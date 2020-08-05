@@ -1,0 +1,19 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "importSorter.generalConfiguration.sortOnBeforeSave": true,
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 160,
+    "cSpell.words": [
+        "Interop",
+        "Parens",
+        "antd",
+        "browserslist",
+        "camelcase",
+        "esnext",
+        "onstatechange",
+        "onupdatefound",
+        "precached",
+        "serviceworker"
+    ]
+}
