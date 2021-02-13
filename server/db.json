@@ -1,3088 +1,3069 @@
 {
-    "categories": [
-        {
-            "id": "5f288becab1091c54b718cd4",
-            "name": "Eat Out",
-            "parent": "/",
-            "path": "/Eat Out"
-        },
-        {
-            "id": "5f288becab1091c54b718cd5",
-            "name": "Oriental express",
-            "parent": "/eat out",
-            "path": "/eat out/oriental express"
-        },
-        {
-            "id": "5f288becab1091c54b718cd6",
-            "name": "Pizza",
-            "parent": "/eat out",
-            "path": "/eat out/pizza"
-        },
-        {
-            "id": "5f288becab1091c54b718cd7",
-            "name": "Wok",
-            "parent": "/eat out",
-            "path": "/eat out/wok"
-        },
-        {
-            "id": "5f288becab1091c54b718cd8",
-            "name": "Framkies",
-            "parent": "/eat out",
-            "path": "/eat out/framkies"
-        },
-        {
-            "id": "5f288becab1091c54b718cd9",
-            "name": "Donuts",
-            "parent": "/eat out",
-            "path": "/eat out/donuts"
-        },
-        {
-            "id": "5f288becab1091c54b718cda",
-            "name": "Budda lounge",
-            "parent": "/eat out",
-            "path": "/eat out/budda lounge"
-        },
-        {
-            "id": "5f288becab1091c54b718cdb",
-            "name": "Tea",
-            "parent": "/eat out",
-            "path": "/eat out/tea"
-        },
-        {
-            "id": "5f288becab1091c54b718cdc",
-            "name": "Hot-dog+pancake",
-            "parent": "/eat out",
-            "path": "/eat out/hot-dog+pancake"
-        },
-        {
-            "id": "5f288becab1091c54b718cdd",
-            "name": "Bar",
-            "parent": "/eat out",
-            "path": "/eat out/bar"
-        },
-        {
-            "id": "5f288becab1091c54b718cde",
-            "name": "Restaurant",
-            "parent": "/eat out",
-            "path": "/eat out/restaurant"
-        },
-        {
-            "id": "5f288becab1091c54b718cdf",
-            "name": "Pizza 45 cm",
-            "parent": "/eat out",
-            "path": "/eat out/pizza 45 cm"
-        },
-        {
-            "id": "5f288becab1091c54b718ce0",
-            "name": "Coffee",
-            "parent": "/eat out",
-            "path": "/eat out/coffee"
-        },
-        {
-            "id": "5f288becab1091c54b718ce1",
-            "name": "Street food",
-            "parent": "/eat out",
-            "path": "/eat out/street food"
-        },
-        {
-            "id": "5f288becab1091c54b718ce2",
-            "name": "Vietnamise",
-            "parent": "/eat out",
-            "path": "/eat out/vietnamise"
-        },
-        {
-            "id": "5f288becab1091c54b718ce3",
-            "name": "Pub",
-            "parent": "/eat out",
-            "path": "/eat out/pub"
-        },
-        {
-            "id": "5f288becab1091c54b718ce4",
-            "name": "Beer",
-            "parent": "/eat out",
-            "path": "/eat out/beer"
-        },
-        {
-            "id": "5f288becab1091c54b718ce5",
-            "name": "Burgerking",
-            "parent": "/eat out",
-            "path": "/eat out/burgerking"
-        },
-        {
-            "id": "5f288becab1091c54b718ce6",
-            "name": "Starbucks",
-            "parent": "/eat out",
-            "path": "/eat out/starbucks"
-        },
-        {
-            "id": "5f288becab1091c54b718ce7",
-            "name": "Paris",
-            "parent": "/eat out",
-            "path": "/eat out/paris"
-        },
-        {
-            "id": "5f288becab1091c54b718ce8",
-            "name": "Costa cofe",
-            "parent": "/eat out",
-            "path": "/eat out/costa cofe"
-        },
-        {
-            "id": "5f288becab1091c54b718ce9",
-            "name": "Thai soup",
-            "parent": "/eat out",
-            "path": "/eat out/thai soup"
-        },
-        {
-            "id": "5f288becab1091c54b718cea",
-            "name": "Sushi",
-            "parent": "/eat out",
-            "path": "/eat out/sushi"
-        },
-        {
-            "id": "5f288becab1091c54b718ceb",
-            "name": "Lunch",
-            "parent": "/eat out",
-            "path": "/eat out/lunch"
-        },
-        {
-            "id": "5f288becab1091c54b718cec",
-            "name": "Burger Pasibus",
-            "parent": "/eat out",
-            "path": "/eat out/burger pasibus"
-        },
-        {
-            "id": "5f288becab1091c54b718ced",
-            "name": "Sandwitch",
-            "parent": "/eat out",
-            "path": "/eat out/sandwitch"
-        },
-        {
-            "id": "5f288becab1091c54b718cee",
-            "name": "Snacks",
-            "parent": "/",
-            "path": "/Snacks"
-        },
-        {
-            "id": "5f288bedab1091c54b718cef",
-            "name": "Peanuts",
-            "parent": "/snacks",
-            "path": "/snacks/peanuts"
-        },
-        {
-            "id": "5f288bedab1091c54b718cf0",
-            "name": "Hazelnut",
-            "parent": "/snacks",
-            "path": "/snacks/hazelnut"
-        },
-        {
-            "id": "5f288bedab1091c54b718cf1",
-            "name": "Gum",
-            "parent": "/snacks",
-            "path": "/snacks/gum"
-        },
-        {
-            "id": "5f288bedab1091c54b718cf2",
-            "name": "Cashew nut",
-            "parent": "/snacks",
-            "path": "/snacks/cashew nut"
-        },
-        {
-            "id": "5f288bedab1091c54b718cf3",
-            "name": "Sweets",
-            "parent": "/snacks",
-            "path": "/snacks/sweets"
-        },
-        {
-            "id": "5f288bedab1091c54b718cf4",
-            "name": "Pistachio",
-            "parent": "/snacks",
-            "path": "/snacks/pistachio"
-        },
-        {
-            "id": "5f288bedab1091c54b718cf5",
-            "name": "Dry fish",
-            "parent": "/snacks",
-            "path": "/snacks/dry fish"
-        },
-        {
-            "id": "5f288bedab1091c54b718cf6",
-            "name": "Nuts muss",
-            "parent": "/snacks",
-            "path": "/snacks/nuts muss"
-        },
-        {
-            "id": "5f288bedab1091c54b718cf7",
-            "name": "Chips",
-            "parent": "/snacks",
-            "path": "/snacks/chips"
-        },
-        {
-            "id": "5f288bedab1091c54b718cf8",
-            "name": "Peanut butter",
-            "parent": "/snacks",
-            "path": "/snacks/peanut butter"
-        },
-        {
-            "id": "5f288bedab1091c54b718cf9",
-            "name": "Almond",
-            "parent": "/snacks",
-            "path": "/snacks/almond"
-        },
-        {
-            "id": "5f288bedab1091c54b718cfa",
-            "name": "Sunflower seeds",
-            "parent": "/snacks",
-            "path": "/snacks/sunflower seeds"
-        },
-        {
-            "id": "5f288bedab1091c54b718cfb",
-            "name": "Nuts mix",
-            "parent": "/snacks",
-            "path": "/snacks/nuts mix"
-        },
-        {
-            "id": "5f288bedab1091c54b718cfc",
-            "name": "Sandwitch",
-            "parent": "/snacks",
-            "path": "/snacks/sandwitch"
-        },
-        {
-            "id": "5f288bedab1091c54b718cfd",
-            "name": "Сhestnuts",
-            "parent": "/snacks",
-            "path": "/snacks/сhestnuts"
-        },
-        {
-            "id": "5f288bedab1091c54b718cfe",
-            "name": "Rice waffles",
-            "parent": "/snacks",
-            "path": "/snacks/rice waffles"
-        },
-        {
-            "id": "5f288bedab1091c54b718cff",
-            "name": "Baby",
-            "parent": "/",
-            "path": "/Baby"
-        },
-        {
-            "id": "5f288bedab1091c54b718d00",
-            "name": "Clothing",
-            "parent": "/baby",
-            "path": "/baby/clothing"
-        },
-        {
-            "id": "5f288bedab1091c54b718d01",
-            "name": "Books",
-            "parent": "/baby",
-            "path": "/baby/books"
-        },
-        {
-            "id": "5f288bedab1091c54b718d02",
-            "name": "Furniture",
-            "parent": "/baby",
-            "path": "/baby/furniture"
-        },
-        {
-            "id": "5f288bedab1091c54b718d03",
-            "name": "Diapers",
-            "parent": "/baby",
-            "path": "/baby/diapers"
-        },
-        {
-            "id": "5f288bedab1091c54b718d04",
-            "name": "Food",
-            "parent": "/baby",
-            "path": "/baby/food"
-        },
-        {
-            "id": "5f288bedab1091c54b718d05",
-            "name": "Accessories",
-            "parent": "/baby",
-            "path": "/baby/accessories"
-        },
-        {
-            "id": "5f288bedab1091c54b718d06",
-            "name": "Toys",
-            "parent": "/baby",
-            "path": "/baby/toys"
-        },
-        {
-            "id": "5f288bedab1091c54b718d07",
-            "name": "Beauty",
-            "parent": "/baby",
-            "path": "/baby/beauty"
-        },
-        {
-            "id": "5f288bedab1091c54b718d08",
-            "name": "Stroller",
-            "parent": "/baby",
-            "path": "/baby/stroller"
-        },
-        {
-            "id": "5f288bedab1091c54b718d09",
-            "name": "Dinnerware",
-            "parent": "/baby",
-            "path": "/baby/dinnerware"
-        },
-        {
-            "id": "5f288bedab1091c54b718d0a",
-            "name": "Shoes",
-            "parent": "/baby",
-            "path": "/baby/shoes"
-        },
-        {
-            "id": "5f288bedab1091c54b718d0b",
-            "name": "Documents",
-            "parent": "/",
-            "path": "/Documents"
-        },
-        {
-            "id": "5f288bedab1091c54b718d0c",
-            "name": "Visa",
-            "parent": "/documents",
-            "path": "/documents/visa"
-        },
-        {
-            "id": "5f288bedab1091c54b718d0d",
-            "name": "Photo",
-            "parent": "/documents",
-            "path": "/documents/photo"
-        },
-        {
-            "id": "5f288bedab1091c54b718d0e",
-            "name": "Documents",
-            "parent": "/documents",
-            "path": "/documents/documents"
-        },
-        {
-            "id": "5f288bedab1091c54b718d0f",
-            "name": "Translation",
-            "parent": "/documents",
-            "path": "/documents/translation"
-        },
-        {
-            "id": "5f288bedab1091c54b718d10",
-            "name": "Home",
-            "parent": "/",
-            "path": "/Home"
-        },
-        {
-            "id": "5f288bedab1091c54b718d11",
-            "name": "Ikea - Delivery",
-            "parent": "/home",
-            "path": "/home/ikea - delivery"
-        },
-        {
-            "id": "5f288bedab1091c54b718d12",
-            "name": "Stationery",
-            "parent": "/home",
-            "path": "/home/stationery"
-        },
-        {
-            "id": "5f288bedab1091c54b718d13",
-            "name": "Ikea - Home stuff",
-            "parent": "/home",
-            "path": "/home/ikea - home stuff"
-        },
-        {
-            "id": "5f288bedab1091c54b718d14",
-            "name": "Cooking pot",
-            "parent": "/home",
-            "path": "/home/cooking pot"
-        },
-        {
-            "id": "5f288bedab1091c54b718d15",
-            "name": "Instruments",
-            "parent": "/home",
-            "path": "/home/instruments"
-        },
-        {
-            "id": "5f288beeab1091c54b718d16",
-            "name": "Home",
-            "parent": "/home",
-            "path": "/home/home"
-        },
-        {
-            "id": "5f288beeab1091c54b718d17",
-            "name": "Cloth dryer",
-            "parent": "/home",
-            "path": "/home/cloth dryer"
-        },
-        {
-            "id": "5f288beeab1091c54b718d18",
-            "name": "Plates",
-            "parent": "/home",
-            "path": "/home/plates"
-        },
-        {
-            "id": "5f288beeab1091c54b718d19",
-            "name": "Flowers",
-            "parent": "/home",
-            "path": "/home/flowers"
-        },
-        {
-            "id": "5f288beeab1091c54b718d1a",
-            "name": "Kitchen stuff",
-            "parent": "/home",
-            "path": "/home/kitchen stuff"
-        },
-        {
-            "id": "5f288beeab1091c54b718d1b",
-            "name": "Ikea - Furniture",
-            "parent": "/home",
-            "path": "/home/ikea - furniture"
-        },
-        {
-            "id": "5f288beeab1091c54b718d1c",
-            "name": "Glue",
-            "parent": "/home",
-            "path": "/home/glue"
-        },
-        {
-            "id": "5f288beeab1091c54b718d1d",
-            "name": "Light bulb",
-            "parent": "/home",
-            "path": "/home/light bulb"
-        },
-        {
-            "id": "5f288beeab1091c54b718d1e",
-            "name": "Plaid",
-            "parent": "/home",
-            "path": "/home/plaid"
-        },
-        {
-            "id": "5f288beeab1091c54b718d1f",
-            "name": "Cleaning",
-            "parent": "/home",
-            "path": "/home/cleaning"
-        },
-        {
-            "id": "5f288beeab1091c54b718d20",
-            "name": "Fixture",
-            "parent": "/home",
-            "path": "/home/fixture"
-        },
-        {
-            "id": "5f288beeab1091c54b718d21",
-            "name": "Bottle",
-            "parent": "/home",
-            "path": "/home/bottle"
-        },
-        {
-            "id": "5f288beeab1091c54b718d22",
-            "name": "Garbage bags",
-            "parent": "/home",
-            "path": "/home/garbage bags"
-        },
-        {
-            "id": "5f288beeab1091c54b718d23",
-            "name": "Payments",
-            "parent": "/",
-            "path": "/Payments"
-        },
-        {
-            "id": "5f288beeab1091c54b718d24",
-            "name": "Mobile apps",
-            "parent": "/payments",
-            "path": "/payments/mobile apps"
-        },
-        {
-            "id": "5f288beeab1091c54b718d25",
-            "name": "Bank fee",
-            "parent": "/payments",
-            "path": "/payments/bank fee"
-        },
-        {
-            "id": "5f288beeab1091c54b718d26",
-            "name": "Electricity",
-            "parent": "/payments",
-            "path": "/payments/electricity"
-        },
-        {
-            "id": "5f288beeab1091c54b718d27",
-            "name": "Internet",
-            "parent": "/payments",
-            "path": "/payments/internet"
-        },
-        {
-            "id": "5f288beeab1091c54b718d28",
-            "name": "Apple subscription",
-            "parent": "/payments",
-            "path": "/payments/apple subscription"
-        },
-        {
-            "id": "5f288beeab1091c54b718d29",
-            "name": "Dog tax",
-            "parent": "/payments",
-            "path": "/payments/dog tax"
-        },
-        {
-            "id": "5f288beeab1091c54b718d2a",
-            "name": "Travel insurance",
-            "parent": "/payments",
-            "path": "/payments/travel insurance"
-        },
-        {
-            "id": "5f288beeab1091c54b718d2b",
-            "name": "TV tax",
-            "parent": "/payments",
-            "path": "/payments/tv tax"
-        },
-        {
-            "id": "5f288beeab1091c54b718d2c",
-            "name": "Rent deposit",
-            "parent": "/payments",
-            "path": "/payments/rent deposit"
-        },
-        {
-            "id": "5f288beeab1091c54b718d2d",
-            "name": "Mobile",
-            "parent": "/payments",
-            "path": "/payments/mobile"
-        },
-        {
-            "id": "5f288beeab1091c54b718d2e",
-            "name": "Post",
-            "parent": "/payments",
-            "path": "/payments/post"
-        },
-        {
-            "id": "5f288beeab1091c54b718d2f",
-            "name": "Games",
-            "parent": "/payments",
-            "path": "/payments/games"
-        },
-        {
-            "id": "5f288beeab1091c54b718d30",
-            "name": "Amazon prime",
-            "parent": "/payments",
-            "path": "/payments/amazon prime"
-        },
-        {
-            "id": "5f288beeab1091c54b718d31",
-            "name": "Rent",
-            "parent": "/payments",
-            "path": "/payments/rent"
-        },
-        {
-            "id": "5f288beeab1091c54b718d32",
-            "name": "Meat",
-            "parent": "/",
-            "path": "/Meat"
-        },
-        {
-            "id": "5f288beeab1091c54b718d33",
-            "name": "Turkey filet",
-            "parent": "/meat",
-            "path": "/meat/turkey filet"
-        },
-        {
-            "id": "5f288beeab1091c54b718d34",
-            "name": "Whole chicken",
-            "parent": "/meat",
-            "path": "/meat/whole chicken"
-        },
-        {
-            "id": "5f288beeab1091c54b718d35",
-            "name": "Chicken breast",
-            "parent": "/meat",
-            "path": "/meat/chicken breast"
-        },
-        {
-            "id": "5f288beeab1091c54b718d36",
-            "name": "Whole duck",
-            "parent": "/meat",
-            "path": "/meat/whole duck"
-        },
-        {
-            "id": "5f288beeab1091c54b718d37",
-            "name": "Turkey legs",
-            "parent": "/meat",
-            "path": "/meat/turkey legs"
-        },
-        {
-            "id": "5f288beeab1091c54b718d38",
-            "name": "Pork legs",
-            "parent": "/meat",
-            "path": "/meat/pork legs"
-        },
-        {
-            "id": "5f288beeab1091c54b718d39",
-            "name": "Chicken udo",
-            "parent": "/meat",
-            "path": "/meat/chicken udo"
-        },
-        {
-            "id": "5f288beeab1091c54b718d3a",
-            "name": "Chicken other",
-            "parent": "/meat",
-            "path": "/meat/chicken other"
-        },
-        {
-            "id": "5f288beeab1091c54b718d3b",
-            "name": "Pork neck",
-            "parent": "/meat",
-            "path": "/meat/pork neck"
-        },
-        {
-            "id": "5f288beeab1091c54b718d3c",
-            "name": "Beef expensive",
-            "parent": "/meat",
-            "path": "/meat/beef expensive"
-        },
-        {
-            "id": "5f288beeab1091c54b718d3d",
-            "name": "Chicken legs",
-            "parent": "/meat",
-            "path": "/meat/chicken legs"
-        },
-        {
-            "id": "5f288beeab1091c54b718d3e",
-            "name": "Chicken filet",
-            "parent": "/meat",
-            "path": "/meat/chicken filet"
-        },
-        {
-            "id": "5f288befab1091c54b718d3f",
-            "name": "Whole goose",
-            "parent": "/meat",
-            "path": "/meat/whole goose"
-        },
-        {
-            "id": "5f288befab1091c54b718d40",
-            "name": "Chicken legs boneless",
-            "parent": "/meat",
-            "path": "/meat/chicken legs boneless"
-        },
-        {
-            "id": "5f288befab1091c54b718d41",
-            "name": "Dry meat",
-            "parent": "/meat",
-            "path": "/meat/dry meat"
-        },
-        {
-            "id": "5f288befab1091c54b718d42",
-            "name": "Turkey udo",
-            "parent": "/meat",
-            "path": "/meat/turkey udo"
-        },
-        {
-            "id": "5f288befab1091c54b718d43",
-            "name": "Chicken wings",
-            "parent": "/meat",
-            "path": "/meat/chicken wings"
-        },
-        {
-            "id": "5f288befab1091c54b718d44",
-            "name": "Pork steak",
-            "parent": "/meat",
-            "path": "/meat/pork steak"
-        },
-        {
-            "id": "5f288befab1091c54b718d45",
-            "name": "Ground meat",
-            "parent": "/meat",
-            "path": "/meat/ground meat"
-        },
-        {
-            "id": "5f288befab1091c54b718d46",
-            "name": "Duck legs",
-            "parent": "/meat",
-            "path": "/meat/duck legs"
-        },
-        {
-            "id": "5f288befab1091c54b718d47",
-            "name": "Pharmacy",
-            "parent": "/",
-            "path": "/Pharmacy"
-        },
-        {
-            "id": "5f288befab1091c54b718d48",
-            "name": "Medicine",
-            "parent": "/pharmacy",
-            "path": "/pharmacy/medicine"
-        },
-        {
-            "id": "5f288befab1091c54b718d49",
-            "name": "Rowatinex",
-            "parent": "/pharmacy",
-            "path": "/pharmacy/rowatinex"
-        },
-        {
-            "id": "5f288befab1091c54b718d4a",
-            "name": "Fish",
-            "parent": "/",
-            "path": "/Fish"
-        },
-        {
-            "id": "5f288befab1091c54b718d4b",
-            "name": "Salmon",
-            "parent": "/fish",
-            "path": "/fish/salmon"
-        },
-        {
-            "id": "5f288befab1091c54b718d4c",
-            "name": "Herring",
-            "parent": "/fish",
-            "path": "/fish/herring"
-        },
-        {
-            "id": "5f288befab1091c54b718d4d",
-            "name": "Smoked roach",
-            "parent": "/fish",
-            "path": "/fish/smoked roach"
-        },
-        {
-            "id": "5f288befab1091c54b718d4e",
-            "name": "Trout",
-            "parent": "/fish",
-            "path": "/fish/trout"
-        },
-        {
-            "id": "5f288befab1091c54b718d4f",
-            "name": "Smoked mackerel",
-            "parent": "/fish",
-            "path": "/fish/smoked mackerel"
-        },
-        {
-            "id": "5f288befab1091c54b718d50",
-            "name": "Rose fish",
-            "parent": "/fish",
-            "path": "/fish/rose fish"
-        },
-        {
-            "id": "5f288befab1091c54b718d51",
-            "name": "Shrimps",
-            "parent": "/fish",
-            "path": "/fish/shrimps"
-        },
-        {
-            "id": "5f288befab1091c54b718d52",
-            "name": "Octopus",
-            "parent": "/fish",
-            "path": "/fish/octopus"
-        },
-        {
-            "id": "5f288befab1091c54b718d53",
-            "name": "Health",
-            "parent": "/",
-            "path": "/Health"
-        },
-        {
-            "id": "5f288befab1091c54b718d54",
-            "name": "Glasses",
-            "parent": "/health",
-            "path": "/health/glasses"
-        },
-        {
-            "id": "5f288befab1091c54b718d55",
-            "name": "Health check - Gynecology",
-            "parent": "/health",
-            "path": "/health/health check - gynecology"
-        },
-        {
-            "id": "5f288befab1091c54b718d56",
-            "name": "Dogs",
-            "parent": "/",
-            "path": "/Dogs"
-        },
-        {
-            "id": "5f288befab1091c54b718d57",
-            "name": "Transport box",
-            "parent": "/dogs",
-            "path": "/dogs/transport box"
-        },
-        {
-            "id": "5f288befab1091c54b718d58",
-            "name": "Toy",
-            "parent": "/dogs",
-            "path": "/dogs/toy"
-        },
-        {
-            "id": "5f288befab1091c54b718d59",
-            "name": "Food",
-            "parent": "/dogs",
-            "path": "/dogs/food"
-        },
-        {
-            "id": "5f288befab1091c54b718d5a",
-            "name": "Medicine",
-            "parent": "/dogs",
-            "path": "/dogs/medicine"
-        },
-        {
-            "id": "5f288befab1091c54b718d5b",
-            "name": "Packets",
-            "parent": "/dogs",
-            "path": "/dogs/packets"
-        },
-        {
-            "id": "5f288befab1091c54b718d5c",
-            "name": "Documents",
-            "parent": "/dogs",
-            "path": "/dogs/documents"
-        },
-        {
-            "id": "5f288befab1091c54b718d5d",
-            "name": "Treats",
-            "parent": "/dogs",
-            "path": "/dogs/treats"
-        },
-        {
-            "id": "5f288befab1091c54b718d5e",
-            "name": "Vet clinic",
-            "parent": "/dogs",
-            "path": "/dogs/vet clinic"
-        },
-        {
-            "id": "5f288befab1091c54b718d5f",
-            "name": "Dog beauty",
-            "parent": "/dogs",
-            "path": "/dogs/dog beauty"
-        },
-        {
-            "id": "5f288befab1091c54b718d60",
-            "name": "Health",
-            "parent": "/dogs",
-            "path": "/dogs/health"
-        },
-        {
-            "id": "5f288befab1091c54b718d61",
-            "name": "Accessories",
-            "parent": "/dogs",
-            "path": "/dogs/accessories"
-        },
-        {
-            "id": "5f288befab1091c54b718d62",
-            "name": "Hotel",
-            "parent": "/dogs",
-            "path": "/dogs/hotel"
-        },
-        {
-            "id": "5f288befab1091c54b718d63",
-            "name": "Dog haircut",
-            "parent": "/dogs",
-            "path": "/dogs/dog haircut"
-        },
-        {
-            "id": "5f288befab1091c54b718d64",
-            "name": "Kitchen stuff",
-            "parent": "/",
-            "path": "/Kitchen stuff"
-        },
-        {
-            "id": "5f288befab1091c54b718d65",
-            "name": "Paper",
-            "parent": "/kitchen stuff",
-            "path": "/kitchen stuff/paper"
-        },
-        {
-            "id": "5f288befab1091c54b718d66",
-            "name": "Packets",
-            "parent": "/kitchen stuff",
-            "path": "/kitchen stuff/packets"
-        },
-        {
-            "id": "5f288befab1091c54b718d67",
-            "name": "Folia",
-            "parent": "/kitchen stuff",
-            "path": "/kitchen stuff/folia"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d68",
-            "name": "Foil",
-            "parent": "/kitchen stuff",
-            "path": "/kitchen stuff/foil"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d69",
-            "name": "Wipes",
-            "parent": "/kitchen stuff",
-            "path": "/kitchen stuff/wipes"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d6a",
-            "name": "Sponges",
-            "parent": "/kitchen stuff",
-            "path": "/kitchen stuff/sponges"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d6b",
-            "name": "Sausage",
-            "parent": "/",
-            "path": "/Sausage"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d6c",
-            "name": "Packed meat",
-            "parent": "/sausage",
-            "path": "/sausage/packed meat"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d6d",
-            "name": "Meat",
-            "parent": "/sausage",
-            "path": "/sausage/meat"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d6e",
-            "name": "Pate",
-            "parent": "/sausage",
-            "path": "/sausage/pate"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d6f",
-            "name": "Sauseges",
-            "parent": "/sausage",
-            "path": "/sausage/sauseges"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d70",
-            "name": "Cheese",
-            "parent": "/",
-            "path": "/Cheese"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d71",
-            "name": "Pamesan",
-            "parent": "/cheese",
-            "path": "/cheese/pamesan"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d72",
-            "name": "Cheese",
-            "parent": "/cheese",
-            "path": "/cheese/cheese"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d73",
-            "name": "Mascarpone",
-            "parent": "/cheese",
-            "path": "/cheese/mascarpone"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d74",
-            "name": "Blue cheese",
-            "parent": "/cheese",
-            "path": "/cheese/blue cheese"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d75",
-            "name": "Mozzarella",
-            "parent": "/cheese",
-            "path": "/cheese/mozzarella"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d76",
-            "name": "Ricotta",
-            "parent": "/cheese",
-            "path": "/cheese/ricotta"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d77",
-            "name": "Oven cheese",
-            "parent": "/cheese",
-            "path": "/cheese/oven cheese"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d78",
-            "name": "Cheese packed",
-            "parent": "/cheese",
-            "path": "/cheese/cheese packed"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d79",
-            "name": "Smocked cheese",
-            "parent": "/cheese",
-            "path": "/cheese/smocked cheese"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d7a",
-            "name": "Transport",
-            "parent": "/",
-            "path": "/Transport"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d7b",
-            "name": "Air tickets",
-            "parent": "/transport",
-            "path": "/transport/air tickets"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d7c",
-            "name": "Bus tickets",
-            "parent": "/transport",
-            "path": "/transport/bus tickets"
-        },
-        {
-            "id": "5f288bf0ab1091c54b718d7d",
-            "name": "Montly ticket",
-            "parent": "/transport",
-            "path": "/transport/montly ticket"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d7e",
-            "name": "Metro",
-            "parent": "/transport",
-            "path": "/transport/metro"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d7f",
-            "name": "Single ticket",
-            "parent": "/transport",
-            "path": "/transport/single ticket"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d80",
-            "name": "Train tickets",
-            "parent": "/transport",
-            "path": "/transport/train tickets"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d81",
-            "name": "Luggage",
-            "parent": "/transport",
-            "path": "/transport/luggage"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d82",
-            "name": "3 month ticket",
-            "parent": "/transport",
-            "path": "/transport/3 month ticket"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d83",
-            "name": "Taxi",
-            "parent": "/transport",
-            "path": "/transport/taxi"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d84",
-            "name": "Hobby",
-            "parent": "/",
-            "path": "/Hobby"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d85",
-            "name": "Beer collection",
-            "parent": "/hobby",
-            "path": "/hobby/beer collection"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d86",
-            "name": "Games",
-            "parent": "/hobby",
-            "path": "/hobby/games"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d87",
-            "name": "Garden",
-            "parent": "/hobby",
-            "path": "/hobby/garden"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d88",
-            "name": "Pin collection",
-            "parent": "/hobby",
-            "path": "/hobby/pin collection"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d89",
-            "name": "Amazon hosting",
-            "parent": "/hobby",
-            "path": "/hobby/amazon hosting"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d8a",
-            "name": "Domain",
-            "parent": "/hobby",
-            "path": "/hobby/domain"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d8b",
-            "name": "Badger's hobby",
-            "parent": "/hobby",
-            "path": "/hobby/badger's hobby"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d8c",
-            "name": "Azure hosting",
-            "parent": "/hobby",
-            "path": "/hobby/azure hosting"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d8d",
-            "name": "Knitting",
-            "parent": "/hobby",
-            "path": "/hobby/knitting"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d8e",
-            "name": "Beverages",
-            "parent": "/",
-            "path": "/Beverages"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d8f",
-            "name": "Sweet Water",
-            "parent": "/beverages",
-            "path": "/beverages/sweet water"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d90",
-            "name": "Water 1.5 L",
-            "parent": "/beverages",
-            "path": "/beverages/water 1.5 l"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d91",
-            "name": "Hot chocalate",
-            "parent": "/beverages",
-            "path": "/beverages/hot chocalate"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d92",
-            "name": "Water 0.5 L",
-            "parent": "/beverages",
-            "path": "/beverages/water 0.5 l"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d93",
-            "name": "Wine",
-            "parent": "/beverages",
-            "path": "/beverages/wine"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d94",
-            "name": "Kwas",
-            "parent": "/beverages",
-            "path": "/beverages/kwas"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d95",
-            "name": "Juice",
-            "parent": "/beverages",
-            "path": "/beverages/juice"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d96",
-            "name": "Learning",
-            "parent": "/",
-            "path": "/Learning"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d97",
-            "name": "Book",
-            "parent": "/learning",
-            "path": "/learning/book"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d98",
-            "name": "German classes",
-            "parent": "/learning",
-            "path": "/learning/german classes"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d99",
-            "name": "Driving lesson",
-            "parent": "/learning",
-            "path": "/learning/driving lesson"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d9a",
-            "name": "Magazine",
-            "parent": "/learning",
-            "path": "/learning/magazine"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d9b",
-            "name": "Alcohol",
-            "parent": "/",
-            "path": "/Alcohol"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d9c",
-            "name": "Sparkling wine",
-            "parent": "/alcohol",
-            "path": "/alcohol/sparkling wine"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d9d",
-            "name": "Spirit",
-            "parent": "/alcohol",
-            "path": "/alcohol/spirit"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d9e",
-            "name": "Auto",
-            "parent": "/",
-            "path": "/Auto"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718d9f",
-            "name": "Car wash",
-            "parent": "/auto",
-            "path": "/auto/car wash"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718da0",
-            "name": "Gasoline",
-            "parent": "/auto",
-            "path": "/auto/gasoline"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718da1",
-            "name": "Liquid for washing",
-            "parent": "/auto",
-            "path": "/auto/liquid for washing"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718da2",
-            "name": "Document",
-            "parent": "/auto",
-            "path": "/auto/document"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718da3",
-            "name": "Vignette",
-            "parent": "/auto",
-            "path": "/auto/vignette"
-        },
-        {
-            "id": "5f288bf1ab1091c54b718da4",
-            "name": "Tax",
-            "parent": "/auto",
-            "path": "/auto/tax"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718da5",
-            "name": "Service check",
-            "parent": "/auto",
-            "path": "/auto/service check"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718da6",
-            "name": "Accessories",
-            "parent": "/auto",
-            "path": "/auto/accessories"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718da7",
-            "name": "Winter Tires",
-            "parent": "/auto",
-            "path": "/auto/winter tires"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718da8",
-            "name": "Repair",
-            "parent": "/auto",
-            "path": "/auto/repair"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718da9",
-            "name": "Tires change",
-            "parent": "/auto",
-            "path": "/auto/tires change"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718daa",
-            "name": "Insurance",
-            "parent": "/auto",
-            "path": "/auto/insurance"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dab",
-            "name": "Toll road",
-            "parent": "/auto",
-            "path": "/auto/toll road"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dac",
-            "name": "Summer tires",
-            "parent": "/auto",
-            "path": "/auto/summer tires"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dad",
-            "name": "Other stuff",
-            "parent": "/auto",
-            "path": "/auto/other stuff"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dae",
-            "name": "Import tax",
-            "parent": "/auto",
-            "path": "/auto/import tax"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718daf",
-            "name": "Parking",
-            "parent": "/auto",
-            "path": "/auto/parking"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718db0",
-            "name": "Clothes",
-            "parent": "/",
-            "path": "/Clothes"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718db1",
-            "name": "Jacket",
-            "parent": "/clothes",
-            "path": "/clothes/jacket"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718db2",
-            "name": "Socks",
-            "parent": "/clothes",
-            "path": "/clothes/socks"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718db3",
-            "name": "Home clothes",
-            "parent": "/clothes",
-            "path": "/clothes/home clothes"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718db4",
-            "name": "Hat",
-            "parent": "/clothes",
-            "path": "/clothes/hat"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718db5",
-            "name": "Sport jacket",
-            "parent": "/clothes",
-            "path": "/clothes/sport jacket"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718db6",
-            "name": "Accessories",
-            "parent": "/clothes",
-            "path": "/clothes/accessories"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718db7",
-            "name": "Belt",
-            "parent": "/clothes",
-            "path": "/clothes/belt"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718db8",
-            "name": "T-Short",
-            "parent": "/clothes",
-            "path": "/clothes/t-short"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718db9",
-            "name": "Shoes",
-            "parent": "/clothes",
-            "path": "/clothes/shoes"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dba",
-            "name": "Underwear",
-            "parent": "/clothes",
-            "path": "/clothes/underwear"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dbb",
-            "name": "Dress",
-            "parent": "/clothes",
-            "path": "/clothes/dress"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dbc",
-            "name": "Hoody",
-            "parent": "/clothes",
-            "path": "/clothes/hoody"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dbd",
-            "name": "Beg",
-            "parent": "/clothes",
-            "path": "/clothes/beg"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dbe",
-            "name": "Jeans",
-            "parent": "/clothes",
-            "path": "/clothes/jeans"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dbf",
-            "name": "Swimming suit",
-            "parent": "/clothes",
-            "path": "/clothes/swimming suit"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dc0",
-            "name": "Winter truisers",
-            "parent": "/clothes",
-            "path": "/clothes/winter truisers"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dc1",
-            "name": "Scarf",
-            "parent": "/clothes",
-            "path": "/clothes/scarf"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dc2",
-            "name": "Sport trousers",
-            "parent": "/clothes",
-            "path": "/clothes/sport trousers"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dc3",
-            "name": "Shirt",
-            "parent": "/clothes",
-            "path": "/clothes/shirt"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dc4",
-            "name": "Shorts",
-            "parent": "/clothes",
-            "path": "/clothes/shorts"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dc5",
-            "name": "Tights",
-            "parent": "/clothes",
-            "path": "/clothes/tights"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dc6",
-            "name": "Dry cleaning",
-            "parent": "/clothes",
-            "path": "/clothes/dry cleaning"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dc7",
-            "name": "Sweater",
-            "parent": "/clothes",
-            "path": "/clothes/sweater"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dc8",
-            "name": "Gloves",
-            "parent": "/clothes",
-            "path": "/clothes/gloves"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dc9",
-            "name": "Sport",
-            "parent": "/",
-            "path": "/Sport"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dca",
-            "name": "Bicycle accessories",
-            "parent": "/sport",
-            "path": "/sport/bicycle accessories"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dcb",
-            "name": "Mat",
-            "parent": "/sport",
-            "path": "/sport/mat"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dcc",
-            "name": "Bicycle",
-            "parent": "/sport",
-            "path": "/sport/bicycle"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dcd",
-            "name": "Appliances",
-            "parent": "/",
-            "path": "/Appliances"
-        },
-        {
-            "id": "5f288bf2ab1091c54b718dce",
-            "name": "Batteries",
-            "parent": "/appliances",
-            "path": "/appliances/batteries"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dcf",
-            "name": "Technic",
-            "parent": "/appliances",
-            "path": "/appliances/technic"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dd0",
-            "name": "Humidifiers",
-            "parent": "/appliances",
-            "path": "/appliances/humidifiers"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dd1",
-            "name": "Clock",
-            "parent": "/appliances",
-            "path": "/appliances/clock"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dd2",
-            "name": "Kettle",
-            "parent": "/appliances",
-            "path": "/appliances/kettle"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dd3",
-            "name": "Repair",
-            "parent": "/appliances",
-            "path": "/appliances/repair"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dd4",
-            "name": "Teethbrush",
-            "parent": "/appliances",
-            "path": "/appliances/teethbrush"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dd5",
-            "name": "Phone",
-            "parent": "/appliances",
-            "path": "/appliances/phone"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dd6",
-            "name": "Headphones",
-            "parent": "/appliances",
-            "path": "/appliances/headphones"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dd7",
-            "name": "External battary",
-            "parent": "/appliances",
-            "path": "/appliances/external battary"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dd8",
-            "name": "Cabel TV",
-            "parent": "/appliances",
-            "path": "/appliances/cabel tv"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dd9",
-            "name": "Cabel HDMI",
-            "parent": "/appliances",
-            "path": "/appliances/cabel hdmi"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dda",
-            "name": "Power strip ",
-            "parent": "/appliances",
-            "path": "/appliances/power strip "
-        },
-        {
-            "id": "5f288bf3ab1091c54b718ddb",
-            "name": "Adapter",
-            "parent": "/appliances",
-            "path": "/appliances/adapter"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718ddc",
-            "name": "Router",
-            "parent": "/appliances",
-            "path": "/appliances/router"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718ddd",
-            "name": "Other",
-            "parent": "/appliances",
-            "path": "/appliances/other"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dde",
-            "name": "E-Book",
-            "parent": "/appliances",
-            "path": "/appliances/e-book"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718ddf",
-            "name": "Kitchen",
-            "parent": "/appliances",
-            "path": "/appliances/kitchen"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718de0",
-            "name": "Accessories",
-            "parent": "/appliances",
-            "path": "/appliances/accessories"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718de1",
-            "name": "IP Camera",
-            "parent": "/appliances",
-            "path": "/appliances/ip camera"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718de2",
-            "name": "Dairy",
-            "parent": "/",
-            "path": "/Dairy"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718de3",
-            "name": "Cheese ala Almetta",
-            "parent": "/dairy",
-            "path": "/dairy/cheese ala almetta"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718de4",
-            "name": "Kefir 0.5 L",
-            "parent": "/dairy",
-            "path": "/dairy/kefir 0.5 l"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718de5",
-            "name": "Sour Cream",
-            "parent": "/dairy",
-            "path": "/dairy/sour cream"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718de6",
-            "name": "Yogurt 0.4 L",
-            "parent": "/dairy",
-            "path": "/dairy/yogurt 0.4 l"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718de7",
-            "name": "Quark",
-            "parent": "/dairy",
-            "path": "/dairy/quark"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718de8",
-            "name": "Kefir sweet",
-            "parent": "/dairy",
-            "path": "/dairy/kefir sweet"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718de9",
-            "name": "Milk",
-            "parent": "/dairy",
-            "path": "/dairy/milk"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dea",
-            "name": "Milk sweets",
-            "parent": "/dairy",
-            "path": "/dairy/milk sweets"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718deb",
-            "name": "Buter",
-            "parent": "/dairy",
-            "path": "/dairy/buter"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dec",
-            "name": "Cottage cheese",
-            "parent": "/dairy",
-            "path": "/dairy/cottage cheese"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718ded",
-            "name": "Yogurt",
-            "parent": "/dairy",
-            "path": "/dairy/yogurt"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718dee",
-            "name": "Feta",
-            "parent": "/dairy",
-            "path": "/dairy/feta"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718def",
-            "name": "Yogurt x4",
-            "parent": "/dairy",
-            "path": "/dairy/yogurt x4"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718df0",
-            "name": "Whipped cream",
-            "parent": "/dairy",
-            "path": "/dairy/whipped cream"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718df1",
-            "name": "Butter",
-            "parent": "/dairy",
-            "path": "/dairy/butter"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718df2",
-            "name": "Kefir 1 L",
-            "parent": "/dairy",
-            "path": "/dairy/kefir 1 l"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718df3",
-            "name": "Cream",
-            "parent": "/dairy",
-            "path": "/dairy/cream"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718df4",
-            "name": "Eggs",
-            "parent": "/dairy",
-            "path": "/dairy/eggs"
-        },
-        {
-            "id": "5f288bf3ab1091c54b718df5",
-            "name": "Vacation",
-            "parent": "/",
-            "path": "/Vacation"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718df6",
-            "name": "Bed linen in hotel",
-            "parent": "/vacation",
-            "path": "/vacation/bed linen in hotel"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718df7",
-            "name": "Ski resort - restrant",
-            "parent": "/vacation",
-            "path": "/vacation/ski resort - restrant"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718df8",
-            "name": "Ski resort - ticket",
-            "parent": "/vacation",
-            "path": "/vacation/ski resort - ticket"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718df9",
-            "name": "Hostel",
-            "parent": "/vacation",
-            "path": "/vacation/hostel"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718dfa",
-            "name": "Visa",
-            "parent": "/vacation",
-            "path": "/vacation/visa"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718dfb",
-            "name": "Ski resort - instructor",
-            "parent": "/vacation",
-            "path": "/vacation/ski resort - instructor"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718dfc",
-            "name": "Ski resort - equipment",
-            "parent": "/vacation",
-            "path": "/vacation/ski resort - equipment"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718dfd",
-            "name": "Souvenirs",
-            "parent": "/vacation",
-            "path": "/vacation/souvenirs"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718dfe",
-            "name": "Grocery",
-            "parent": "/vacation",
-            "path": "/vacation/grocery"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718dff",
-            "name": "Ski resort - ski pass",
-            "parent": "/vacation",
-            "path": "/vacation/ski resort - ski pass"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e00",
-            "name": "Attraction ticket",
-            "parent": "/vacation",
-            "path": "/vacation/attraction ticket"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e01",
-            "name": "Baggage storage",
-            "parent": "/vacation",
-            "path": "/vacation/baggage storage"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e02",
-            "name": "Bus",
-            "parent": "/vacation",
-            "path": "/vacation/bus"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e03",
-            "name": "Hotel 1 room",
-            "parent": "/vacation",
-            "path": "/vacation/hotel 1 room"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e04",
-            "name": "Toilet",
-            "parent": "/vacation",
-            "path": "/vacation/toilet"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e05",
-            "name": "Rental",
-            "parent": "/vacation",
-            "path": "/vacation/rental"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e06",
-            "name": "Pin",
-            "parent": "/vacation",
-            "path": "/vacation/pin"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e07",
-            "name": "Train",
-            "parent": "/vacation",
-            "path": "/vacation/train"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e08",
-            "name": "Beer",
-            "parent": "/",
-            "path": "/Beer"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e09",
-            "name": "Beer",
-            "parent": "/beer",
-            "path": "/beer/beer"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e0a",
-            "name": "Bakery",
-            "parent": "/",
-            "path": "/Bakery"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e0b",
-            "name": "new",
-            "parent": "/bakery",
-            "path": "/bakery/new"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e0c",
-            "name": "Sweet pie",
-            "parent": "/bakery",
-            "path": "/bakery/sweet pie"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e0d",
-            "name": "Croissant",
-            "parent": "/bakery",
-            "path": "/bakery/croissant"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e0e",
-            "name": "Bread",
-            "parent": "/bakery",
-            "path": "/bakery/bread"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e0f",
-            "name": "Pie",
-            "parent": "/bakery",
-            "path": "/bakery/pie"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e10",
-            "name": "Bath stuff",
-            "parent": "/",
-            "path": "/Bath stuff"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e11",
-            "name": "Antiperspirant",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/antiperspirant"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e12",
-            "name": "Teeth liquid",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/teeth liquid"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e13",
-            "name": "Napkins",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/napkins"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e14",
-            "name": "Liquid for washing",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/liquid for washing"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e15",
-            "name": "Toothpaste",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/toothpaste"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e16",
-            "name": "Soap",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/soap"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e17",
-            "name": "Beauty stuff",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/beauty stuff"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e18",
-            "name": "Shawing gel",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/shawing gel"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e19",
-            "name": "Shampoo",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/shampoo"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e1a",
-            "name": "Cleaning stuff",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/cleaning stuff"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e1b",
-            "name": "Deodorant",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/deodorant"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e1c",
-            "name": "Pantyliner",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/pantyliner"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e1d",
-            "name": "Sticks",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/sticks"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e1e",
-            "name": "Liquid for conditioner",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/liquid for conditioner"
-        },
-        {
-            "id": "5f288bf4ab1091c54b718e1f",
-            "name": "Razor blades",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/razor blades"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e20",
-            "name": "Toilet paper",
-            "parent": "/bath stuff",
-            "path": "/bath stuff/toilet paper"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e21",
-            "name": "Leisure",
-            "parent": "/",
-            "path": "/Leisure"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e22",
-            "name": "Excursion",
-            "parent": "/leisure",
-            "path": "/leisure/excursion"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e23",
-            "name": "Tickets",
-            "parent": "/leisure",
-            "path": "/leisure/tickets"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e24",
-            "name": "Bicycle",
-            "parent": "/leisure",
-            "path": "/leisure/bicycle"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e25",
-            "name": "Board games",
-            "parent": "/leisure",
-            "path": "/leisure/board games"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e26",
-            "name": "Ticket",
-            "parent": "/leisure",
-            "path": "/leisure/ticket"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e27",
-            "name": "Gifts",
-            "parent": "/",
-            "path": "/Gifts"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e28",
-            "name": "New Year gifts",
-            "parent": "/gifts",
-            "path": "/gifts/new year gifts"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e29",
-            "name": "Alco",
-            "parent": "/gifts",
-            "path": "/gifts/alco"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e2a",
-            "name": "Flowers",
-            "parent": "/gifts",
-            "path": "/gifts/flowers"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e2b",
-            "name": "Other",
-            "parent": "/gifts",
-            "path": "/gifts/other"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e2c",
-            "name": "Meat",
-            "parent": "/gifts",
-            "path": "/gifts/meat"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e2d",
-            "name": "Birthday gift",
-            "parent": "/gifts",
-            "path": "/gifts/birthday gift"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e2e",
-            "name": "Blue cheese",
-            "parent": "/gifts",
-            "path": "/gifts/blue cheese"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e2f",
-            "name": "Sweet",
-            "parent": "/gifts",
-            "path": "/gifts/sweet"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e30",
-            "name": "Unknown",
-            "parent": "/",
-            "path": "/Unknown"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e31",
-            "name": "Unknown",
-            "parent": "/unknown",
-            "path": "/unknown/unknown"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e32",
-            "name": "Sweets",
-            "parent": "/",
-            "path": "/Sweets"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e33",
-            "name": "Ekler",
-            "parent": "/sweets",
-            "path": "/sweets/ekler"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e34",
-            "name": "Jam",
-            "parent": "/sweets",
-            "path": "/sweets/jam"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e35",
-            "name": "Muss",
-            "parent": "/sweets",
-            "path": "/sweets/muss"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e36",
-            "name": "Halva",
-            "parent": "/sweets",
-            "path": "/sweets/halva"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e37",
-            "name": "Syrop",
-            "parent": "/sweets",
-            "path": "/sweets/syrop"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e38",
-            "name": "Gum",
-            "parent": "/sweets",
-            "path": "/sweets/gum"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e39",
-            "name": "Cakes",
-            "parent": "/sweets",
-            "path": "/sweets/cakes"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e3a",
-            "name": "Dry fruits",
-            "parent": "/sweets",
-            "path": "/sweets/dry fruits"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e3b",
-            "name": "Candy",
-            "parent": "/sweets",
-            "path": "/sweets/candy"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e3c",
-            "name": "Cookies",
-            "parent": "/sweets",
-            "path": "/sweets/cookies"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e3d",
-            "name": "Ice cream",
-            "parent": "/sweets",
-            "path": "/sweets/ice cream"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e3e",
-            "name": "Ice cream 1L",
-            "parent": "/sweets",
-            "path": "/sweets/ice cream 1l"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e3f",
-            "name": "Chocolate",
-            "parent": "/sweets",
-            "path": "/sweets/chocolate"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e40",
-            "name": "Desert",
-            "parent": "/sweets",
-            "path": "/sweets/desert"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e41",
-            "name": "Honey 0.4",
-            "parent": "/sweets",
-            "path": "/sweets/honey 0.4"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e42",
-            "name": "Beauty",
-            "parent": "/",
-            "path": "/Beauty"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e43",
-            "name": "Haircut",
-            "parent": "/beauty",
-            "path": "/beauty/haircut"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e44",
-            "name": "Hair coloring",
-            "parent": "/beauty",
-            "path": "/beauty/hair coloring"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e45",
-            "name": "Sun protection",
-            "parent": "/beauty",
-            "path": "/beauty/sun protection"
-        },
-        {
-            "id": "5f288bf5ab1091c54b718e46",
-            "name": "Sugaring",
-            "parent": "/beauty",
-            "path": "/beauty/sugaring"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e47",
-            "name": "Cleaning",
-            "parent": "/beauty",
-            "path": "/beauty/cleaning"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e48",
-            "name": "Grocery",
-            "parent": "/",
-            "path": "/Grocery"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e49",
-            "name": "Linen",
-            "parent": "/grocery",
-            "path": "/grocery/linen"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e4a",
-            "name": "Tomato paste",
-            "parent": "/grocery",
-            "path": "/grocery/tomato paste"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e4b",
-            "name": "Mustard",
-            "parent": "/grocery",
-            "path": "/grocery/mustard"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e4c",
-            "name": "Flour",
-            "parent": "/grocery",
-            "path": "/grocery/flour"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e4d",
-            "name": "Oyster sauce",
-            "parent": "/grocery",
-            "path": "/grocery/oyster sauce"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e4e",
-            "name": "Flakes",
-            "parent": "/grocery",
-            "path": "/grocery/flakes"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e4f",
-            "name": "Musli",
-            "parent": "/grocery",
-            "path": "/grocery/musli"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e50",
-            "name": "Rice 0.4 Kg",
-            "parent": "/grocery",
-            "path": "/grocery/rice 0.4 kg"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e51",
-            "name": "Barley",
-            "parent": "/grocery",
-            "path": "/grocery/barley"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e52",
-            "name": "Chili sause",
-            "parent": "/grocery",
-            "path": "/grocery/chili sause"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e53",
-            "name": "Coconut milk",
-            "parent": "/grocery",
-            "path": "/grocery/coconut milk"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e54",
-            "name": "Cacao",
-            "parent": "/grocery",
-            "path": "/grocery/cacao"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e55",
-            "name": "Salt",
-            "parent": "/grocery",
-            "path": "/grocery/salt"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e56",
-            "name": "Lasagne",
-            "parent": "/grocery",
-            "path": "/grocery/lasagne"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e57",
-            "name": "Pasta",
-            "parent": "/grocery",
-            "path": "/grocery/pasta"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e58",
-            "name": "Pomelo",
-            "parent": "/grocery",
-            "path": "/grocery/pomelo"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e59",
-            "name": "Instant noodles",
-            "parent": "/grocery",
-            "path": "/grocery/instant noodles"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e5a",
-            "name": "Olive oil",
-            "parent": "/grocery",
-            "path": "/grocery/olive oil"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e5b",
-            "name": "Beans",
-            "parent": "/grocery",
-            "path": "/grocery/beans"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e5c",
-            "name": "Oatmeal",
-            "parent": "/grocery",
-            "path": "/grocery/oatmeal"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e5d",
-            "name": "Sugar",
-            "parent": "/grocery",
-            "path": "/grocery/sugar"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e5e",
-            "name": "Rice noodles",
-            "parent": "/grocery",
-            "path": "/grocery/rice noodles"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e5f",
-            "name": "Syrop",
-            "parent": "/grocery",
-            "path": "/grocery/syrop"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e60",
-            "name": "Spice",
-            "parent": "/grocery",
-            "path": "/grocery/spice"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e61",
-            "name": "Ketchup",
-            "parent": "/grocery",
-            "path": "/grocery/ketchup"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e62",
-            "name": "Bakery stuff",
-            "parent": "/grocery",
-            "path": "/grocery/bakery stuff"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e63",
-            "name": "Buckwheat",
-            "parent": "/grocery",
-            "path": "/grocery/buckwheat"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e64",
-            "name": "Fish souce",
-            "parent": "/grocery",
-            "path": "/grocery/fish souce"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e65",
-            "name": "Rice flakes",
-            "parent": "/grocery",
-            "path": "/grocery/rice flakes"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e66",
-            "name": "Wheatmeal",
-            "parent": "/grocery",
-            "path": "/grocery/wheatmeal"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e67",
-            "name": "Coffee",
-            "parent": "/grocery",
-            "path": "/grocery/coffee"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e68",
-            "name": "Tea",
-            "parent": "/grocery",
-            "path": "/grocery/tea"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e69",
-            "name": "Lentil",
-            "parent": "/grocery",
-            "path": "/grocery/lentil"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e6a",
-            "name": "Rice 1 Kg",
-            "parent": "/grocery",
-            "path": "/grocery/rice 1 kg"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e6b",
-            "name": "Chia seeds",
-            "parent": "/grocery",
-            "path": "/grocery/chia seeds"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e6c",
-            "name": "Soi sause",
-            "parent": "/grocery",
-            "path": "/grocery/soi sause"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e6d",
-            "name": "Cornmeal",
-            "parent": "/grocery",
-            "path": "/grocery/cornmeal"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e6e",
-            "name": "Sugar powder",
-            "parent": "/grocery",
-            "path": "/grocery/sugar powder"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e6f",
-            "name": "Linen seeds",
-            "parent": "/grocery",
-            "path": "/grocery/linen seeds"
-        },
-        {
-            "id": "5f288bf6ab1091c54b718e70",
-            "name": "Balsamic vinegar",
-            "parent": "/grocery",
-            "path": "/grocery/balsamic vinegar"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e71",
-            "name": "Canning",
-            "parent": "/grocery",
-            "path": "/grocery/canning"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e72",
-            "name": "Mayonnaise",
-            "parent": "/grocery",
-            "path": "/grocery/mayonnaise"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e73",
-            "name": "Oil",
-            "parent": "/grocery",
-            "path": "/grocery/oil"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e74",
-            "name": "Smashed nuts",
-            "parent": "/grocery",
-            "path": "/grocery/smashed nuts"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e75",
-            "name": "Semifinished",
-            "parent": "/",
-            "path": "/Semifinished"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e76",
-            "name": "Pizza",
-            "parent": "/semifinished",
-            "path": "/semifinished/pizza"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e77",
-            "name": "Meat dumplings",
-            "parent": "/semifinished",
-            "path": "/semifinished/meat dumplings"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e78",
-            "name": "Frozen fruits",
-            "parent": "/semifinished",
-            "path": "/semifinished/frozen fruits"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e79",
-            "name": "Pelmeni",
-            "parent": "/semifinished",
-            "path": "/semifinished/pelmeni"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e7a",
-            "name": "Dill",
-            "parent": "/semifinished",
-            "path": "/semifinished/dill"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e7b",
-            "name": "Salad",
-            "parent": "/semifinished",
-            "path": "/semifinished/salad"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e7c",
-            "name": "Spinach",
-            "parent": "/semifinished",
-            "path": "/semifinished/spinach"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e7d",
-            "name": "Frozen vegetables",
-            "parent": "/semifinished",
-            "path": "/semifinished/frozen vegetables"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e7e",
-            "name": "Sushi",
-            "parent": "/semifinished",
-            "path": "/semifinished/sushi"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e7f",
-            "name": "Frozen fish",
-            "parent": "/semifinished",
-            "path": "/semifinished/frozen fish"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e80",
-            "name": "Crockets",
-            "parent": "/semifinished",
-            "path": "/semifinished/crockets"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e81",
-            "name": "French Dough",
-            "parent": "/semifinished",
-            "path": "/semifinished/french dough"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e82",
-            "name": "Seafood",
-            "parent": "/semifinished",
-            "path": "/semifinished/seafood"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e83",
-            "name": "1",
-            "parent": "/",
-            "path": "/1"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e84",
-            "name": "12",
-            "parent": "/1",
-            "path": "/1/12"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e85",
-            "name": "11",
-            "parent": "/1",
-            "path": "/1/11"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e86",
-            "name": "313",
-            "parent": "/1",
-            "path": "/1/313"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e87",
-            "name": "Produce",
-            "parent": "/",
-            "path": "/Produce"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e88",
-            "name": "Pickles",
-            "parent": "/produce",
-            "path": "/produce/pickles"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e89",
-            "name": "Pomegranate",
-            "parent": "/produce",
-            "path": "/produce/pomegranate"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e8a",
-            "name": "Mixed salad",
-            "parent": "/produce",
-            "path": "/produce/mixed salad"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e8b",
-            "name": "Mango",
-            "parent": "/produce",
-            "path": "/produce/mango"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e8c",
-            "name": "Cabbage",
-            "parent": "/produce",
-            "path": "/produce/cabbage"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e8d",
-            "name": "Persimmon",
-            "parent": "/produce",
-            "path": "/produce/persimmon"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e8e",
-            "name": "Apple",
-            "parent": "/produce",
-            "path": "/produce/apple"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e8f",
-            "name": "Potato",
-            "parent": "/produce",
-            "path": "/produce/potato"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e90",
-            "name": "Pomelo",
-            "parent": "/produce",
-            "path": "/produce/pomelo"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e91",
-            "name": "Grapefruit",
-            "parent": "/produce",
-            "path": "/produce/grapefruit"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e92",
-            "name": "Cauliflower",
-            "parent": "/produce",
-            "path": "/produce/cauliflower"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e93",
-            "name": "Mandarin",
-            "parent": "/produce",
-            "path": "/produce/mandarin"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e94",
-            "name": "Pears",
-            "parent": "/produce",
-            "path": "/produce/pears"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e95",
-            "name": "Carrot",
-            "parent": "/produce",
-            "path": "/produce/carrot"
-        },
-        {
-            "id": "5f288bf7ab1091c54b718e96",
-            "name": "French bean",
-            "parent": "/produce",
-            "path": "/produce/french bean"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718e97",
-            "name": "Sweet Cherry",
-            "parent": "/produce",
-            "path": "/produce/sweet cherry"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718e98",
-            "name": "Zucchini",
-            "parent": "/produce",
-            "path": "/produce/zucchini"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718e99",
-            "name": "Orange",
-            "parent": "/produce",
-            "path": "/produce/orange"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718e9a",
-            "name": "Bob",
-            "parent": "/produce",
-            "path": "/produce/bob"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718e9b",
-            "name": "Parsley root",
-            "parent": "/produce",
-            "path": "/produce/parsley root"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718e9c",
-            "name": "Coconut",
-            "parent": "/produce",
-            "path": "/produce/coconut"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718e9d",
-            "name": "Kiwi",
-            "parent": "/produce",
-            "path": "/produce/kiwi"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718e9e",
-            "name": "Celery root",
-            "parent": "/produce",
-            "path": "/produce/celery root"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718e9f",
-            "name": "Green Paper",
-            "parent": "/produce",
-            "path": "/produce/green paper"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ea0",
-            "name": "Water melon",
-            "parent": "/produce",
-            "path": "/produce/water melon"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ea1",
-            "name": "Radish",
-            "parent": "/produce",
-            "path": "/produce/radish"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ea2",
-            "name": "Salad",
-            "parent": "/produce",
-            "path": "/produce/salad"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ea3",
-            "name": "Red paper",
-            "parent": "/produce",
-            "path": "/produce/red paper"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ea4",
-            "name": "Cherry tomato",
-            "parent": "/produce",
-            "path": "/produce/cherry tomato"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ea5",
-            "name": "Plum",
-            "parent": "/produce",
-            "path": "/produce/plum"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ea6",
-            "name": "Soy",
-            "parent": "/produce",
-            "path": "/produce/soy"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ea7",
-            "name": "Pumpkin",
-            "parent": "/produce",
-            "path": "/produce/pumpkin"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ea8",
-            "name": "Green onion",
-            "parent": "/produce",
-            "path": "/produce/green onion"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ea9",
-            "name": "Leek",
-            "parent": "/produce",
-            "path": "/produce/leek"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eaa",
-            "name": "Lemon",
-            "parent": "/produce",
-            "path": "/produce/lemon"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eab",
-            "name": "Paprica",
-            "parent": "/produce",
-            "path": "/produce/paprica"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eac",
-            "name": "Chili",
-            "parent": "/produce",
-            "path": "/produce/chili"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ead",
-            "name": "Corn",
-            "parent": "/produce",
-            "path": "/produce/corn"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eae",
-            "name": "Basil",
-            "parent": "/produce",
-            "path": "/produce/basil"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eaf",
-            "name": "Spinach",
-            "parent": "/produce",
-            "path": "/produce/spinach"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eb0",
-            "name": "Green Asparagus",
-            "parent": "/produce",
-            "path": "/produce/green asparagus"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eb1",
-            "name": "Garlik",
-            "parent": "/produce",
-            "path": "/produce/garlik"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eb2",
-            "name": "Ginger",
-            "parent": "/produce",
-            "path": "/produce/ginger"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eb3",
-            "name": "Lime",
-            "parent": "/produce",
-            "path": "/produce/lime"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eb4",
-            "name": "Beetroot",
-            "parent": "/produce",
-            "path": "/produce/beetroot"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eb5",
-            "name": "Avocado",
-            "parent": "/produce",
-            "path": "/produce/avocado"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eb6",
-            "name": "European blueberry",
-            "parent": "/produce",
-            "path": "/produce/european blueberry"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eb7",
-            "name": "Tropical fruits",
-            "parent": "/produce",
-            "path": "/produce/tropical fruits"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eb8",
-            "name": "Yellow Paper",
-            "parent": "/produce",
-            "path": "/produce/yellow paper"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eb9",
-            "name": "Pineapple",
-            "parent": "/produce",
-            "path": "/produce/pineapple"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718eba",
-            "name": "Celery",
-            "parent": "/produce",
-            "path": "/produce/celery"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ebb",
-            "name": "Olives",
-            "parent": "/produce",
-            "path": "/produce/olives"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ebc",
-            "name": "Peach",
-            "parent": "/produce",
-            "path": "/produce/peach"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ebd",
-            "name": "Tomato packed",
-            "parent": "/produce",
-            "path": "/produce/tomato packed"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ebe",
-            "name": "Rhubarb",
-            "parent": "/produce",
-            "path": "/produce/rhubarb"
-        },
-        {
-            "id": "5f288bf8ab1091c54b718ebf",
-            "name": "Gooseberry",
-            "parent": "/produce",
-            "path": "/produce/gooseberry"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ec0",
-            "name": "Cucumber",
-            "parent": "/produce",
-            "path": "/produce/cucumber"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ec1",
-            "name": "Arugula",
-            "parent": "/produce",
-            "path": "/produce/arugula"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ec2",
-            "name": "Greens",
-            "parent": "/produce",
-            "path": "/produce/greens"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ec3",
-            "name": "Fig",
-            "parent": "/produce",
-            "path": "/produce/fig"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ec4",
-            "name": "Season tomatoes",
-            "parent": "/produce",
-            "path": "/produce/season tomatoes"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ec5",
-            "name": "Mushroom",
-            "parent": "/produce",
-            "path": "/produce/mushroom"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ec6",
-            "name": "Nektarin",
-            "parent": "/produce",
-            "path": "/produce/nektarin"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ec7",
-            "name": "Mulberry",
-            "parent": "/produce",
-            "path": "/produce/mulberry"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ec8",
-            "name": "Apricot",
-            "parent": "/produce",
-            "path": "/produce/apricot"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ec9",
-            "name": "Grape",
-            "parent": "/produce",
-            "path": "/produce/grape"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718eca",
-            "name": "Banana",
-            "parent": "/produce",
-            "path": "/produce/banana"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ecb",
-            "name": "Onion",
-            "parent": "/produce",
-            "path": "/produce/onion"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ecc",
-            "name": "Vegetables mix",
-            "parent": "/produce",
-            "path": "/produce/vegetables mix"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ecd",
-            "name": "Eggplant",
-            "parent": "/produce",
-            "path": "/produce/eggplant"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ece",
-            "name": "Pear",
-            "parent": "/produce",
-            "path": "/produce/pear"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ecf",
-            "name": "Raspberry",
-            "parent": "/produce",
-            "path": "/produce/raspberry"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ed0",
-            "name": "Ramiro  paper",
-            "parent": "/produce",
-            "path": "/produce/ramiro  paper"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ed1",
-            "name": "Blueberry",
-            "parent": "/produce",
-            "path": "/produce/blueberry"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ed2",
-            "name": "Strawberry",
-            "parent": "/produce",
-            "path": "/produce/strawberry"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ed3",
-            "name": "Tomato",
-            "parent": "/produce",
-            "path": "/produce/tomato"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ed4",
-            "name": "White Asparagus",
-            "parent": "/produce",
-            "path": "/produce/white asparagus"
-        },
-        {
-            "id": "5f288bf9ab1091c54b718ed5",
-            "name": "Broccoli",
-            "parent": "/produce",
-            "path": "/produce/broccoli"
-        }
-    ]
+  "categories": [
+    {
+      "id": "5f288becab1091c54b718cd4",
+      "name": "Eat Out",
+      "parent": "/",
+      "path": "/Eat Out"
+    },
+    {
+      "id": "5f288becab1091c54b718cd5",
+      "name": "Oriental express",
+      "parent": "/eat out",
+      "path": "/eat out/oriental express"
+    },
+    {
+      "id": "5f288becab1091c54b718cd6",
+      "name": "Pizza",
+      "parent": "/eat out",
+      "path": "/eat out/pizza"
+    },
+    {
+      "id": "5f288becab1091c54b718cd7",
+      "name": "Wok",
+      "parent": "/eat out",
+      "path": "/eat out/wok"
+    },
+    {
+      "id": "5f288becab1091c54b718cd8",
+      "name": "Framkies",
+      "parent": "/eat out",
+      "path": "/eat out/framkies"
+    },
+    {
+      "id": "5f288becab1091c54b718cd9",
+      "name": "Donuts",
+      "parent": "/eat out",
+      "path": "/eat out/donuts"
+    },
+    {
+      "id": "5f288becab1091c54b718cda",
+      "name": "Budda lounge",
+      "parent": "/eat out",
+      "path": "/eat out/budda lounge"
+    },
+    {
+      "id": "5f288becab1091c54b718cdb",
+      "name": "Tea",
+      "parent": "/eat out",
+      "path": "/eat out/tea"
+    },
+    {
+      "id": "5f288becab1091c54b718cdc",
+      "name": "Hot-dog+pancake",
+      "parent": "/eat out",
+      "path": "/eat out/hot-dog+pancake"
+    },
+    {
+      "id": "5f288becab1091c54b718cdd",
+      "name": "Bar",
+      "parent": "/eat out",
+      "path": "/eat out/bar"
+    },
+    {
+      "id": "5f288becab1091c54b718cde",
+      "name": "Restaurant",
+      "parent": "/eat out",
+      "path": "/eat out/restaurant"
+    },
+    {
+      "id": "5f288becab1091c54b718cdf",
+      "name": "Pizza 45 cm",
+      "parent": "/eat out",
+      "path": "/eat out/pizza 45 cm"
+    },
+    {
+      "id": "5f288becab1091c54b718ce0",
+      "name": "Coffee",
+      "parent": "/eat out",
+      "path": "/eat out/coffee"
+    },
+    {
+      "id": "5f288becab1091c54b718ce1",
+      "name": "Street food",
+      "parent": "/eat out",
+      "path": "/eat out/street food"
+    },
+    {
+      "id": "5f288becab1091c54b718ce2",
+      "name": "Vietnamise",
+      "parent": "/eat out",
+      "path": "/eat out/vietnamise"
+    },
+    {
+      "id": "5f288becab1091c54b718ce3",
+      "name": "Pub",
+      "parent": "/eat out",
+      "path": "/eat out/pub"
+    },
+    {
+      "id": "5f288becab1091c54b718ce4",
+      "name": "Beer",
+      "parent": "/eat out",
+      "path": "/eat out/beer"
+    },
+    {
+      "id": "5f288becab1091c54b718ce5",
+      "name": "Burgerking",
+      "parent": "/eat out",
+      "path": "/eat out/burgerking"
+    },
+    {
+      "id": "5f288becab1091c54b718ce6",
+      "name": "Starbucks",
+      "parent": "/eat out",
+      "path": "/eat out/starbucks"
+    },
+    {
+      "id": "5f288becab1091c54b718ce7",
+      "name": "Paris",
+      "parent": "/eat out",
+      "path": "/eat out/paris"
+    },
+    {
+      "id": "5f288becab1091c54b718ce8",
+      "name": "Costa cofe",
+      "parent": "/eat out",
+      "path": "/eat out/costa cofe"
+    },
+    {
+      "id": "5f288becab1091c54b718ce9",
+      "name": "Thai soup",
+      "parent": "/eat out",
+      "path": "/eat out/thai soup"
+    },
+    {
+      "id": "5f288becab1091c54b718cea",
+      "name": "Sushi",
+      "parent": "/eat out",
+      "path": "/eat out/sushi"
+    },
+    {
+      "id": "5f288becab1091c54b718ceb",
+      "name": "Lunch",
+      "parent": "/eat out",
+      "path": "/eat out/lunch"
+    },
+    {
+      "id": "5f288becab1091c54b718cec",
+      "name": "Burger Pasibus",
+      "parent": "/eat out",
+      "path": "/eat out/burger pasibus"
+    },
+    {
+      "id": "5f288becab1091c54b718ced",
+      "name": "Sandwitch",
+      "parent": "/eat out",
+      "path": "/eat out/sandwitch"
+    },
+    {
+      "id": "5f288becab1091c54b718cee",
+      "name": "Snacks",
+      "parent": "/",
+      "path": "/Snacks"
+    },
+    {
+      "id": "5f288bedab1091c54b718cef",
+      "name": "Peanuts",
+      "parent": "/snacks",
+      "path": "/snacks/peanuts"
+    },
+    {
+      "id": "5f288bedab1091c54b718cf0",
+      "name": "Hazelnut",
+      "parent": "/snacks",
+      "path": "/snacks/hazelnut"
+    },
+    {
+      "id": "5f288bedab1091c54b718cf1",
+      "name": "Gum",
+      "parent": "/snacks",
+      "path": "/snacks/gum"
+    },
+    {
+      "id": "5f288bedab1091c54b718cf2",
+      "name": "Cashew nut",
+      "parent": "/snacks",
+      "path": "/snacks/cashew nut"
+    },
+    {
+      "id": "5f288bedab1091c54b718cf3",
+      "name": "Sweets",
+      "parent": "/snacks",
+      "path": "/snacks/sweets"
+    },
+    {
+      "id": "5f288bedab1091c54b718cf4",
+      "name": "Pistachio",
+      "parent": "/snacks",
+      "path": "/snacks/pistachio"
+    },
+    {
+      "id": "5f288bedab1091c54b718cf5",
+      "name": "Dry fish",
+      "parent": "/snacks",
+      "path": "/snacks/dry fish"
+    },
+    {
+      "id": "5f288bedab1091c54b718cf6",
+      "name": "Nuts muss",
+      "parent": "/snacks",
+      "path": "/snacks/nuts muss"
+    },
+    {
+      "id": "5f288bedab1091c54b718cf7",
+      "name": "Chips",
+      "parent": "/snacks",
+      "path": "/snacks/chips"
+    },
+    {
+      "id": "5f288bedab1091c54b718cf8",
+      "name": "Peanut butter",
+      "parent": "/snacks",
+      "path": "/snacks/peanut butter"
+    },
+    {
+      "id": "5f288bedab1091c54b718cf9",
+      "name": "Almond",
+      "parent": "/snacks",
+      "path": "/snacks/almond"
+    },
+    {
+      "id": "5f288bedab1091c54b718cfa",
+      "name": "Sunflower seeds",
+      "parent": "/snacks",
+      "path": "/snacks/sunflower seeds"
+    },
+    {
+      "id": "5f288bedab1091c54b718cfb",
+      "name": "Nuts mix",
+      "parent": "/snacks",
+      "path": "/snacks/nuts mix"
+    },
+    {
+      "id": "5f288bedab1091c54b718cfc",
+      "name": "Sandwitch",
+      "parent": "/snacks",
+      "path": "/snacks/sandwitch"
+    },
+    {
+      "id": "5f288bedab1091c54b718cfd",
+      "name": "Сhestnuts",
+      "parent": "/snacks",
+      "path": "/snacks/сhestnuts"
+    },
+    {
+      "id": "5f288bedab1091c54b718cfe",
+      "name": "Rice waffles",
+      "parent": "/snacks",
+      "path": "/snacks/rice waffles"
+    },
+    {
+      "id": "5f288bedab1091c54b718cff"
+    },
+    {
+      "id": "5f288bedab1091c54b718d00",
+      "name": "Clothing",
+      "parent": "/baby",
+      "path": "/baby/clothing"
+    },
+    {
+      "id": "5f288bedab1091c54b718d01",
+      "name": "Books",
+      "parent": "/baby",
+      "path": "/baby/books"
+    },
+    {
+      "id": "5f288bedab1091c54b718d02",
+      "name": "Furniture",
+      "parent": "/baby",
+      "path": "/baby/furniture"
+    },
+    {
+      "id": "5f288bedab1091c54b718d03",
+      "name": "Diapers",
+      "parent": "/baby",
+      "path": "/baby/diapers"
+    },
+    {
+      "id": "5f288bedab1091c54b718d04",
+      "name": "Food",
+      "parent": "/baby",
+      "path": "/baby/food"
+    },
+    {
+      "id": "5f288bedab1091c54b718d05",
+      "name": "Accessories",
+      "parent": "/baby",
+      "path": "/baby/accessories"
+    },
+    {
+      "id": "5f288bedab1091c54b718d06",
+      "name": "Toys",
+      "parent": "/baby",
+      "path": "/baby/toys"
+    },
+    {
+      "id": "5f288bedab1091c54b718d07",
+      "name": "Beauty",
+      "parent": "/baby",
+      "path": "/baby/beauty"
+    },
+    {
+      "id": "5f288bedab1091c54b718d08",
+      "name": "Stroller",
+      "parent": "/baby",
+      "path": "/baby/stroller"
+    },
+    {
+      "id": "5f288bedab1091c54b718d09",
+      "name": "Dinnerware",
+      "parent": "/baby",
+      "path": "/baby/dinnerware"
+    },
+    {
+      "id": "5f288bedab1091c54b718d0a",
+      "name": "Shoes",
+      "parent": "/baby",
+      "path": "/baby/shoes"
+    },
+    {
+      "id": "5f288bedab1091c54b718d0b",
+      "name": "Documents",
+      "parent": "/",
+      "path": "/Documents"
+    },
+    {
+      "id": "5f288bedab1091c54b718d0c",
+      "name": "Visa",
+      "parent": "/documents",
+      "path": "/documents/visa"
+    },
+    {
+      "id": "5f288bedab1091c54b718d0d",
+      "name": "Photo",
+      "parent": "/documents",
+      "path": "/documents/photo"
+    },
+    {
+      "id": "5f288bedab1091c54b718d0e",
+      "name": "Documents",
+      "parent": "/documents",
+      "path": "/documents/documents"
+    },
+    {
+      "id": "5f288bedab1091c54b718d0f",
+      "name": "Translation",
+      "parent": "/documents",
+      "path": "/documents/translation"
+    },
+    {
+      "id": "5f288bedab1091c54b718d10",
+      "name": "Home",
+      "parent": "/",
+      "path": "/Home"
+    },
+    {
+      "id": "5f288bedab1091c54b718d11",
+      "name": "Ikea - Delivery",
+      "parent": "/home",
+      "path": "/home/ikea - delivery"
+    },
+    {
+      "id": "5f288bedab1091c54b718d12",
+      "name": "Stationery",
+      "parent": "/home",
+      "path": "/home/stationery"
+    },
+    {
+      "id": "5f288bedab1091c54b718d13",
+      "name": "Ikea - Home stuff",
+      "parent": "/home",
+      "path": "/home/ikea - home stuff"
+    },
+    {
+      "id": "5f288bedab1091c54b718d14",
+      "name": "Cooking pot",
+      "parent": "/home",
+      "path": "/home/cooking pot"
+    },
+    {
+      "id": "5f288bedab1091c54b718d15",
+      "name": "Instruments",
+      "parent": "/home",
+      "path": "/home/instruments"
+    },
+    {
+      "id": "5f288beeab1091c54b718d16",
+      "name": "Home",
+      "parent": "/home",
+      "path": "/home/home"
+    },
+    {
+      "id": "5f288beeab1091c54b718d17",
+      "name": "Cloth dryer",
+      "parent": "/home",
+      "path": "/home/cloth dryer"
+    },
+    {
+      "id": "5f288beeab1091c54b718d18",
+      "name": "Plates",
+      "parent": "/home",
+      "path": "/home/plates"
+    },
+    {
+      "id": "5f288beeab1091c54b718d19",
+      "name": "Flowers",
+      "parent": "/home",
+      "path": "/home/flowers"
+    },
+    {
+      "id": "5f288beeab1091c54b718d1a",
+      "name": "Kitchen stuff",
+      "parent": "/home",
+      "path": "/home/kitchen stuff"
+    },
+    {
+      "id": "5f288beeab1091c54b718d1b",
+      "name": "Ikea - Furniture",
+      "parent": "/home",
+      "path": "/home/ikea - furniture"
+    },
+    {
+      "id": "5f288beeab1091c54b718d1c",
+      "name": "Glue",
+      "parent": "/home",
+      "path": "/home/glue"
+    },
+    {
+      "id": "5f288beeab1091c54b718d1d",
+      "name": "Light bulb",
+      "parent": "/home",
+      "path": "/home/light bulb"
+    },
+    {
+      "id": "5f288beeab1091c54b718d1e",
+      "name": "Plaid",
+      "parent": "/home",
+      "path": "/home/plaid"
+    },
+    {
+      "id": "5f288beeab1091c54b718d1f",
+      "name": "Cleaning",
+      "parent": "/home",
+      "path": "/home/cleaning"
+    },
+    {
+      "id": "5f288beeab1091c54b718d20",
+      "name": "Fixture",
+      "parent": "/home",
+      "path": "/home/fixture"
+    },
+    {
+      "id": "5f288beeab1091c54b718d21",
+      "name": "Bottle",
+      "parent": "/home",
+      "path": "/home/bottle"
+    },
+    {
+      "id": "5f288beeab1091c54b718d22",
+      "name": "Garbage bags",
+      "parent": "/home",
+      "path": "/home/garbage bags"
+    },
+    {
+      "id": "5f288beeab1091c54b718d23",
+      "name": "Payments",
+      "parent": "/",
+      "path": "/Payments"
+    },
+    {
+      "id": "5f288beeab1091c54b718d24",
+      "name": "Mobile apps",
+      "parent": "/payments",
+      "path": "/payments/mobile apps"
+    },
+    {
+      "id": "5f288beeab1091c54b718d25",
+      "name": "Bank fee",
+      "parent": "/payments",
+      "path": "/payments/bank fee"
+    },
+    {
+      "id": "5f288beeab1091c54b718d26",
+      "name": "Electricity",
+      "parent": "/payments",
+      "path": "/payments/electricity"
+    },
+    {
+      "id": "5f288beeab1091c54b718d27",
+      "name": "Internet",
+      "parent": "/payments",
+      "path": "/payments/internet"
+    },
+    {
+      "id": "5f288beeab1091c54b718d28",
+      "name": "Apple subscription",
+      "parent": "/payments",
+      "path": "/payments/apple subscription"
+    },
+    {
+      "id": "5f288beeab1091c54b718d29",
+      "name": "Dog tax",
+      "parent": "/payments",
+      "path": "/payments/dog tax"
+    },
+    {
+      "id": "5f288beeab1091c54b718d2a",
+      "name": "Travel insurance",
+      "parent": "/payments",
+      "path": "/payments/travel insurance"
+    },
+    {
+      "id": "5f288beeab1091c54b718d2b",
+      "name": "TV tax",
+      "parent": "/payments",
+      "path": "/payments/tv tax"
+    },
+    {
+      "id": "5f288beeab1091c54b718d2c",
+      "name": "Rent deposit",
+      "parent": "/payments",
+      "path": "/payments/rent deposit"
+    },
+    {
+      "id": "5f288beeab1091c54b718d2d",
+      "name": "Mobile",
+      "parent": "/payments",
+      "path": "/payments/mobile"
+    },
+    {
+      "id": "5f288beeab1091c54b718d2e",
+      "name": "Post",
+      "parent": "/payments",
+      "path": "/payments/post"
+    },
+    {
+      "id": "5f288beeab1091c54b718d2f",
+      "name": "Games",
+      "parent": "/payments",
+      "path": "/payments/games"
+    },
+    {
+      "id": "5f288beeab1091c54b718d30",
+      "name": "Amazon prime",
+      "parent": "/payments",
+      "path": "/payments/amazon prime"
+    },
+    {
+      "id": "5f288beeab1091c54b718d31",
+      "name": "Rent",
+      "parent": "/payments",
+      "path": "/payments/rent"
+    },
+    {
+      "id": "5f288beeab1091c54b718d32",
+      "name": "Meat",
+      "parent": "/",
+      "path": "/Meat"
+    },
+    {
+      "id": "5f288beeab1091c54b718d33",
+      "name": "Turkey filet",
+      "parent": "/meat",
+      "path": "/meat/turkey filet"
+    },
+    {
+      "id": "5f288beeab1091c54b718d34",
+      "name": "Whole chicken",
+      "parent": "/meat",
+      "path": "/meat/whole chicken"
+    },
+    {
+      "id": "5f288beeab1091c54b718d35",
+      "name": "Chicken breast",
+      "parent": "/meat",
+      "path": "/meat/chicken breast"
+    },
+    {
+      "id": "5f288beeab1091c54b718d36",
+      "name": "Whole duck",
+      "parent": "/meat",
+      "path": "/meat/whole duck"
+    },
+    {
+      "id": "5f288beeab1091c54b718d37",
+      "name": "Turkey legs",
+      "parent": "/meat",
+      "path": "/meat/turkey legs"
+    },
+    {
+      "id": "5f288beeab1091c54b718d38",
+      "name": "Pork legs",
+      "parent": "/meat",
+      "path": "/meat/pork legs"
+    },
+    {
+      "id": "5f288beeab1091c54b718d39",
+      "name": "Chicken udo",
+      "parent": "/meat",
+      "path": "/meat/chicken udo"
+    },
+    {
+      "id": "5f288beeab1091c54b718d3a",
+      "name": "Chicken other",
+      "parent": "/meat",
+      "path": "/meat/chicken other"
+    },
+    {
+      "id": "5f288beeab1091c54b718d3b",
+      "name": "Pork neck",
+      "parent": "/meat",
+      "path": "/meat/pork neck"
+    },
+    {
+      "id": "5f288beeab1091c54b718d3c",
+      "name": "Beef expensive",
+      "parent": "/meat",
+      "path": "/meat/beef expensive"
+    },
+    {
+      "id": "5f288beeab1091c54b718d3d",
+      "name": "Chicken legs",
+      "parent": "/meat",
+      "path": "/meat/chicken legs"
+    },
+    {
+      "id": "5f288beeab1091c54b718d3e",
+      "name": "Chicken filet",
+      "parent": "/meat",
+      "path": "/meat/chicken filet"
+    },
+    {
+      "id": "5f288befab1091c54b718d3f",
+      "name": "Whole goose",
+      "parent": "/meat",
+      "path": "/meat/whole goose"
+    },
+    {
+      "id": "5f288befab1091c54b718d40",
+      "name": "Chicken legs boneless",
+      "parent": "/meat",
+      "path": "/meat/chicken legs boneless"
+    },
+    {
+      "id": "5f288befab1091c54b718d41",
+      "name": "Dry meat",
+      "parent": "/meat",
+      "path": "/meat/dry meat"
+    },
+    {
+      "id": "5f288befab1091c54b718d42",
+      "name": "Turkey udo",
+      "parent": "/meat",
+      "path": "/meat/turkey udo"
+    },
+    {
+      "id": "5f288befab1091c54b718d43",
+      "name": "Chicken wings",
+      "parent": "/meat",
+      "path": "/meat/chicken wings"
+    },
+    {
+      "id": "5f288befab1091c54b718d44",
+      "name": "Pork steak",
+      "parent": "/meat",
+      "path": "/meat/pork steak"
+    },
+    {
+      "id": "5f288befab1091c54b718d45",
+      "name": "Ground meat",
+      "parent": "/meat",
+      "path": "/meat/ground meat"
+    },
+    {
+      "id": "5f288befab1091c54b718d46",
+      "name": "Duck legs",
+      "parent": "/meat",
+      "path": "/meat/duck legs"
+    },
+    {
+      "id": "5f288befab1091c54b718d47",
+      "name": "Pharmacy",
+      "parent": "/",
+      "path": "/Pharmacy"
+    },
+    {
+      "id": "5f288befab1091c54b718d48",
+      "name": "Medicine",
+      "parent": "/pharmacy",
+      "path": "/pharmacy/medicine"
+    },
+    {
+      "id": "5f288befab1091c54b718d49",
+      "name": "Rowatinex",
+      "parent": "/pharmacy",
+      "path": "/pharmacy/rowatinex"
+    },
+    {
+      "id": "5f288befab1091c54b718d4a",
+      "name": "Fish",
+      "parent": "/",
+      "path": "/Fish"
+    },
+    {
+      "id": "5f288befab1091c54b718d4b",
+      "name": "Salmon",
+      "parent": "/fish",
+      "path": "/fish/salmon"
+    },
+    {
+      "id": "5f288befab1091c54b718d4c",
+      "name": "Herring",
+      "parent": "/fish",
+      "path": "/fish/herring"
+    },
+    {
+      "id": "5f288befab1091c54b718d4d",
+      "name": "Smoked roach",
+      "parent": "/fish",
+      "path": "/fish/smoked roach"
+    },
+    {
+      "id": "5f288befab1091c54b718d4e",
+      "name": "Trout",
+      "parent": "/fish",
+      "path": "/fish/trout"
+    },
+    {
+      "id": "5f288befab1091c54b718d4f",
+      "name": "Smoked mackerel",
+      "parent": "/fish",
+      "path": "/fish/smoked mackerel"
+    },
+    {
+      "id": "5f288befab1091c54b718d50",
+      "name": "Rose fish",
+      "parent": "/fish",
+      "path": "/fish/rose fish"
+    },
+    {
+      "id": "5f288befab1091c54b718d51",
+      "name": "Shrimps",
+      "parent": "/fish",
+      "path": "/fish/shrimps"
+    },
+    {
+      "id": "5f288befab1091c54b718d52",
+      "name": "Octopus",
+      "parent": "/fish",
+      "path": "/fish/octopus"
+    },
+    {
+      "id": "5f288befab1091c54b718d53",
+      "name": "Health",
+      "parent": "/",
+      "path": "/Health"
+    },
+    {
+      "id": "5f288befab1091c54b718d54",
+      "name": "Glasses",
+      "parent": "/health",
+      "path": "/health/glasses"
+    },
+    {
+      "id": "5f288befab1091c54b718d55",
+      "name": "Health check - Gynecology",
+      "parent": "/health",
+      "path": "/health/health check - gynecology"
+    },
+    {
+      "id": "5f288befab1091c54b718d56",
+      "name": "Dogs",
+      "parent": "/",
+      "path": "/Dogs"
+    },
+    {
+      "id": "5f288befab1091c54b718d57",
+      "name": "Transport box",
+      "parent": "/dogs",
+      "path": "/dogs/transport box"
+    },
+    {
+      "id": "5f288befab1091c54b718d58",
+      "name": "Toy",
+      "parent": "/dogs",
+      "path": "/dogs/toy"
+    },
+    {
+      "id": "5f288befab1091c54b718d59",
+      "name": "Food",
+      "parent": "/dogs",
+      "path": "/dogs/food"
+    },
+    {
+      "id": "5f288befab1091c54b718d5a",
+      "name": "Medicine",
+      "parent": "/dogs",
+      "path": "/dogs/medicine"
+    },
+    {
+      "id": "5f288befab1091c54b718d5b",
+      "name": "Packets",
+      "parent": "/dogs",
+      "path": "/dogs/packets"
+    },
+    {
+      "id": "5f288befab1091c54b718d5c",
+      "name": "Documents",
+      "parent": "/dogs",
+      "path": "/dogs/documents"
+    },
+    {
+      "id": "5f288befab1091c54b718d5d",
+      "name": "Treats",
+      "parent": "/dogs",
+      "path": "/dogs/treats"
+    },
+    {
+      "id": "5f288befab1091c54b718d5e",
+      "name": "Vet clinic",
+      "parent": "/dogs",
+      "path": "/dogs/vet clinic"
+    },
+    {
+      "id": "5f288befab1091c54b718d5f",
+      "name": "Dog beauty",
+      "parent": "/dogs",
+      "path": "/dogs/dog beauty"
+    },
+    {
+      "id": "5f288befab1091c54b718d60",
+      "name": "Health",
+      "parent": "/dogs",
+      "path": "/dogs/health"
+    },
+    {
+      "id": "5f288befab1091c54b718d61",
+      "name": "Accessories",
+      "parent": "/dogs",
+      "path": "/dogs/accessories"
+    },
+    {
+      "id": "5f288befab1091c54b718d62",
+      "name": "Hotel",
+      "parent": "/dogs",
+      "path": "/dogs/hotel"
+    },
+    {
+      "id": "5f288befab1091c54b718d63",
+      "name": "Dog haircut",
+      "parent": "/dogs",
+      "path": "/dogs/dog haircut"
+    },
+    {
+      "id": "5f288befab1091c54b718d64",
+      "name": "Kitchen stuff",
+      "parent": "/",
+      "path": "/Kitchen stuff"
+    },
+    {
+      "id": "5f288befab1091c54b718d65",
+      "name": "Paper",
+      "parent": "/kitchen stuff",
+      "path": "/kitchen stuff/paper"
+    },
+    {
+      "id": "5f288befab1091c54b718d66",
+      "name": "Packets",
+      "parent": "/kitchen stuff",
+      "path": "/kitchen stuff/packets"
+    },
+    {
+      "id": "5f288befab1091c54b718d67",
+      "name": "Folia",
+      "parent": "/kitchen stuff",
+      "path": "/kitchen stuff/folia"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d68",
+      "name": "Foil",
+      "parent": "/kitchen stuff",
+      "path": "/kitchen stuff/foil"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d69",
+      "name": "Wipes",
+      "parent": "/kitchen stuff",
+      "path": "/kitchen stuff/wipes"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d6a",
+      "name": "Sponges",
+      "parent": "/kitchen stuff",
+      "path": "/kitchen stuff/sponges"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d6b",
+      "name": "Sausage",
+      "parent": "/",
+      "path": "/Sausage"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d6c",
+      "name": "Packed meat",
+      "parent": "/sausage",
+      "path": "/sausage/packed meat"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d6d",
+      "name": "Meat",
+      "parent": "/sausage",
+      "path": "/sausage/meat"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d6e",
+      "name": "Pate",
+      "parent": "/sausage",
+      "path": "/sausage/pate"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d6f",
+      "name": "Sauseges",
+      "parent": "/sausage",
+      "path": "/sausage/sauseges"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d70",
+      "name": "Cheese",
+      "parent": "/",
+      "path": "/Cheese"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d71",
+      "name": "Pamesan",
+      "parent": "/cheese",
+      "path": "/cheese/pamesan"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d72",
+      "name": "Cheese",
+      "parent": "/cheese",
+      "path": "/cheese/cheese"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d73",
+      "name": "Mascarpone",
+      "parent": "/cheese",
+      "path": "/cheese/mascarpone"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d74",
+      "name": "Blue cheese",
+      "parent": "/cheese",
+      "path": "/cheese/blue cheese"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d75",
+      "name": "Mozzarella",
+      "parent": "/cheese",
+      "path": "/cheese/mozzarella"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d76",
+      "name": "Ricotta",
+      "parent": "/cheese",
+      "path": "/cheese/ricotta"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d77",
+      "name": "Oven cheese",
+      "parent": "/cheese",
+      "path": "/cheese/oven cheese"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d78",
+      "name": "Cheese packed",
+      "parent": "/cheese",
+      "path": "/cheese/cheese packed"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d79",
+      "name": "Smocked cheese",
+      "parent": "/cheese",
+      "path": "/cheese/smocked cheese"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d7a",
+      "name": "Transport",
+      "parent": "/",
+      "path": "/Transport"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d7b",
+      "name": "Air tickets",
+      "parent": "/transport",
+      "path": "/transport/air tickets"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d7c",
+      "name": "Bus tickets",
+      "parent": "/transport",
+      "path": "/transport/bus tickets"
+    },
+    {
+      "id": "5f288bf0ab1091c54b718d7d",
+      "name": "Montly ticket",
+      "parent": "/transport",
+      "path": "/transport/montly ticket"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d7e",
+      "name": "Metro",
+      "parent": "/transport",
+      "path": "/transport/metro"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d7f",
+      "name": "Single ticket",
+      "parent": "/transport",
+      "path": "/transport/single ticket"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d80",
+      "name": "Train tickets",
+      "parent": "/transport",
+      "path": "/transport/train tickets"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d81",
+      "name": "Luggage",
+      "parent": "/transport",
+      "path": "/transport/luggage"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d82",
+      "name": "3 month ticket",
+      "parent": "/transport",
+      "path": "/transport/3 month ticket"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d83",
+      "name": "Taxi",
+      "parent": "/transport",
+      "path": "/transport/taxi"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d84",
+      "name": "Hobby",
+      "parent": "/",
+      "path": "/Hobby"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d85",
+      "name": "Beer collection",
+      "parent": "/hobby",
+      "path": "/hobby/beer collection"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d86",
+      "name": "Games",
+      "parent": "/hobby",
+      "path": "/hobby/games"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d87",
+      "name": "Garden",
+      "parent": "/hobby",
+      "path": "/hobby/garden"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d88",
+      "name": "Pin collection",
+      "parent": "/hobby",
+      "path": "/hobby/pin collection"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d89",
+      "name": "Amazon hosting",
+      "parent": "/hobby",
+      "path": "/hobby/amazon hosting"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d8a",
+      "name": "Domain",
+      "parent": "/hobby",
+      "path": "/hobby/domain"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d8b",
+      "name": "Badger's hobby",
+      "parent": "/hobby",
+      "path": "/hobby/badger's hobby"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d8c",
+      "name": "Azure hosting",
+      "parent": "/hobby",
+      "path": "/hobby/azure hosting"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d8d",
+      "name": "Knitting",
+      "parent": "/hobby",
+      "path": "/hobby/knitting"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d8e",
+      "name": "Beverages",
+      "parent": "/",
+      "path": "/Beverages"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d8f",
+      "name": "Sweet Water",
+      "parent": "/beverages",
+      "path": "/beverages/sweet water"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d90",
+      "name": "Water 1.5 L",
+      "parent": "/beverages",
+      "path": "/beverages/water 1.5 l"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d91",
+      "name": "Hot chocalate",
+      "parent": "/beverages",
+      "path": "/beverages/hot chocalate"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d92",
+      "name": "Water 0.5 L",
+      "parent": "/beverages",
+      "path": "/beverages/water 0.5 l"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d93",
+      "name": "Wine",
+      "parent": "/beverages",
+      "path": "/beverages/wine"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d94",
+      "name": "Kwas",
+      "parent": "/beverages",
+      "path": "/beverages/kwas"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d95",
+      "name": "Juice",
+      "parent": "/beverages",
+      "path": "/beverages/juice"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d96",
+      "name": "Learning",
+      "parent": "/",
+      "path": "/Learning"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d97",
+      "name": "Book",
+      "parent": "/learning",
+      "path": "/learning/book"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d98",
+      "name": "German classes",
+      "parent": "/learning",
+      "path": "/learning/german classes"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d99",
+      "name": "Driving lesson",
+      "parent": "/learning",
+      "path": "/learning/driving lesson"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d9a",
+      "name": "Magazine",
+      "parent": "/learning",
+      "path": "/learning/magazine"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d9b"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d9c",
+      "name": "Sparkling wine",
+      "parent": "/alcohol",
+      "path": "/alcohol/sparkling wine"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d9d",
+      "name": "Spirit",
+      "parent": "/alcohol",
+      "path": "/alcohol/spirit"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d9e"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718d9f",
+      "name": "Car wash",
+      "parent": "/auto",
+      "path": "/auto/car wash"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718da0",
+      "name": "Gasoline",
+      "parent": "/auto",
+      "path": "/auto/gasoline"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718da1",
+      "name": "Liquid for washing",
+      "parent": "/auto",
+      "path": "/auto/liquid for washing"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718da2",
+      "name": "Document",
+      "parent": "/auto",
+      "path": "/auto/document"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718da3",
+      "name": "Vignette",
+      "parent": "/auto",
+      "path": "/auto/vignette"
+    },
+    {
+      "id": "5f288bf1ab1091c54b718da4",
+      "name": "Tax",
+      "parent": "/auto",
+      "path": "/auto/tax"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718da5",
+      "name": "Service check",
+      "parent": "/auto",
+      "path": "/auto/service check"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718da6",
+      "name": "Accessories",
+      "parent": "/auto",
+      "path": "/auto/accessories"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718da7",
+      "name": "Winter Tires",
+      "parent": "/auto",
+      "path": "/auto/winter tires"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718da8",
+      "name": "Repair",
+      "parent": "/auto",
+      "path": "/auto/repair"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718da9",
+      "name": "Tires change",
+      "parent": "/auto",
+      "path": "/auto/tires change"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718daa",
+      "name": "Insurance",
+      "parent": "/auto",
+      "path": "/auto/insurance"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dab",
+      "name": "Toll road",
+      "parent": "/auto",
+      "path": "/auto/toll road"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dac",
+      "name": "Summer tires",
+      "parent": "/auto",
+      "path": "/auto/summer tires"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dad",
+      "name": "Other stuff",
+      "parent": "/auto",
+      "path": "/auto/other stuff"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dae",
+      "name": "Import tax",
+      "parent": "/auto",
+      "path": "/auto/import tax"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718daf",
+      "name": "Parking",
+      "parent": "/auto",
+      "path": "/auto/parking"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718db0",
+      "name": "Clothes",
+      "parent": "/",
+      "path": "/Clothes"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718db1",
+      "name": "Jacket",
+      "parent": "/clothes",
+      "path": "/clothes/jacket"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718db2",
+      "name": "Socks",
+      "parent": "/clothes",
+      "path": "/clothes/socks"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718db3",
+      "name": "Home clothes",
+      "parent": "/clothes",
+      "path": "/clothes/home clothes"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718db4",
+      "name": "Hat",
+      "parent": "/clothes",
+      "path": "/clothes/hat"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718db5",
+      "name": "Sport jacket",
+      "parent": "/clothes",
+      "path": "/clothes/sport jacket"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718db6",
+      "name": "Accessories",
+      "parent": "/clothes",
+      "path": "/clothes/accessories"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718db7",
+      "name": "Belt",
+      "parent": "/clothes",
+      "path": "/clothes/belt"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718db8",
+      "name": "T-Short",
+      "parent": "/clothes",
+      "path": "/clothes/t-short"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718db9",
+      "name": "Shoes",
+      "parent": "/clothes",
+      "path": "/clothes/shoes"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dba",
+      "name": "Underwear",
+      "parent": "/clothes",
+      "path": "/clothes/underwear"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dbb",
+      "name": "Dress",
+      "parent": "/clothes",
+      "path": "/clothes/dress"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dbc",
+      "name": "Hoody",
+      "parent": "/clothes",
+      "path": "/clothes/hoody"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dbd",
+      "name": "Beg",
+      "parent": "/clothes",
+      "path": "/clothes/beg"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dbe",
+      "name": "Jeans",
+      "parent": "/clothes",
+      "path": "/clothes/jeans"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dbf",
+      "name": "Swimming suit",
+      "parent": "/clothes",
+      "path": "/clothes/swimming suit"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dc0",
+      "name": "Winter truisers",
+      "parent": "/clothes",
+      "path": "/clothes/winter truisers"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dc1",
+      "name": "Scarf",
+      "parent": "/clothes",
+      "path": "/clothes/scarf"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dc2",
+      "name": "Sport trousers",
+      "parent": "/clothes",
+      "path": "/clothes/sport trousers"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dc3",
+      "name": "Shirt",
+      "parent": "/clothes",
+      "path": "/clothes/shirt"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dc4",
+      "name": "Shorts",
+      "parent": "/clothes",
+      "path": "/clothes/shorts"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dc5",
+      "name": "Tights",
+      "parent": "/clothes",
+      "path": "/clothes/tights"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dc6",
+      "name": "Dry cleaning",
+      "parent": "/clothes",
+      "path": "/clothes/dry cleaning"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dc7",
+      "name": "Sweater",
+      "parent": "/clothes",
+      "path": "/clothes/sweater"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dc8",
+      "name": "Gloves",
+      "parent": "/clothes",
+      "path": "/clothes/gloves"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dc9",
+      "name": "Sport",
+      "parent": "/",
+      "path": "/Sport"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dca",
+      "name": "Bicycle accessories",
+      "parent": "/sport",
+      "path": "/sport/bicycle accessories"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dcb",
+      "name": "Mat",
+      "parent": "/sport",
+      "path": "/sport/mat"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dcc",
+      "name": "Bicycle",
+      "parent": "/sport",
+      "path": "/sport/bicycle"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dcd"
+    },
+    {
+      "id": "5f288bf2ab1091c54b718dce",
+      "name": "Batteries",
+      "parent": "/appliances",
+      "path": "/appliances/batteries"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dcf",
+      "name": "Technic",
+      "parent": "/appliances",
+      "path": "/appliances/technic"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dd0",
+      "name": "Humidifiers",
+      "parent": "/appliances",
+      "path": "/appliances/humidifiers"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dd1",
+      "name": "Clock",
+      "parent": "/appliances",
+      "path": "/appliances/clock"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dd2",
+      "name": "Kettle",
+      "parent": "/appliances",
+      "path": "/appliances/kettle"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dd3",
+      "name": "Repair",
+      "parent": "/appliances",
+      "path": "/appliances/repair"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dd4",
+      "name": "Teethbrush",
+      "parent": "/appliances",
+      "path": "/appliances/teethbrush"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dd5",
+      "name": "Phone",
+      "parent": "/appliances",
+      "path": "/appliances/phone"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dd6",
+      "name": "Headphones",
+      "parent": "/appliances",
+      "path": "/appliances/headphones"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dd7",
+      "name": "External battary",
+      "parent": "/appliances",
+      "path": "/appliances/external battary"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dd8",
+      "name": "Cabel TV",
+      "parent": "/appliances",
+      "path": "/appliances/cabel tv"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dd9",
+      "name": "Cabel HDMI",
+      "parent": "/appliances",
+      "path": "/appliances/cabel hdmi"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dda",
+      "name": "Power strip ",
+      "parent": "/appliances",
+      "path": "/appliances/power strip "
+    },
+    {
+      "id": "5f288bf3ab1091c54b718ddb",
+      "name": "Adapter",
+      "parent": "/appliances",
+      "path": "/appliances/adapter"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718ddc",
+      "name": "Router",
+      "parent": "/appliances",
+      "path": "/appliances/router"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718ddd",
+      "name": "Other",
+      "parent": "/appliances",
+      "path": "/appliances/other"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dde",
+      "name": "E-Book",
+      "parent": "/appliances",
+      "path": "/appliances/e-book"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718ddf",
+      "name": "Kitchen",
+      "parent": "/appliances",
+      "path": "/appliances/kitchen"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718de0",
+      "name": "Accessories",
+      "parent": "/appliances",
+      "path": "/appliances/accessories"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718de1",
+      "name": "IP Camera",
+      "parent": "/appliances",
+      "path": "/appliances/ip camera"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718de2",
+      "name": "Dairy",
+      "parent": "/",
+      "path": "/Dairy"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718de3",
+      "name": "Cheese ala Almetta",
+      "parent": "/dairy",
+      "path": "/dairy/cheese ala almetta"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718de4",
+      "name": "Kefir 0.5 L",
+      "parent": "/dairy",
+      "path": "/dairy/kefir 0.5 l"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718de5",
+      "name": "Sour Cream",
+      "parent": "/dairy",
+      "path": "/dairy/sour cream"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718de6",
+      "name": "Yogurt 0.4 L",
+      "parent": "/dairy",
+      "path": "/dairy/yogurt 0.4 l"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718de7",
+      "name": "Quark",
+      "parent": "/dairy",
+      "path": "/dairy/quark"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718de8",
+      "name": "Kefir sweet",
+      "parent": "/dairy",
+      "path": "/dairy/kefir sweet"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718de9",
+      "name": "Milk",
+      "parent": "/dairy",
+      "path": "/dairy/milk"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dea",
+      "name": "Milk sweets",
+      "parent": "/dairy",
+      "path": "/dairy/milk sweets"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718deb",
+      "name": "Buter",
+      "parent": "/dairy",
+      "path": "/dairy/buter"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dec",
+      "name": "Cottage cheese",
+      "parent": "/dairy",
+      "path": "/dairy/cottage cheese"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718ded",
+      "name": "Yogurt",
+      "parent": "/dairy",
+      "path": "/dairy/yogurt"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718dee",
+      "name": "Feta",
+      "parent": "/dairy",
+      "path": "/dairy/feta"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718def",
+      "name": "Yogurt x4",
+      "parent": "/dairy",
+      "path": "/dairy/yogurt x4"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718df0",
+      "name": "Whipped cream",
+      "parent": "/dairy",
+      "path": "/dairy/whipped cream"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718df1",
+      "name": "Butter",
+      "parent": "/dairy",
+      "path": "/dairy/butter"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718df2",
+      "name": "Kefir 1 L",
+      "parent": "/dairy",
+      "path": "/dairy/kefir 1 l"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718df3",
+      "name": "Cream",
+      "parent": "/dairy",
+      "path": "/dairy/cream"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718df4",
+      "name": "Eggs",
+      "parent": "/dairy",
+      "path": "/dairy/eggs"
+    },
+    {
+      "id": "5f288bf3ab1091c54b718df5",
+      "name": "Vacation",
+      "parent": "/",
+      "path": "/Vacation"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718df6",
+      "name": "Bed linen in hotel",
+      "parent": "/vacation",
+      "path": "/vacation/bed linen in hotel"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718df7",
+      "name": "Ski resort - restrant",
+      "parent": "/vacation",
+      "path": "/vacation/ski resort - restrant"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718df8",
+      "name": "Ski resort - ticket",
+      "parent": "/vacation",
+      "path": "/vacation/ski resort - ticket"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718df9",
+      "name": "Hostel",
+      "parent": "/vacation",
+      "path": "/vacation/hostel"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718dfa",
+      "name": "Visa",
+      "parent": "/vacation",
+      "path": "/vacation/visa"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718dfb",
+      "name": "Ski resort - instructor",
+      "parent": "/vacation",
+      "path": "/vacation/ski resort - instructor"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718dfc",
+      "name": "Ski resort - equipment",
+      "parent": "/vacation",
+      "path": "/vacation/ski resort - equipment"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718dfd",
+      "name": "Souvenirs",
+      "parent": "/vacation",
+      "path": "/vacation/souvenirs"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718dfe",
+      "name": "Grocery",
+      "parent": "/vacation",
+      "path": "/vacation/grocery"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718dff",
+      "name": "Ski resort - ski pass",
+      "parent": "/vacation",
+      "path": "/vacation/ski resort - ski pass"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e00",
+      "name": "Attraction ticket",
+      "parent": "/vacation",
+      "path": "/vacation/attraction ticket"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e01",
+      "name": "Baggage storage",
+      "parent": "/vacation",
+      "path": "/vacation/baggage storage"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e02",
+      "name": "Bus",
+      "parent": "/vacation",
+      "path": "/vacation/bus"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e03",
+      "name": "Hotel 1 room",
+      "parent": "/vacation",
+      "path": "/vacation/hotel 1 room"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e04",
+      "name": "Toilet",
+      "parent": "/vacation",
+      "path": "/vacation/toilet"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e05",
+      "name": "Rental",
+      "parent": "/vacation",
+      "path": "/vacation/rental"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e06",
+      "name": "Pin",
+      "parent": "/vacation",
+      "path": "/vacation/pin"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e07",
+      "name": "Train",
+      "parent": "/vacation",
+      "path": "/vacation/train"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e08",
+      "name": "Beercvbcvb",
+      "parent": "/"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e09",
+      "name": "Beer",
+      "parent": "/beer",
+      "path": "/beer/beer"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e0a"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e0b",
+      "name": "new",
+      "parent": "/bakery",
+      "path": "/bakery/new"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e0c",
+      "name": "Sweet pie",
+      "parent": "/bakery",
+      "path": "/bakery/sweet pie"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e0d",
+      "name": "Croissant",
+      "parent": "/bakery",
+      "path": "/bakery/croissant"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e0e",
+      "name": "Bread",
+      "parent": "/bakery",
+      "path": "/bakery/bread"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e0f",
+      "name": "Pie",
+      "parent": "/bakery",
+      "path": "/bakery/pie"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e10",
+      "name": "Bath stuffasdsdfsdf",
+      "parent": ""
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e11",
+      "name": "Antiperspirant",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/antiperspirant"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e12",
+      "name": "Teeth liquid",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/teeth liquid"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e13",
+      "name": "Napkins",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/napkins"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e14",
+      "name": "Liquid for washing",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/liquid for washing"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e15",
+      "name": "Toothpaste",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/toothpaste"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e16",
+      "name": "Soap",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/soap"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e17",
+      "name": "Beauty stuff",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/beauty stuff"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e18",
+      "name": "Shawing gel",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/shawing gel"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e19",
+      "name": "Shampoo",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/shampoo"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e1a",
+      "name": "Cleaning stuff",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/cleaning stuff"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e1b",
+      "name": "Deodorant",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/deodorant"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e1c",
+      "name": "Pantyliner",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/pantyliner"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e1d",
+      "name": "Sticks",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/sticks"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e1e",
+      "name": "Liquid for conditioner",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/liquid for conditioner"
+    },
+    {
+      "id": "5f288bf4ab1091c54b718e1f",
+      "name": "Razor blades",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/razor blades"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e20",
+      "name": "Toilet paper",
+      "parent": "/bath stuff",
+      "path": "/bath stuff/toilet paper"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e21",
+      "name": "Leisure",
+      "parent": "/",
+      "path": "/Leisure"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e22",
+      "name": "Excursion",
+      "parent": "/leisure",
+      "path": "/leisure/excursion"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e23",
+      "name": "Tickets",
+      "parent": "/leisure",
+      "path": "/leisure/tickets"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e24",
+      "name": "Bicycle",
+      "parent": "/leisure",
+      "path": "/leisure/bicycle"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e25",
+      "name": "Board games",
+      "parent": "/leisure",
+      "path": "/leisure/board games"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e26",
+      "name": "Ticket",
+      "parent": "/leisure",
+      "path": "/leisure/ticket"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e27",
+      "name": "Gifts",
+      "parent": "/",
+      "path": "/Gifts"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e28",
+      "name": "New Year gifts",
+      "parent": "/gifts",
+      "path": "/gifts/new year gifts"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e29",
+      "name": "Alco",
+      "parent": "/gifts",
+      "path": "/gifts/alco"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e2a",
+      "name": "Flowers",
+      "parent": "/gifts",
+      "path": "/gifts/flowers"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e2b",
+      "name": "Other",
+      "parent": "/gifts",
+      "path": "/gifts/other"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e2c",
+      "name": "Meat",
+      "parent": "/gifts",
+      "path": "/gifts/meat"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e2d",
+      "name": "Birthday gift",
+      "parent": "/gifts",
+      "path": "/gifts/birthday gift"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e2e",
+      "name": "Blue cheese",
+      "parent": "/gifts",
+      "path": "/gifts/blue cheese"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e2f",
+      "name": "Sweet",
+      "parent": "/gifts",
+      "path": "/gifts/sweet"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e30",
+      "name": "Unknown",
+      "parent": "/",
+      "path": "/Unknown"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e31",
+      "name": "Unknown",
+      "parent": "/unknown",
+      "path": "/unknown/unknown"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e32",
+      "name": "Sweets",
+      "parent": "/",
+      "path": "/Sweets"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e33",
+      "name": "Ekler",
+      "parent": "/sweets",
+      "path": "/sweets/ekler"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e34",
+      "name": "Jam",
+      "parent": "/sweets",
+      "path": "/sweets/jam"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e35",
+      "name": "Muss",
+      "parent": "/sweets",
+      "path": "/sweets/muss"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e36",
+      "name": "Halva",
+      "parent": "/sweets",
+      "path": "/sweets/halva"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e37",
+      "name": "Syrop",
+      "parent": "/sweets",
+      "path": "/sweets/syrop"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e38",
+      "name": "Gum",
+      "parent": "/sweets",
+      "path": "/sweets/gum"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e39",
+      "name": "Cakes",
+      "parent": "/sweets",
+      "path": "/sweets/cakes"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e3a",
+      "name": "Dry fruits",
+      "parent": "/sweets",
+      "path": "/sweets/dry fruits"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e3b",
+      "name": "Candy",
+      "parent": "/sweets",
+      "path": "/sweets/candy"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e3c",
+      "name": "Cookies",
+      "parent": "/sweets",
+      "path": "/sweets/cookies"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e3d",
+      "name": "Ice cream",
+      "parent": "/sweets",
+      "path": "/sweets/ice cream"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e3e",
+      "name": "Ice cream 1L",
+      "parent": "/sweets",
+      "path": "/sweets/ice cream 1l"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e3f",
+      "name": "Chocolate",
+      "parent": "/sweets",
+      "path": "/sweets/chocolate"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e40",
+      "name": "Desert",
+      "parent": "/sweets",
+      "path": "/sweets/desert"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e41",
+      "name": "Honey 0.4",
+      "parent": "/sweets",
+      "path": "/sweets/honey 0.4"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e42",
+      "name": "beer",
+      "parent": "/"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e43",
+      "name": "Haircut",
+      "parent": "/beauty",
+      "path": "/beauty/haircut"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e44",
+      "name": "Hair coloring",
+      "parent": "/beauty",
+      "path": "/beauty/hair coloring"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e45",
+      "name": "Sun protection",
+      "parent": "/beauty",
+      "path": "/beauty/sun protection"
+    },
+    {
+      "id": "5f288bf5ab1091c54b718e46",
+      "name": "Sugaring",
+      "parent": "/beauty",
+      "path": "/beauty/sugaring"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e47",
+      "name": "Cleaning",
+      "parent": "/beauty",
+      "path": "/beauty/cleaning"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e48",
+      "name": "Grocery",
+      "parent": "/",
+      "path": "/Grocery"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e49",
+      "name": "Linen",
+      "parent": "/grocery",
+      "path": "/grocery/linen"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e4a",
+      "name": "Tomato paste",
+      "parent": "/grocery",
+      "path": "/grocery/tomato paste"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e4b",
+      "name": "Mustard",
+      "parent": "/grocery",
+      "path": "/grocery/mustard"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e4c",
+      "name": "Flour",
+      "parent": "/grocery",
+      "path": "/grocery/flour"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e4d",
+      "name": "Oyster sauce",
+      "parent": "/grocery",
+      "path": "/grocery/oyster sauce"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e4e",
+      "name": "Flakes",
+      "parent": "/grocery",
+      "path": "/grocery/flakes"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e4f",
+      "name": "Musli",
+      "parent": "/grocery",
+      "path": "/grocery/musli"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e50",
+      "name": "Rice 0.4 Kg",
+      "parent": "/grocery",
+      "path": "/grocery/rice 0.4 kg"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e51",
+      "name": "Barley",
+      "parent": "/grocery",
+      "path": "/grocery/barley"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e52",
+      "name": "Chili sause",
+      "parent": "/grocery",
+      "path": "/grocery/chili sause"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e53",
+      "name": "Coconut milk",
+      "parent": "/grocery",
+      "path": "/grocery/coconut milk"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e54",
+      "name": "Cacao",
+      "parent": "/grocery",
+      "path": "/grocery/cacao"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e55",
+      "name": "Salt",
+      "parent": "/grocery",
+      "path": "/grocery/salt"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e56",
+      "name": "Lasagne",
+      "parent": "/grocery",
+      "path": "/grocery/lasagne"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e57",
+      "name": "Pasta",
+      "parent": "/grocery",
+      "path": "/grocery/pasta"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e58",
+      "name": "Pomelo",
+      "parent": "/grocery",
+      "path": "/grocery/pomelo"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e59",
+      "name": "Instant noodles",
+      "parent": "/grocery",
+      "path": "/grocery/instant noodles"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e5a",
+      "name": "Olive oil",
+      "parent": "/grocery",
+      "path": "/grocery/olive oil"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e5b",
+      "name": "Beans",
+      "parent": "/grocery",
+      "path": "/grocery/beans"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e5c",
+      "name": "Oatmeal",
+      "parent": "/grocery",
+      "path": "/grocery/oatmeal"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e5d",
+      "name": "Sugar",
+      "parent": "/grocery",
+      "path": "/grocery/sugar"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e5e",
+      "name": "Rice noodles",
+      "parent": "/grocery",
+      "path": "/grocery/rice noodles"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e5f",
+      "name": "Syrop",
+      "parent": "/grocery",
+      "path": "/grocery/syrop"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e60",
+      "name": "Spice",
+      "parent": "/grocery",
+      "path": "/grocery/spice"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e61",
+      "name": "Ketchup",
+      "parent": "/grocery",
+      "path": "/grocery/ketchup"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e62",
+      "name": "Bakery stuff",
+      "parent": "/grocery",
+      "path": "/grocery/bakery stuff"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e63",
+      "name": "Buckwheat",
+      "parent": "/grocery",
+      "path": "/grocery/buckwheat"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e64",
+      "name": "Fish souce",
+      "parent": "/grocery",
+      "path": "/grocery/fish souce"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e65",
+      "name": "Rice flakes",
+      "parent": "/grocery",
+      "path": "/grocery/rice flakes"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e66",
+      "name": "Wheatmeal",
+      "parent": "/grocery",
+      "path": "/grocery/wheatmeal"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e67",
+      "name": "Coffee",
+      "parent": "/grocery",
+      "path": "/grocery/coffee"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e68",
+      "name": "Tea",
+      "parent": "/grocery",
+      "path": "/grocery/tea"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e69",
+      "name": "Lentil",
+      "parent": "/grocery",
+      "path": "/grocery/lentil"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e6a",
+      "name": "Rice 1 Kg",
+      "parent": "/grocery",
+      "path": "/grocery/rice 1 kg"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e6b",
+      "name": "Chia seeds",
+      "parent": "/grocery",
+      "path": "/grocery/chia seeds"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e6c",
+      "name": "Soi sause",
+      "parent": "/grocery",
+      "path": "/grocery/soi sause"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e6d",
+      "name": "Cornmeal",
+      "parent": "/grocery",
+      "path": "/grocery/cornmeal"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e6e",
+      "name": "Sugar powder",
+      "parent": "/grocery",
+      "path": "/grocery/sugar powder"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e6f",
+      "name": "Linen seeds",
+      "parent": "/grocery",
+      "path": "/grocery/linen seeds"
+    },
+    {
+      "id": "5f288bf6ab1091c54b718e70",
+      "name": "Balsamic vinegar",
+      "parent": "/grocery",
+      "path": "/grocery/balsamic vinegar"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e71",
+      "name": "Canning",
+      "parent": "/grocery",
+      "path": "/grocery/canning"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e72",
+      "name": "Mayonnaise",
+      "parent": "/grocery",
+      "path": "/grocery/mayonnaise"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e73",
+      "name": "Oil",
+      "parent": "/grocery",
+      "path": "/grocery/oil"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e74",
+      "name": "Smashed nuts",
+      "parent": "/grocery",
+      "path": "/grocery/smashed nuts"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e75",
+      "name": "Semifinished",
+      "parent": "/",
+      "path": "/Semifinished"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e76",
+      "name": "Pizza",
+      "parent": "/semifinished",
+      "path": "/semifinished/pizza"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e77",
+      "name": "Meat dumplings",
+      "parent": "/semifinished",
+      "path": "/semifinished/meat dumplings"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e78",
+      "name": "Frozen fruits",
+      "parent": "/semifinished",
+      "path": "/semifinished/frozen fruits"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e79",
+      "name": "Pelmeni",
+      "parent": "/semifinished",
+      "path": "/semifinished/pelmeni"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e7a",
+      "name": "Dill",
+      "parent": "/semifinished",
+      "path": "/semifinished/dill"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e7b",
+      "name": "Salad",
+      "parent": "/semifinished",
+      "path": "/semifinished/salad"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e7c",
+      "name": "Spinach",
+      "parent": "/semifinished",
+      "path": "/semifinished/spinach"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e7d",
+      "name": "Frozen vegetables",
+      "parent": "/semifinished",
+      "path": "/semifinished/frozen vegetables"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e7e",
+      "name": "Sushi",
+      "parent": "/semifinished",
+      "path": "/semifinished/sushi"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e7f",
+      "name": "Frozen fish",
+      "parent": "/semifinished",
+      "path": "/semifinished/frozen fish"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e80",
+      "name": "Crockets",
+      "parent": "/semifinished",
+      "path": "/semifinished/crockets"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e81",
+      "name": "French Dough",
+      "parent": "/semifinished",
+      "path": "/semifinished/french dough"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e82",
+      "name": "Seafood",
+      "parent": "/semifinished",
+      "path": "/semifinished/seafood"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e83",
+      "name": "1",
+      "parent": "/"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e84",
+      "name": "12",
+      "parent": "/1",
+      "path": "/1/12"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e85",
+      "name": "11",
+      "parent": "/1",
+      "path": "/1/11"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e86",
+      "name": "313",
+      "parent": "/1",
+      "path": "/1/313"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e87",
+      "name": "Produce",
+      "parent": "/",
+      "path": "/Produce"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e88",
+      "name": "Pickles",
+      "parent": "/produce",
+      "path": "/produce/pickles"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e89",
+      "name": "Pomegranate",
+      "parent": "/produce",
+      "path": "/produce/pomegranate"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e8a",
+      "name": "Mixed salad",
+      "parent": "/produce",
+      "path": "/produce/mixed salad"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e8b",
+      "name": "Mango",
+      "parent": "/produce",
+      "path": "/produce/mango"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e8c",
+      "name": "Cabbage",
+      "parent": "/produce",
+      "path": "/produce/cabbage"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e8d",
+      "name": "Persimmon",
+      "parent": "/produce",
+      "path": "/produce/persimmon"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e8e",
+      "name": "Apple",
+      "parent": "/produce",
+      "path": "/produce/apple"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e8f",
+      "name": "Potato",
+      "parent": "/produce",
+      "path": "/produce/potato"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e90",
+      "name": "Pomelo",
+      "parent": "/produce",
+      "path": "/produce/pomelo"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e91",
+      "name": "Grapefruit",
+      "parent": "/produce",
+      "path": "/produce/grapefruit"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e92",
+      "name": "Cauliflower",
+      "parent": "/produce",
+      "path": "/produce/cauliflower"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e93",
+      "name": "Mandarin",
+      "parent": "/produce",
+      "path": "/produce/mandarin"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e94",
+      "name": "Pears",
+      "parent": "/produce",
+      "path": "/produce/pears"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e95",
+      "name": "Carrot",
+      "parent": "/produce",
+      "path": "/produce/carrot"
+    },
+    {
+      "id": "5f288bf7ab1091c54b718e96",
+      "name": "French bean",
+      "parent": "/produce",
+      "path": "/produce/french bean"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718e97",
+      "name": "Sweet Cherry",
+      "parent": "/produce",
+      "path": "/produce/sweet cherry"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718e98",
+      "name": "Zucchini",
+      "parent": "/produce",
+      "path": "/produce/zucchini"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718e99",
+      "name": "Orange",
+      "parent": "/produce",
+      "path": "/produce/orange"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718e9a",
+      "name": "Bob",
+      "parent": "/produce",
+      "path": "/produce/bob"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718e9b",
+      "name": "Parsley root",
+      "parent": "/produce",
+      "path": "/produce/parsley root"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718e9c",
+      "name": "Coconut",
+      "parent": "/produce",
+      "path": "/produce/coconut"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718e9d",
+      "name": "Kiwi",
+      "parent": "/produce",
+      "path": "/produce/kiwi"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718e9e",
+      "name": "Celery root",
+      "parent": "/produce",
+      "path": "/produce/celery root"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718e9f",
+      "name": "Green Paper",
+      "parent": "/produce",
+      "path": "/produce/green paper"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ea0",
+      "name": "Water melon",
+      "parent": "/produce",
+      "path": "/produce/water melon"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ea1",
+      "name": "Radish",
+      "parent": "/produce",
+      "path": "/produce/radish"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ea2",
+      "name": "Salad",
+      "parent": "/produce",
+      "path": "/produce/salad"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ea3",
+      "name": "Red paper",
+      "parent": "/produce",
+      "path": "/produce/red paper"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ea4",
+      "name": "Cherry tomato",
+      "parent": "/produce",
+      "path": "/produce/cherry tomato"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ea5",
+      "name": "Plum",
+      "parent": "/produce",
+      "path": "/produce/plum"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ea6",
+      "name": "Soy",
+      "parent": "/produce",
+      "path": "/produce/soy"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ea7",
+      "name": "Pumpkin",
+      "parent": "/produce",
+      "path": "/produce/pumpkin"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ea8",
+      "name": "Green onion",
+      "parent": "/produce",
+      "path": "/produce/green onion"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ea9",
+      "name": "Leek",
+      "parent": "/produce",
+      "path": "/produce/leek"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eaa",
+      "name": "Lemon",
+      "parent": "/produce",
+      "path": "/produce/lemon"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eab",
+      "name": "Paprica",
+      "parent": "/produce",
+      "path": "/produce/paprica"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eac",
+      "name": "Chili",
+      "parent": "/produce",
+      "path": "/produce/chili"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ead",
+      "name": "Corn",
+      "parent": "/produce",
+      "path": "/produce/corn"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eae",
+      "name": "Basil",
+      "parent": "/produce",
+      "path": "/produce/basil"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eaf",
+      "name": "Spinach",
+      "parent": "/produce",
+      "path": "/produce/spinach"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eb0",
+      "name": "Green Asparagus",
+      "parent": "/produce",
+      "path": "/produce/green asparagus"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eb1",
+      "name": "Garlik",
+      "parent": "/produce",
+      "path": "/produce/garlik"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eb2",
+      "name": "Ginger",
+      "parent": "/produce",
+      "path": "/produce/ginger"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eb3",
+      "name": "Lime",
+      "parent": "/produce",
+      "path": "/produce/lime"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eb4",
+      "name": "Beetroot",
+      "parent": "/produce",
+      "path": "/produce/beetroot"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eb5",
+      "name": "Avocado",
+      "parent": "/produce",
+      "path": "/produce/avocado"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eb6",
+      "name": "European blueberry",
+      "parent": "/produce",
+      "path": "/produce/european blueberry"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eb7",
+      "name": "Tropical fruits",
+      "parent": "/produce",
+      "path": "/produce/tropical fruits"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eb8",
+      "name": "Yellow Paper",
+      "parent": "/produce",
+      "path": "/produce/yellow paper"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eb9",
+      "name": "Pineapple",
+      "parent": "/produce",
+      "path": "/produce/pineapple"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718eba",
+      "name": "Celery",
+      "parent": "/produce",
+      "path": "/produce/celery"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ebb",
+      "name": "Olives",
+      "parent": "/produce",
+      "path": "/produce/olives"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ebc",
+      "name": "Peach",
+      "parent": "/produce",
+      "path": "/produce/peach"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ebd",
+      "name": "Tomato packed",
+      "parent": "/produce",
+      "path": "/produce/tomato packed"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ebe",
+      "name": "Rhubarb",
+      "parent": "/produce",
+      "path": "/produce/rhubarb"
+    },
+    {
+      "id": "5f288bf8ab1091c54b718ebf",
+      "name": "Gooseberry",
+      "parent": "/produce",
+      "path": "/produce/gooseberry"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ec0",
+      "name": "Cucumber",
+      "parent": "/produce",
+      "path": "/produce/cucumber"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ec1",
+      "name": "Arugula",
+      "parent": "/produce",
+      "path": "/produce/arugula"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ec2",
+      "name": "Greens",
+      "parent": "/produce",
+      "path": "/produce/greens"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ec3",
+      "name": "Fig",
+      "parent": "/produce",
+      "path": "/produce/fig"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ec4",
+      "name": "Season tomatoes",
+      "parent": "/produce",
+      "path": "/produce/season tomatoes"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ec5",
+      "name": "Mushroom",
+      "parent": "/produce",
+      "path": "/produce/mushroom"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ec6",
+      "name": "Nektarin",
+      "parent": "/produce",
+      "path": "/produce/nektarin"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ec7",
+      "name": "Mulberry",
+      "parent": "/produce",
+      "path": "/produce/mulberry"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ec8",
+      "name": "Apricot",
+      "parent": "/produce",
+      "path": "/produce/apricot"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ec9",
+      "name": "Grape",
+      "parent": "/produce",
+      "path": "/produce/grape"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718eca",
+      "name": "Banana",
+      "parent": "/produce",
+      "path": "/produce/banana"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ecb",
+      "name": "Onion",
+      "parent": "/produce",
+      "path": "/produce/onion"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ecc",
+      "name": "Vegetables mix",
+      "parent": "/produce",
+      "path": "/produce/vegetables mix"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ecd",
+      "name": "Eggplant",
+      "parent": "/produce",
+      "path": "/produce/eggplant"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ece",
+      "name": "Pear",
+      "parent": "/produce",
+      "path": "/produce/pear"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ecf",
+      "name": "Raspberry",
+      "parent": "/produce",
+      "path": "/produce/raspberry"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ed0",
+      "name": "Ramiro  paper",
+      "parent": "/produce",
+      "path": "/produce/ramiro  paper"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ed1",
+      "name": "Blueberry",
+      "parent": "/produce",
+      "path": "/produce/blueberry"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ed2",
+      "name": "Strawberry",
+      "parent": "/produce",
+      "path": "/produce/strawberry"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ed3",
+      "name": "Tomato",
+      "parent": "/produce",
+      "path": "/produce/tomato"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ed4",
+      "name": "White Asparagus",
+      "parent": "/produce",
+      "path": "/produce/white asparagus"
+    },
+    {
+      "id": "5f288bf9ab1091c54b718ed5",
+      "name": "Broccoli",
+      "parent": "/produce",
+      "path": "/produce/broccoli"
+    }
+  ]
 }
