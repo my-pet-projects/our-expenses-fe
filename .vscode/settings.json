@@ -2,15 +2,38 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "importSorter.generalConfiguration.sortOnBeforeSave": true,
-    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 160,
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    // "importSorter.generalConfiguration.sortOnBeforeSave": true,
+    // "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 120,
+    "importSorter.sortConfiguration.customOrderingRules.rules": [
+        {
+            "type": "importMember",
+            "regex": "^$",
+            "orderLevel": 100,
+        },
+        {
+            "regex": "^[.]",
+            "orderLevel": 40
+        },
+        {
+            "regex": "^(src)",
+            "orderLevel": 35
+        }
+    ],
     "cSpell.words": [
+        "Formik",
         "Interop",
         "Parens",
+        "Unmount",
         "antd",
         "browserslist",
         "camelcase",
         "esnext",
+        "loglevel",
+        "middlewares",
         "onstatechange",
         "onupdatefound",
         "precached",
