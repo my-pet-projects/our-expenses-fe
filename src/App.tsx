@@ -4,6 +4,7 @@ import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 
 import { Header } from './Header';
 import CategoriesPage from './pages/Category/CategoriesPage';
+import SystemNotificationPage from './pages/Notify/SystemNotificationPage';
 import { ExpensesListComponent } from './pages/Expense/ExpensesPage';
 
 import 'antd/dist/antd.css';
@@ -31,6 +32,7 @@ const App: FunctionComponent = (): JSX.Element => (
             </div>
         </Layout.Content>
         <Layout.Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Layout.Footer>
+        <SystemNotificationPage />
     </Layout>
 );
 
