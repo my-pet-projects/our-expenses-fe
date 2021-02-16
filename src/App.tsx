@@ -8,7 +8,7 @@ import SystemNotificationPage from './pages/Notify/SystemNotificationPage';
 import { ExpensesListComponent } from './pages/Expense/ExpensesPage';
 
 import 'antd/dist/antd.css';
-import './App.css';
+import './App.scss';
 
 const App: FunctionComponent = (): JSX.Element => (
     <Layout className="layout" style={{ minHeight: '100vh' }}>
