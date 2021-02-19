@@ -1,13 +1,12 @@
-import axios, { AxiosRequestConfig } from 'axios';
-import log from 'loglevel';
-
+import axios, { AxiosRequestConfig, AxiosError } from 'axios';
 import { IHttpRequestOptions, IHttpResponse } from './http.types';
+import { HttpError } from './httpError';
 
 const cancelToken = axios.CancelToken;
 let source = cancelToken.source();
 
 export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHttpResponse<T>> => {
-    const baseUrl = 'http://localhost:5000';
+    const baseUrl = 'http://localhost:5000/dsf';
 
     const config = {
         url: `${baseUrl}/${options.path}`,
@@ -18,21 +17,27 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
 
     try {
         const result = await axios.request<T>(config);
-        // logger.info('Successful HTTP response', result.data);
         return {
             data: result.data
         };
     } catch (error) {
         if (axios.isCancel(error)) {
-            // logger.debug(`Request cancelled: ${error}`);
             console.log('request was canceled');
             return {
                 isCanceled: true
             };
         }
-        // logger.error(`Failed HTTP response: ${error.message}`, error);
 
-        throw error;
+        const err = error as AxiosError;
+        let customMessage;
+        if (err.response) {
+            customMessage = 'Unsuccessful response from the service.';
+        } else if (err.request) {
+            customMessage = 'No response from the service.';
+        } else {
+            customMessage = 'Malformed request.';
+        }
+        throw new HttpError(customMessage, err);
     }
 };
 

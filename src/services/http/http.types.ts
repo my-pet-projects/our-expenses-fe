@@ -10,3 +10,7 @@ export interface IHttpResponse<T> {
     error?: Error;
     isCanceled?: boolean;
 }
+
+export interface IHttpError {
+    code: string;
+}
