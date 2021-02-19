@@ -1,3 +1,4 @@
+import { ApplicationError } from 'src/models';
 import { SystemNotification } from 'src/models/notification';
 
 import { NotifyActionType } from '../constants';
@@ -11,11 +12,11 @@ export const notifySuccess = (message: string): INotifySuccess => ({
     } as SystemNotification
 });
 
-export const notifyFailure = (message: string, details?: string): INotifyFailure => ({
+export const notifyFailure = (error: ApplicationError): INotifyFailure => ({
     type: NotifyActionType.SYSTEM_NOTIFICATION,
     payload: {
         type: 'error',
-        message: message,
-        details: details
+        message: error.message,
+        details: error.description
     } as SystemNotification
 });
