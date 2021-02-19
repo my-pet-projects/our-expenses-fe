@@ -1,6 +1,6 @@
 import { Reducer } from 'redux';
 
-import { Category } from 'src/models';
+import { ApplicationError, Category } from 'src/models';
 import { CategoriesAction } from 'src/store/categories/actions';
 import { CategoriesActionType } from 'src/store/categories/constants';
 
@@ -8,7 +8,7 @@ export interface ICategoriesState {
     categories: Category[];
     selectedCategoryId: string | null;
     isLoading: boolean;
-    error?: Error;
+    error?: ApplicationError;
 }
 
 const initialState: ICategoriesState = {
@@ -35,6 +35,12 @@ export const categoriesReducer: Reducer<ICategoriesState, CategoriesAction> = (
             return {
                 ...state,
                 categories: action.categories,
+                isLoading: false
+            };
+        case CategoriesActionType.FETCH_FAILED:
+            return {
+                ...state,
+                error: action.error,
                 isLoading: false
             };
         case CategoriesActionType.ITEM_UPDATE:

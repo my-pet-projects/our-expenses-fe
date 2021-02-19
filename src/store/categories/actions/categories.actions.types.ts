@@ -1,6 +1,5 @@
-import { Category } from 'src/models';
+import { ApplicationError, Category } from 'src/models';
 import { CategoriesActionType } from 'src/store/categories/constants';
-import { ICategoryProcessingDone } from 'src/store/category/actions';
 
 export interface IFetchCategoriesInit {
     type: CategoriesActionType.FETCH_INIT;
@@ -20,7 +19,7 @@ export interface IFetchCategoriesCancel {
 
 export interface IFetchCategoriesFail {
     type: CategoriesActionType.FETCH_FAILED;
-    isLoading: boolean;
+    error: ApplicationError;
 }
 
 export interface ICategoryUpdate {

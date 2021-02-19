@@ -1,11 +1,7 @@
-import { Dispatch } from 'react';
-import { AnyAction } from 'redux';
-
-import { Category, SystemNotification } from 'src/models';
-import { cancelRequest, IHttpRequestOptions, sendRequest } from 'src/services/http';
-import { AppThunkDispatch, AppThunkResult, RootState } from 'src/store/app.store.types';
-import { IFetchCategoriesInit, updateCategory } from 'src/store/categories/actions';
-import { CategoriesActionType } from 'src/store/categories/constants';
+import { ApplicationError, Category } from 'src/models';
+import { IHttpRequestOptions, sendRequest } from 'src/services/http';
+import { AppThunkDispatch, AppThunkResult } from 'src/store/app.store.types';
+import { updateCategory } from 'src/store/categories/actions';
 import { notifyFailure, notifySuccess } from 'src/store/notify/actions';
 
 import { CategoryActionType } from '../constants';
@@ -13,12 +9,14 @@ import {
     ICategoryProcessingDone,
     ICategoryProcessingFailed,
     ICategoryProcessingInit,
+    IFetchCategoryFail,
     IFetchCategoryInit,
     IFetchCategorySuccess,
+    IHideCategoryForm,
     IShowCategoryForm
 } from './category.actions.types';
 
-export const willFetchCategory = (id: string): IFetchCategoryInit => ({
+export const willFetchCategory = (): IFetchCategoryInit => ({
     type: CategoryActionType.FETCH_INIT,
     isLoading: true
 });
@@ -29,10 +27,19 @@ export const didFetchedCategory = (category: Category): IFetchCategorySuccess =>
     isLoading: false
 });
 
-const didShowCategoryForm = (isVisible: boolean): IShowCategoryForm => ({
-    type: CategoryActionType.SHOW_FORM,
-    isCategoryFormVisible: isVisible
+const failedToFetchCategory = (error: ApplicationError): IFetchCategoryFail => ({
+    type: CategoryActionType.FETCH_FAILED,
+    error: error
 });
+
+const didShowCategoryForm = (): IShowCategoryForm => ({
+    type: CategoryActionType.SHOW_FORM
+});
+
+const didHideCategoryForm = (): IHideCategoryForm => ({
+    type: CategoryActionType.HIDE_FORM
+});
+
 // export const fetchCancel = () => async (dispatch: Dispatch<AnyAction>, getState: () => RootState): Promise<void> => {
 //     await dispatch(GetFetchCancel());
 //     cancelRequest();
@@ -48,82 +55,77 @@ const didProcessCategory = (): ICategoryProcessingDone => ({
     isProcessing: false
 });
 
-const failedProcessCategory = (error: Error): ICategoryProcessingFailed => ({
+const failedProcessCategory = (error: ApplicationError): ICategoryProcessingFailed => ({
     type: CategoryActionType.PROCESSING_FAILED,
     isProcessing: false,
     error: error
 });
 
-export const showCategoryForm = (isVisible: boolean): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch,
-    getState: () => RootState
+export const showCategoryForm = (): AppThunkResult<Promise<void>> => async (
+    dispatch: AppThunkDispatch
 ): Promise<void> => {
-    dispatch(didShowCategoryForm(isVisible));
+    dispatch(didShowCategoryForm());
 };
 
 export const hideCategoryForm = (): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch,
-    getState: () => RootState
+    dispatch: AppThunkDispatch
 ): Promise<void> => {
-    dispatch(didShowCategoryForm(false));
+    dispatch(didHideCategoryForm());
 };
 
 export const selectCategory = (id: string): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch,
-    getState: () => RootState
+    dispatch: AppThunkDispatch
 ): Promise<void> => {
-    console.log('selectcategory1');
     const options = {
         path: `categories/${id}`,
         method: 'GET'
     } as IHttpRequestOptions;
 
-    console.log('fetch category');
-
-    dispatch(didShowCategoryForm(true));
     try {
         // TODO: cancel only relevant requests
         //cancelRequest();
-        dispatch(willFetchCategory('1'));
-        const result = await sendRequest<Category>(options);
 
-        console.log('check', id, result.data?.id);
+        await dispatch(willFetchCategory());
+        const result = await sendRequest<Category>(options);
 
         // ensure that we got back category that was expected
         if (id === result?.data?.id) {
-            dispatch(didFetchedCategory(result.data!));
+            dispatch(didFetchedCategory(result.data));
         }
     } catch (error) {
-        console.log('error', error);
+        const appError = {
+            message: 'Failed to get category details!',
+            description: error.getFullMessage(),
+            error: error
+        } as ApplicationError;
+        await dispatch(notifyFailure(appError));
+        await dispatch(failedToFetchCategory(appError));
     }
 };
 
 export const saveCategory = (category: Category): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch,
-    getState: () => RootState
+    dispatch: AppThunkDispatch
 ): Promise<void> => {
-    console.log('save category', category);
     const options = {
         path: `categories/${category.id}`,
         method: 'PUT',
         payload: category
     } as IHttpRequestOptions<Category>;
 
-    dispatch(willProcessCategory());
+    await dispatch(willProcessCategory());
 
     try {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        await new Promise((r: any) => setTimeout(r, 2000));
-
-        const result = await sendRequest<Category>(options);
-        dispatch(didProcessCategory());
-        dispatch(updateCategory(category));
-        dispatch(notifySuccess('Saved category successfully!'));
-        dispatch(notifyFailure('Failed to save category!', 'details here'));
-        console.log('result', result);
+        await sendRequest<Category>(options);
+        await dispatch(didProcessCategory());
+        await dispatch(updateCategory(category));
+        await dispatch(notifySuccess('Saved category successfully!'));
     } catch (error) {
-        console.log('failed to save', error);
-        dispatch(failedProcessCategory(error));
-        dispatch(notifyFailure('Failed to save category!'));
+        const appError = {
+            message: 'Failed to save category!',
+            description: error.getFullMessage(),
+            error: error
+        } as ApplicationError;
+        await dispatch(failedProcessCategory(appError));
+        await dispatch(notifyFailure(appError));
     }
 };

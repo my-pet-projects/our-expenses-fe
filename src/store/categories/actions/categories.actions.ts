@@ -1,13 +1,15 @@
 import { Dispatch } from 'react';
 import { AnyAction } from 'redux';
 
-import { Category } from 'src/models';
+import { ApplicationError, Category } from 'src/models';
 import { cancelRequest, IHttpRequestOptions, sendRequest } from 'src/services/http';
 import { CategoriesActionType } from 'src/store/categories/constants';
+import { notifyFailure } from 'src/store/notify/actions';
 
 import {
     ICategoryUpdate,
     IFetchCategoriesCancel,
+    IFetchCategoriesFail,
     IFetchCategoriesInit,
     IFetchCategoriesSuccess
 } from './categories.actions.types';
@@ -26,6 +28,11 @@ const didFetchCategories = (categories: Category[]): IFetchCategoriesSuccess => 
     type: CategoriesActionType.FETCH_SUCCESS,
     categories: categories,
     isLoading: false
+});
+
+const failedToFetchCategories = (error: ApplicationError): IFetchCategoriesFail => ({
+    type: CategoriesActionType.FETCH_FAILED,
+    error: error
 });
 
 const didUpdateCategory = (category: Category): ICategoryUpdate => ({
@@ -48,12 +55,18 @@ export const fetchCategories = () => async (dispatch: Dispatch<AnyAction>): Prom
         method: 'GET'
     } as IHttpRequestOptions;
 
-    dispatch(willFetchCategories());
+    await dispatch(willFetchCategories());
     try {
         const result = await sendRequest<Category[]>(options);
-        dispatch(didFetchCategories(result.data!));
+        await dispatch(didFetchCategories(result.data || []));
     } catch (error) {
-        console.log('error', error);
+        const appError = {
+            message: 'Failed to fetch categories!',
+            description: error.getFullMessage(),
+            error: error
+        } as ApplicationError;
+        await dispatch(notifyFailure(appError));
+        await dispatch(failedToFetchCategories(appError));
     }
 };
 
