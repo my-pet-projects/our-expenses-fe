@@ -10,7 +10,6 @@ type ExpensesListProps = RouteComponentProps;
 export class ExpensesListComponent extends React.Component<ExpensesListProps, ExpensesListState> {
     constructor(props: ExpensesListProps) {
         super(props);
-        console.log(props);
         this.state = {
             loading: true,
             error: false

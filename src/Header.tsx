@@ -1,5 +1,5 @@
 import Menu from 'antd/lib/menu';
-import React, { FunctionComponent, useContext } from 'react';
+import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 
 import { DeleteOutlined } from '@ant-design/icons';

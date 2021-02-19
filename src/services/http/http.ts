@@ -22,6 +22,7 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
         };
     } catch (error) {
         if (axios.isCancel(error)) {
+            // eslint-disable-next-line no-console
             console.log('request was canceled');
             return {
                 isCanceled: true
