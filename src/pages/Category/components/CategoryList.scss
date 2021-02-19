@@ -1,0 +1,19 @@
+.category-list {
+    margin: -16px -24px !important;
+
+    li {
+        transition: background 0.3s;
+        padding: 16px;
+        overflow-wrap: break-word;
+    }
+
+    li:hover {
+        background: #fafafa;
+        cursor: pointer;
+    }
+
+    li.active {
+        border-color: rgba(0, 0, 0, 0.03);
+        background-color: #e6f7ff;
+    }
+}

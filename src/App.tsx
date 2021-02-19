@@ -3,7 +3,7 @@ import React, { FunctionComponent } from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 
 import { Header } from './Header';
-import CategoriesPage from './pages/Category/CategoriesPage';
+import CategoriesLayoutContainer from './pages/Category/CategoriesLayoutContainer';
 import SystemNotificationPage from './pages/Notify/SystemNotificationPage';
 import { ExpensesListComponent } from './pages/Expense/ExpensesPage';
 
@@ -24,9 +24,7 @@ const App: FunctionComponent = (): JSX.Element => (
             <div className="site-layout-content">
                 <Switch>
                     <Route exact path="/" render={(): JSX.Element => <Redirect to="/categories" />} />
-                    <Route path="/categories/:id?" render={(): JSX.Element => <CategoriesPage />}>
-                        <CategoriesPage />
-                    </Route>
+                    <Route path="/categories/:id?" render={(): JSX.Element => <CategoriesLayoutContainer />} />
                     <Route path="/expenses" component={ExpensesListComponent}></Route>
                 </Switch>
             </div>
