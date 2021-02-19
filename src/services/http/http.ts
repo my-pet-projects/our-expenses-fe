@@ -6,7 +6,7 @@ const cancelToken = axios.CancelToken;
 let source = cancelToken.source();
 
 export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHttpResponse<T>> => {
-    const baseUrl = 'http://localhost:5000/dsf';
+    const baseUrl = 'http://localhost:5000';
 
     const config = {
         url: `${baseUrl}/${options.path}`,
