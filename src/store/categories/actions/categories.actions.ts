@@ -49,9 +49,9 @@ export const fetchCancel = () => async (dispatch: Dispatch<AnyAction>): Promise<
     cancelRequest();
 };
 
-export const fetchCategories = () => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
+export const fetchCategories = (categoryId?: string) => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
     const options = {
-        path: 'categories',
+        path: categoryId ? `categories?parentId=${categoryId}` : 'categories',
         method: 'GET'
     } as IHttpRequestOptions;
 
