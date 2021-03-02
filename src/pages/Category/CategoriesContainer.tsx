@@ -1,5 +1,4 @@
-import { PlusSquareOutlined } from '@ant-design/icons';
-import { Alert, Button, Card, Skeleton } from 'antd';
+import { Alert, Skeleton } from 'antd';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { ApplicationError, Category } from 'src/models';
@@ -15,7 +14,7 @@ interface PropsFromState {
 }
 
 interface PropsFromDispatch {
-    fetchCategories: () => Promise<void>;
+    fetchCategories: (categoryId?: string) => Promise<void>;
     fetchCancel: () => Promise<void>;
 }
 
@@ -30,35 +29,23 @@ const CategoriesContainer = (props: CategoriesContainerProps): JSX.Element => {
     const { categories, selectedCategoryId, isLoading, error, fetchCategories, fetchCancel, onCategorySelect } = props;
 
     useEffect(() => {
-        fetchCategories();
+        fetchCategories(selectedCategoryId);
         return (): void => {
             fetchCancel();
         };
-    }, [fetchCancel, fetchCategories]);
+    }, [fetchCancel, fetchCategories, selectedCategoryId]);
 
     return (
         <>
-            <Card
-                size="default"
-                title="Available categories"
-                type="inner"
-                bordered={true}
-                extra={
-                    <Button type="link" block>
-                        <PlusSquareOutlined />
-                    </Button>
-                }
-            >
-                <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 20 }} />
-                {!error && !isLoading && (
-                    <CategoryList
-                        selectedCategoryId={selectedCategoryId}
-                        categories={categories}
-                        onSelect={onCategorySelect}
-                    />
-                )}
-                {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
-            </Card>
+            <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 20 }} />
+            {!error && !isLoading && (
+                <CategoryList
+                    selectedCategoryId={selectedCategoryId}
+                    categories={categories}
+                    onSelect={onCategorySelect}
+                />
+            )}
+            {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
         </>
     );
 };

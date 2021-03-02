@@ -1,4 +1,4 @@
-import { Alert, Button, Card, Skeleton } from 'antd';
+import { Alert, Skeleton } from 'antd';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -7,8 +7,7 @@ import { ApplicationError, Category } from 'src/models';
 import { RootState } from 'src/store';
 import { fetchCancel, fetchCategories } from 'src/store/categories/actions';
 import { saveCategory, selectCategory, showCategoryForm } from 'src/store/category/actions';
-
-import CategoryForm from './components/CategoryForm';
+import { CategoryTitle } from './components';
 
 interface PropsFromState {
     isLoading: boolean;
@@ -48,7 +47,18 @@ const CategoryDetailsContainer = (props: CategoryDetailsContainerProps): JSX.Ele
 
     return (
         <>
-            <Card
+            <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 2 }} />
+            {!error && !isLoading && (
+                <>
+                    <CategoryTitle category={category} />
+                </>
+            )}
+
+            {error && !isProcessing && (
+                <Alert message={error.message} description={error.description} type="error" showIcon />
+            )}
+
+            {/* <Card
                 size="default"
                 title="Edit category"
                 type="inner"
@@ -68,7 +78,7 @@ const CategoryDetailsContainer = (props: CategoryDetailsContainerProps): JSX.Ele
                 {error && !isProcessing && (
                     <Alert message={error.message} description={error.description} type="error" showIcon />
                 )}
-            </Card>
+            </Card> */}
         </>
     );
 };

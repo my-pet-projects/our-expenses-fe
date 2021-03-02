@@ -1,4 +1,4 @@
-import { Col, Row } from 'antd';
+import { Divider } from 'antd';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
@@ -44,16 +44,15 @@ const CategoriesLayoutContainer = (props: CategoriesLayoutContainerProps): JSX.E
     };
 
     return (
-        <Row justify="center" gutter={[16, 0]}>
-            <Col span={12}>
-                <CategoriesContainer selectedCategoryId={selectedCategoryId} onCategorySelect={onCategorySelect} />
-            </Col>
-            {isCategoryFormVisible && (
-                <Col span={12}>
+        <>
+            {selectedCategoryId && (
+                <>
                     <CategoryDetailsContainer onCancel={onCategoryCancel} />
-                </Col>
+                    <Divider />
+                </>
             )}
-        </Row>
+            <CategoriesContainer selectedCategoryId={selectedCategoryId} onCategorySelect={onCategorySelect} />
+        </>
     );
 };
 

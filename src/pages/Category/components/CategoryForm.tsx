@@ -7,11 +7,14 @@ import * as Yup from 'yup';
 import { Category } from 'src/models';
 
 import './CategoryForm.scss';
+import { Icon } from './Icon';
 
 interface CategoryFormValues {
     id: string;
     name: string;
+    icon: string;
     parent: string;
+    path: string;
 }
 
 type CategoryFormProps = {
@@ -68,6 +71,10 @@ const CategoryFormComponent = (props: CategoryFormProps & FormikProps<CategoryFo
                 <Input type="hidden" value={values.parent} />
             </Form.Item>
 
+            <Form.Item name="path" noStyle>
+                <Input type="hidden" value={values.path} />
+            </Form.Item>
+
             <Form.Item
                 label="Name"
                 help={touched.name && errors.name}
@@ -85,6 +92,29 @@ const CategoryFormComponent = (props: CategoryFormProps & FormikProps<CategoryFo
                     onBlur={handleBlur}
                 />
             </Form.Item>
+
+            <Form.Item
+                label="Icon"
+                help={touched.name && errors.name}
+                hasFeedback={touched.name && !!errors.name}
+                validateStatus={touched.name && errors.name ? 'error' : 'success'}
+            >
+                <Input
+                    prefix={<EditOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
+                    placeholder="Icon path"
+                    autoComplete="off"
+                    type="text"
+                    name="icon"
+                    value={values.icon}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                />
+            </Form.Item>
+
+            <Form.Item label="Icon preview">
+                <Icon name={values.icon} fill="gray" width="24" />
+            </Form.Item>
+
             <Form.Item {...tailLayout} style={{ textAlign: 'right' }}>
                 <Button
                     type="primary"
@@ -114,20 +144,24 @@ const CategoryForm = withFormik<CategoryFormProps, CategoryFormValues>({
     mapPropsToValues: ({ category }: CategoryFormProps) => ({
         id: category?.id || '',
         name: category?.name || '',
-        parent: category?.parent || ''
+        icon: category?.icon || '',
+        parent: category?.parent || '',
+        path: category?.path || ''
     }),
     validationSchema: Yup.object().shape({
         name: Yup.string().max(50, 'Too Long!').required('Please input category name!')
     }),
     handleSubmit: async (
-        { id, name, parent }: CategoryFormValues,
+        { id, name, icon, parent, path }: CategoryFormValues,
         { props, setSubmitting }: FormikBag<CategoryFormProps, CategoryFormValues>
     ) => {
         const { onCategorySave: saveCategory } = props;
         const category = {
             id: id,
             name: name,
-            parent: parent
+            icon: icon,
+            parent: parent,
+            path: path
         } as Category;
 
         await saveCategory(category);
