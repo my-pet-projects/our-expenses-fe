@@ -6,7 +6,7 @@ const cancelToken = axios.CancelToken;
 let source = cancelToken.source();
 
 export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHttpResponse<T>> => {
-    const baseUrl = 'http://localhost:5000';
+    const baseUrl = 'http://localhost:8080/api';
 
     const config = {
         url: `${baseUrl}/${options.path}`,
@@ -16,6 +16,12 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
     } as AxiosRequestConfig;
 
     try {
+        const wait = (ms: number): Promise<void> =>
+            new Promise((resolve: (value: void | PromiseLike<void>) => void) => {
+                setTimeout(resolve, ms);
+            });
+        await wait(1000);
+
         const result = await axios.request<T>(config);
         return {
             data: result.data
