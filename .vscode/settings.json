@@ -6,8 +6,11 @@
     "[javascript]": {
         "editor.formatOnSave": true
     },
-    // "importSorter.generalConfiguration.sortOnBeforeSave": true,
-    // "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 120,
+    "importSorter.generalConfiguration.sortOnBeforeSave": true,
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 120,
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+    "importSorter.sortConfiguration.removeUnusedImports": true,
+    "importSorter.sortConfiguration.removeUnusedDefaultImports": true,
     "importSorter.sortConfiguration.customOrderingRules.rules": [
         {
             "type": "importMember",
