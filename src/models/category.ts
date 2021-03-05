@@ -2,7 +2,7 @@ export interface Category {
     id: string;
     name: string;
     icon: string;
-    parent: string;
+    parentId: string;
     path: string;
     level: number;
 }

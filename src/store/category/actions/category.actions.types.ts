@@ -1,44 +1,55 @@
 import { ApplicationError, Category } from 'src/models';
+import { CategoryModalType } from 'src/pages/Category/components';
 import { CategoryActionType } from 'src/store/category/constants';
 
 export interface IFetchCategoryInit {
     type: CategoryActionType.FETCH_INIT;
-    isLoading: boolean;
 }
 
 export interface IFetchCategorySuccess {
     type: CategoryActionType.FETCH_SUCCESS;
-    isLoading: boolean;
-    category: Category;
+    payload: {
+        category: Category;
+    };
 }
 
 export interface IFetchCategoryFail {
     type: CategoryActionType.FETCH_FAILED;
-    error: ApplicationError;
+    payload: ApplicationError;
+    error: boolean;
 }
 
 export interface IShowCategoryForm {
-    type: CategoryActionType.SHOW_FORM;
+    type: CategoryActionType.SHOW_MODAL;
+    payload: {
+        category: Category | null;
+        mode: CategoryModalType;
+    };
 }
 
 export interface IHideCategoryForm {
-    type: CategoryActionType.HIDE_FORM;
+    type: CategoryActionType.HIDE_MODAL;
 }
 
 export interface ICategoryProcessingInit {
     type: CategoryActionType.PROCESSING_INIT;
-    isProcessing: boolean;
 }
 
 export interface ICategoryProcessingDone {
     type: CategoryActionType.PROCESSING_DONE;
-    isProcessing: boolean;
 }
 
 export interface ICategoryProcessingFailed {
     type: CategoryActionType.PROCESSING_FAILED;
-    isProcessing: boolean;
-    error: ApplicationError;
+    payload: ApplicationError;
+    error: boolean;
+}
+
+export interface ICategoryUpdateDone {
+    type: CategoryActionType.REFRESH;
+    payload: {
+        category: Category;
+    };
 }
 
 export type CategoryAction =
@@ -49,4 +60,5 @@ export type CategoryAction =
     | IHideCategoryForm
     | ICategoryProcessingDone
     | ICategoryProcessingInit
-    | ICategoryProcessingFailed;
+    | ICategoryProcessingFailed
+    | ICategoryUpdateDone;

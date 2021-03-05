@@ -34,24 +34,24 @@ export const categoriesReducer: Reducer<ICategoriesState, CategoriesAction> = (
         case CategoriesActionType.FETCH_SUCCESS:
             return {
                 ...state,
-                categories: action.categories,
+                categories: action.payload.categories,
                 isLoading: false
             };
         case CategoriesActionType.FETCH_FAILED:
             return {
                 ...state,
-                error: action.error,
+                error: action.payload,
                 isLoading: false
             };
         case CategoriesActionType.ITEM_UPDATE:
             const categories = state.categories.map((item: Category) => {
-                if (item.id !== action.category.id) {
+                if (item.id !== action.payload.category.id) {
                     return item;
                 }
 
                 return {
                     ...item,
-                    ...action.category
+                    ...action.payload.category
                 };
             });
 
@@ -60,11 +60,11 @@ export const categoriesReducer: Reducer<ICategoriesState, CategoriesAction> = (
                 categories: categories
             };
         case CategoriesActionType.ITEM_INSERT:
-            // const newArray = array.slice();
-            // newArray.splice(action.index, 0, action.item);
-            // return newArray;
+            const newArray = state.categories.slice();
+            newArray.splice(0, 0, action.payload.category);
             return {
-                ...state
+                ...state,
+                categories: newArray
             };
         case CategoriesActionType.ITEM_REMOVE:
             // let newArray = array.slice();

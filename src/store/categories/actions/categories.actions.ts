@@ -7,7 +7,7 @@ import { CategoriesActionType } from 'src/store/categories/constants';
 import { notifyFailure } from 'src/store/notify/actions';
 
 import {
-    ICategoryUpdate,
+    ICategoryInsert,
     IFetchCategoriesCancel,
     IFetchCategoriesFail,
     IFetchCategoriesInit,
@@ -15,33 +15,35 @@ import {
 } from './categories.actions.types';
 
 const willFetchCategories = (): IFetchCategoriesInit => ({
-    type: CategoriesActionType.FETCH_INIT,
-    isLoading: true
+    type: CategoriesActionType.FETCH_INIT
 });
 
 const canceledFetchCategories = (): IFetchCategoriesCancel => ({
-    type: CategoriesActionType.FETCH_CANCEL,
-    isLoading: false
+    type: CategoriesActionType.FETCH_CANCEL
 });
 
 const didFetchCategories = (categories: Category[]): IFetchCategoriesSuccess => ({
     type: CategoriesActionType.FETCH_SUCCESS,
-    categories: categories,
-    isLoading: false
+    payload: {
+        categories: categories
+    }
 });
 
 const failedToFetchCategories = (error: ApplicationError): IFetchCategoriesFail => ({
     type: CategoriesActionType.FETCH_FAILED,
-    error: error
+    payload: error,
+    error: true
 });
 
-const didUpdateCategory = (category: Category): ICategoryUpdate => ({
-    type: CategoriesActionType.ITEM_UPDATE,
-    category: category
+const addChildCategory = (category: Category): ICategoryInsert => ({
+    type: CategoriesActionType.ITEM_INSERT,
+    payload: {
+        category: category
+    }
 });
 
-export const updateCategory = (category: Category) => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
-    await dispatch(didUpdateCategory(category));
+export const addCategory = (category: Category) => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
+    await dispatch(addChildCategory(category));
 };
 
 export const fetchCancel = () => async (dispatch: Dispatch<AnyAction>): Promise<void> => {

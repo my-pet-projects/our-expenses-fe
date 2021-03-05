@@ -1,19 +1,19 @@
-import { Avatar, List, Row, Col, Card } from 'antd';
+import { Card, Col, Row } from 'antd';
 import React from 'react';
 
 import { Category } from 'src/models';
 
-import './CategoryList.scss';
 import { Icon } from './Icon';
+
+import './CategoryList.scss';
 
 type CategoryListProps = {
     categories: Category[];
-    selectedCategoryId: string;
     onSelect: (category: Category) => void;
 };
 
 export const CategoryList = (props: CategoryListProps): JSX.Element => {
-    const { categories, selectedCategoryId, onSelect } = props;
+    const { categories, onSelect } = props;
 
     const sortedCategories = ([] as Category[])
         .concat(categories || [])
@@ -41,21 +41,5 @@ export const CategoryList = (props: CategoryListProps): JSX.Element => {
                 </Col>
             ))}
         </Row>
-        // <List
-        //     className="category-list"
-        //     itemLayout="horizontal"
-        //     dataSource={sortedCategories}
-        //     renderItem={(category: Category): React.ReactNode => (
-        //         <List.Item
-        //             className={category.id === selectedCategoryId ? 'active' : ''}
-        //             onClick={(): void => onSelect(category)}
-        //         >
-        //             <List.Item.Meta
-        //                 avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-        //                 title={category.name}
-        //             />
-        //         </List.Item>
-        //     )}
-        // />
     );
 };

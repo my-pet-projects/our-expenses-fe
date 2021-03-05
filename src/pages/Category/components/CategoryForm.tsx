@@ -6,21 +6,22 @@ import * as Yup from 'yup';
 
 import { Category } from 'src/models';
 
-import './CategoryForm.scss';
 import { Icon } from './Icon';
+
+import './CategoryForm.scss';
 
 interface CategoryFormValues {
     id: string;
     name: string;
     icon: string;
-    parent: string;
+    parentId: string;
     path: string;
 }
 
 type CategoryFormProps = {
     isProcessing: boolean;
     category: Category | null;
-    onCategorySave: (category: Category) => void;
+    onSave: (category: Category) => Promise<void>;
     onCancel: () => void;
 };
 
@@ -57,9 +58,15 @@ const CategoryFormComponent = (props: CategoryFormProps & FormikProps<CategoryFo
         handleChange,
         handleBlur,
         handleSubmit,
+        handleReset,
         onCancel,
         isSubmitting
     } = props;
+
+    const handleCancel = (): void => {
+        handleReset();
+        onCancel();
+    };
 
     return (
         <Form {...layout} className="category-form" onFinish={handleSubmit}>
@@ -67,13 +74,15 @@ const CategoryFormComponent = (props: CategoryFormProps & FormikProps<CategoryFo
                 <Input type="hidden" value={values.id} />
             </Form.Item>
 
-            <Form.Item name="parent" noStyle>
-                <Input type="hidden" value={values.parent} />
+            <Form.Item name="parentId" noStyle>
+                <Input type="hidden" value={values.parentId} />
             </Form.Item>
 
             <Form.Item name="path" noStyle>
                 <Input type="hidden" value={values.path} />
             </Form.Item>
+
+            {JSON.stringify(values)}
 
             <Form.Item
                 label="Name"
@@ -93,12 +102,7 @@ const CategoryFormComponent = (props: CategoryFormProps & FormikProps<CategoryFo
                 />
             </Form.Item>
 
-            <Form.Item
-                label="Icon"
-                help={touched.name && errors.name}
-                hasFeedback={touched.name && !!errors.name}
-                validateStatus={touched.name && errors.name ? 'error' : 'success'}
-            >
+            <Form.Item label="Icon" help={touched.icon && errors.icon}>
                 <Input
                     prefix={<EditOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
                     placeholder="Icon path"
@@ -124,12 +128,12 @@ const CategoryFormComponent = (props: CategoryFormProps & FormikProps<CategoryFo
                     disabled={isSubmitting || !!(errors.name && touched.name)}
                     loading={isProcessing}
                 >
-                    Update
+                    Save
                 </Button>
                 <Button
                     type="default"
                     icon={<StopOutlined />}
-                    onClick={onCancel}
+                    onClick={handleCancel}
                     disabled={isSubmitting || isProcessing}
                 >
                     Cancel
@@ -139,34 +143,37 @@ const CategoryFormComponent = (props: CategoryFormProps & FormikProps<CategoryFo
     );
 };
 
-const CategoryForm = withFormik<CategoryFormProps, CategoryFormValues>({
+export const CategoryForm = withFormik<CategoryFormProps, CategoryFormValues>({
     enableReinitialize: true,
     mapPropsToValues: ({ category }: CategoryFormProps) => ({
         id: category?.id || '',
         name: category?.name || '',
         icon: category?.icon || '',
-        parent: category?.parent || '',
+        parentId: category?.parentId || '',
         path: category?.path || ''
     }),
     validationSchema: Yup.object().shape({
         name: Yup.string().max(50, 'Too Long!').required('Please input category name!')
     }),
     handleSubmit: async (
-        { id, name, icon, parent, path }: CategoryFormValues,
-        { props, setSubmitting }: FormikBag<CategoryFormProps, CategoryFormValues>
+        { id, name, icon, parentId, path }: CategoryFormValues,
+        { props, setSubmitting, resetForm, setStatus }: FormikBag<CategoryFormProps, CategoryFormValues>
     ) => {
-        const { onCategorySave: saveCategory } = props;
+        const { onSave } = props;
         const category = {
             id: id,
             name: name,
             icon: icon,
-            parent: parent,
+            parentId: parentId,
             path: path
         } as Category;
 
-        await saveCategory(category);
+        try {
+            await onSave(category);
+            resetForm();
+        } catch (error) {
+            setStatus(error);
+        }
         setSubmitting(false);
     }
 })(CategoryFormComponent);
-
-export default CategoryForm;

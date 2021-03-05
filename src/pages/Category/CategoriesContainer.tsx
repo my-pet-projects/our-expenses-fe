@@ -1,6 +1,7 @@
 import { Alert, Skeleton } from 'antd';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+
 import { ApplicationError, Category } from 'src/models';
 import { RootState } from 'src/store';
 import { fetchCancel, fetchCategories } from 'src/store/categories/actions';
@@ -38,13 +39,7 @@ const CategoriesContainer = (props: CategoriesContainerProps): JSX.Element => {
     return (
         <>
             <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 20 }} />
-            {!error && !isLoading && (
-                <CategoryList
-                    selectedCategoryId={selectedCategoryId}
-                    categories={categories}
-                    onSelect={onCategorySelect}
-                />
-            )}
+            {!error && !isLoading && <CategoryList categories={categories} onSelect={onCategorySelect} />}
             {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
         </>
     );

@@ -1,6 +1,8 @@
 import Title from 'antd/lib/typography/Title';
 import React from 'react';
+
 import { Category } from 'src/models';
+
 import { Icon } from './Icon';
 
 import './CategoryTitle.scss';

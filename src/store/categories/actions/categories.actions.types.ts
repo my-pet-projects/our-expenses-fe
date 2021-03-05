@@ -3,38 +3,44 @@ import { CategoriesActionType } from 'src/store/categories/constants';
 
 export interface IFetchCategoriesInit {
     type: CategoriesActionType.FETCH_INIT;
-    isLoading: boolean;
 }
 
 export interface IFetchCategoriesSuccess {
     type: CategoriesActionType.FETCH_SUCCESS;
-    isLoading: boolean;
-    categories: Category[];
+    payload: {
+        categories: Category[];
+    };
 }
 
 export interface IFetchCategoriesCancel {
     type: CategoriesActionType.FETCH_CANCEL;
-    isLoading: boolean;
 }
 
 export interface IFetchCategoriesFail {
     type: CategoriesActionType.FETCH_FAILED;
-    error: ApplicationError;
+    payload: ApplicationError;
+    error: boolean;
 }
 
 export interface ICategoryUpdate {
     type: CategoriesActionType.ITEM_UPDATE;
-    category: Category;
+    payload: {
+        category: Category;
+    };
 }
 
 export interface ICategoryInsert {
     type: CategoriesActionType.ITEM_INSERT;
-    category: Category;
+    payload: {
+        category: Category;
+    };
 }
 
 export interface ICategoryRemove {
     type: CategoriesActionType.ITEM_REMOVE;
-    category: Category;
+    payload: {
+        category: Category;
+    };
 }
 
 export type CategoriesAction =
