@@ -5,4 +5,5 @@ export interface Category {
     parentId: string;
     path: string;
     level: number;
+    parents: Category[];
 }
