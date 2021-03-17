@@ -51,6 +51,9 @@ export interface ICategoryUpdateDone {
         category: Category;
     };
 }
+export interface ICategoryReset {
+    type: CategoryActionType.RESET;
+}
 
 export type CategoryAction =
     | IFetchCategoryInit
@@ -61,4 +64,5 @@ export type CategoryAction =
     | ICategoryProcessingDone
     | ICategoryProcessingInit
     | ICategoryProcessingFailed
-    | ICategoryUpdateDone;
+    | ICategoryUpdateDone
+    | ICategoryReset;

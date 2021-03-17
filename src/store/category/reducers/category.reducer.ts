@@ -107,6 +107,11 @@ export const categoryReducer: Reducer<ICategoryState, CategoryAction> = (
                 ...state,
                 category: action.payload.category
             };
+        case CategoryActionType.RESET:
+            return {
+                ...state,
+                category: null
+            };
         default:
             return state;
     }

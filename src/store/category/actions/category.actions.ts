@@ -10,6 +10,7 @@ import {
     ICategoryProcessingDone,
     ICategoryProcessingFailed,
     ICategoryProcessingInit,
+    ICategoryReset,
     ICategoryUpdateDone,
     IFetchCategoryFail,
     IFetchCategoryInit,
@@ -47,6 +48,10 @@ const hideCategoryModal = (): IHideCategoryForm => ({
     type: CategoryActionType.HIDE_MODAL
 });
 
+const resetSelectedCategory = (): ICategoryReset => ({
+    type: CategoryActionType.RESET
+});
+
 // export const fetchCancel = () => async (dispatch: Dispatch<AnyAction>, getState: () => RootState): Promise<void> => {
 //     await dispatch(GetFetchCancel());
 //     cancelRequest();
@@ -73,20 +78,22 @@ const refreshCategory = (category: Category): ICategoryUpdateDone => ({
     }
 });
 
-export const showCategoryForm = (category: Category, mode: CategoryModalType): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
+export const showCategoryForm = (
+    category: Category | null,
+    mode: CategoryModalType
+): AppThunkResult<Promise<void>> => async (dispatch: AppThunkDispatch): Promise<void> => {
     let payload = category;
     if (mode === CategoryModalType.Create) {
         payload = {
             id: '',
             name: '',
             icon: '',
-            path: category.path,
-            parentId: category.id
+            path: category ? category.path : '',
+            parentId: category ? category.id : '',
+            level: category ? category.level : 1
         } as Category;
     }
-    dispatch(didShowCategoryModal(payload, mode));
+    dispatch(didShowCategoryModal(payload!, mode));
 };
 
 export const hideCategoryForm = (): AppThunkResult<Promise<void>> => async (
@@ -95,9 +102,14 @@ export const hideCategoryForm = (): AppThunkResult<Promise<void>> => async (
     dispatch(hideCategoryModal());
 };
 
-export const selectCategory = (id: string): AppThunkResult<Promise<void>> => async (
+export const selectCategory = (id?: string): AppThunkResult<Promise<void>> => async (
     dispatch: AppThunkDispatch
 ): Promise<void> => {
+    if (!id) {
+        dispatch(resetSelectedCategory());
+        return;
+    }
+
     const options = {
         path: `categories/${id}`,
         method: 'GET'
