@@ -16,6 +16,7 @@ interface CategoryFormValues {
     icon: string;
     parentId: string;
     path: string;
+    level: number;
 }
 
 type CategoryFormProps = {
@@ -80,6 +81,10 @@ const CategoryFormComponent = (props: CategoryFormProps & FormikProps<CategoryFo
 
             <Form.Item name="path" noStyle>
                 <Input type="hidden" value={values.path} />
+            </Form.Item>
+
+            <Form.Item name="level" noStyle>
+                <Input type="hidden" value={values.level} />
             </Form.Item>
 
             {JSON.stringify(values)}
@@ -150,13 +155,14 @@ export const CategoryForm = withFormik<CategoryFormProps, CategoryFormValues>({
         name: category?.name || '',
         icon: category?.icon || '',
         parentId: category?.parentId || '',
-        path: category?.path || ''
+        path: category?.path || '',
+        level: category?.level || 0
     }),
     validationSchema: Yup.object().shape({
         name: Yup.string().max(50, 'Too Long!').required('Please input category name!')
     }),
     handleSubmit: async (
-        { id, name, icon, parentId, path }: CategoryFormValues,
+        { id, name, icon, parentId, path, level }: CategoryFormValues,
         { props, setSubmitting, resetForm, setStatus }: FormikBag<CategoryFormProps, CategoryFormValues>
     ) => {
         const { onSave } = props;
@@ -165,7 +171,8 @@ export const CategoryForm = withFormik<CategoryFormProps, CategoryFormValues>({
             name: name,
             icon: icon,
             parentId: parentId,
-            path: path
+            path: path,
+            level: level
         } as Category;
 
         try {

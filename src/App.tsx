@@ -1,11 +1,11 @@
-import { Breadcrumb, Layout } from 'antd';
+import { Layout } from 'antd';
 import React, { FunctionComponent } from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 
 import { Header } from './Header';
 import CategoriesLayoutContainer from './pages/Category/CategoriesLayoutContainer';
-import SystemNotificationPage from './pages/Notify/SystemNotificationPage';
 import { ExpensesListComponent } from './pages/Expense/ExpensesPage';
+import SystemNotificationPage from './pages/Notify/SystemNotificationPage';
 
 import 'antd/dist/antd.css';
 import './App.scss';
@@ -15,12 +15,7 @@ const App: FunctionComponent = (): JSX.Element => (
         <Layout.Header>
             <Header />
         </Layout.Header>
-        <Layout.Content style={{ padding: '0 50px' }}>
-            <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
-                <Breadcrumb.Item>List</Breadcrumb.Item>
-                <Breadcrumb.Item>App</Breadcrumb.Item>
-            </Breadcrumb>
+        <Layout.Content>
             <div className="site-layout-content">
                 <Switch>
                     <Route exact path="/" render={(): JSX.Element => <Redirect to="/categories" />} />

@@ -1,4 +1,4 @@
-import { Alert, Button, Modal, Skeleton } from 'antd';
+import { Alert, Modal, Skeleton } from 'antd';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -9,7 +9,9 @@ import { fetchCancel, fetchCategories } from 'src/store/categories/actions';
 import { hideCategoryForm, saveCategory, selectCategory, showCategoryForm } from 'src/store/category/actions';
 import { ICategoryModalState } from 'src/store/category/reducers';
 
-import { CategoryForm, CategoryModalType, CategoryTitle } from './components';
+import { CategoryForm, CategoryHeader, CategoryModalType } from './components';
+
+import './CategoryDetailsContainer.scss';
 
 interface PropsFromState {
     isLoading: boolean;
@@ -23,12 +25,13 @@ interface PropsFromDispatch {
     fetchCancel: () => Promise<void>;
     selectCategory: (id: string) => Promise<void>;
     saveCategory: (category: Category) => Promise<void>;
-    showCategoryForm: (category: Category, mode: CategoryModalType) => Promise<void>;
+    showCategoryForm: (category: Category | null, mode: CategoryModalType) => Promise<void>;
     hideCategoryForm: () => Promise<void>;
 }
 
 interface CategoryDetailsProps {
     onCancel: () => void;
+    onCategoryReset: () => void;
 }
 
 type CategoryDetailsContainerProps = PropsFromState & PropsFromDispatch & CategoryDetailsProps;
@@ -43,13 +46,12 @@ const CategoryDetailsContainer = (props: CategoryDetailsContainerProps): JSX.Ele
         saveCategory,
         showCategoryForm,
         hideCategoryForm,
-        modalData
+        modalData,
+        onCategoryReset
     } = props;
 
     useEffect(() => {
-        if (categoryId) {
-            selectCategory(categoryId);
-        }
+        selectCategory(categoryId);
     }, [categoryId, selectCategory]);
 
     const handleSaveCategory = async (category: Category): Promise<void> => {
@@ -57,9 +59,6 @@ const CategoryDetailsContainer = (props: CategoryDetailsContainerProps): JSX.Ele
     };
 
     const showCreateModal = (): void => {
-        if (!category) {
-            return;
-        }
         showCategoryForm(category, CategoryModalType.Create);
     };
 
@@ -76,42 +75,44 @@ const CategoryDetailsContainer = (props: CategoryDetailsContainerProps): JSX.Ele
 
     return (
         <>
-            <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 2 }} />
-            {!error && !isLoading && (
-                <>
-                    <CategoryTitle category={category} />
-                </>
-            )}
+            <div className="categories-title-wrap">
+                <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 2 }}>
+                    {!error && (
+                        <>
+                            <CategoryHeader
+                                category={category}
+                                onCategoryCreate={showCreateModal}
+                                onCategoryEdit={showEditModal}
+                                onCategoryReset={onCategoryReset}
+                            />
+                        </>
+                    )}
 
-            <Button type="primary" onClick={showCreateModal}>
-                Create
-            </Button>
-            <Button type="primary" onClick={showEditModal}>
-                Edit
-            </Button>
-            <Modal
-                title={modalData.mode === CategoryModalType.Create ? 'Create a new category' : 'Edit category'}
-                visible={modalData.isOpen}
-                onCancel={handleCancel}
-                footer={<></>}
-            >
-                <CategoryForm
-                    isProcessing={modalData.isProcessing}
-                    category={modalData.category}
-                    onCancel={handleCancel}
-                    onSave={handleSaveCategory}
-                />
-                {modalData.error && !modalData.isProcessing && (
-                    <Alert
-                        message={modalData.error.message}
-                        description={modalData.error.description}
-                        type="error"
-                        showIcon
-                    />
-                )}
-            </Modal>
+                    <Modal
+                        title={modalData.mode === CategoryModalType.Create ? 'Create a new category' : 'Edit category'}
+                        visible={modalData.isOpen}
+                        onCancel={handleCancel}
+                        footer={<></>}
+                    >
+                        <CategoryForm
+                            isProcessing={modalData.isProcessing}
+                            category={modalData.category}
+                            onCancel={handleCancel}
+                            onSave={handleSaveCategory}
+                        />
+                        {modalData.error && !modalData.isProcessing && (
+                            <Alert
+                                message={modalData.error.message}
+                                description={modalData.error.description}
+                                type="error"
+                                showIcon
+                            />
+                        )}
+                    </Modal>
+                </Skeleton>
 
-            {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
+                {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
+            </div>
         </>
     );
 };

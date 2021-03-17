@@ -18,14 +18,16 @@
 //     }
 // }
 
-.category-card {
-    height: 100px;
+.category-card-wrap {
     transition: background 0.3s;
 
     :hover {
         background: #fafafa;
-        cursor: pointer;
     }
+}
+
+.category-card {
+    height: 100px;
 
     &-body {
         height: 100%;

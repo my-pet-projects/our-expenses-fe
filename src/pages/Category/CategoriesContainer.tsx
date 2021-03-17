@@ -8,6 +8,8 @@ import { fetchCancel, fetchCategories } from 'src/store/categories/actions';
 
 import { CategoryList } from './components';
 
+import './CategoriesContainer.scss';
+
 interface PropsFromState {
     isLoading: boolean;
     categories: Category[];
@@ -38,9 +40,11 @@ const CategoriesContainer = (props: CategoriesContainerProps): JSX.Element => {
 
     return (
         <>
-            <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 20 }} />
-            {!error && !isLoading && <CategoryList categories={categories} onSelect={onCategorySelect} />}
-            {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
+            <div className="categories-wrap">
+                <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 20 }} />
+                {!error && !isLoading && <CategoryList categories={categories} onSelect={onCategorySelect} />}
+                {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
+            </div>
         </>
     );
 };

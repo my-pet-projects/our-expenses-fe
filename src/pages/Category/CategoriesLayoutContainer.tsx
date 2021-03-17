@@ -1,4 +1,3 @@
-import { Divider } from 'antd';
 import React from 'react';
 import { connect } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
@@ -22,12 +21,7 @@ const CategoriesLayoutContainer = (): JSX.Element => {
 
     return (
         <>
-            {selectedCategoryId && (
-                <>
-                    <CategoryDetailsContainer onCancel={onCategoryCancel} />
-                    <Divider />
-                </>
-            )}
+            <CategoryDetailsContainer onCancel={onCategoryCancel} onCategoryReset={onCategoryCancel} />
             <CategoriesContainer selectedCategoryId={selectedCategoryId} onCategorySelect={onCategorySelect} />
         </>
     );
