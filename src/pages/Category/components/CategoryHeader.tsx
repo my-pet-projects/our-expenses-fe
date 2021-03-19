@@ -1,4 +1,4 @@
-import { AppstoreFilled, EditOutlined, HomeOutlined, PlusOutlined } from '@ant-design/icons';
+import { AppstoreFilled, DeleteOutlined, EditOutlined, HomeOutlined, PlusOutlined } from '@ant-design/icons';
 import { Breadcrumb, Button, PageHeader } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -12,12 +12,13 @@ import './CategoryHeader.scss';
 type CategoryHeaderProps = {
     category: Category | null;
     onCategoryEdit: (category: Category) => void;
+    onCategoryDelete: (category: Category) => void;
     onCategoryCreate: (category?: Category) => void;
     onCategoryReset: () => void;
 };
 
 export const CategoryHeader = (props: CategoryHeaderProps): JSX.Element => {
-    const { category, onCategoryEdit, onCategoryCreate, onCategoryReset } = props;
+    const { category, onCategoryEdit, onCategoryCreate, onCategoryDelete, onCategoryReset } = props;
 
     const parentCategories = ([] as Category[])
         .concat(category?.parents || [])
@@ -72,12 +73,17 @@ export const CategoryHeader = (props: CategoryHeaderProps): JSX.Element => {
             title={category.name}
             className="catalog-header"
             extra={[
-                <Button type="primary" key="1" onClick={(): void => onCategoryEdit(category)}>
-                    <EditOutlined /> Edit
+                <Button key="1" onClick={(): void => onCategoryEdit(category)} type="primary">
+                    <EditOutlined />
+                    Edit
                 </Button>,
                 <Button key="2" onClick={(): void => onCategoryCreate(category)}>
                     <PlusOutlined />
                     Create
+                </Button>,
+                <Button key="3" onClick={(): void => onCategoryDelete(category)} danger>
+                    <DeleteOutlined />
+                    Delete
                 </Button>
             ]}
             avatar={{

@@ -9,9 +9,11 @@ import { fetchCancel, fetchCategories } from 'src/store/categories/actions';
 import { hideCategoryForm, saveCategory, selectCategory, showCategoryForm } from 'src/store/category/actions';
 import { ICategoryModalState } from 'src/store/category/reducers';
 
-import { CategoryForm, CategoryHeader, CategoryModalType } from './components';
+import { CategoryForm, CategoryHeader, CategoryModalType, CategoryUsages } from './components';
 
 import './CategoryDetailsContainer.scss';
+
+const { confirm } = Modal;
 
 interface PropsFromState {
     isLoading: boolean;
@@ -69,6 +71,26 @@ const CategoryDetailsContainer = (props: CategoryDetailsContainerProps): JSX.Ele
         showCategoryForm(category, CategoryModalType.Edit);
     };
 
+    const showDeleteModal = (): void => {
+        confirm({
+            title: 'Are you sure delete this task?',
+            // icon: <ExclamationCircleOutlined />,
+            content: <CategoryUsages categories={[]} onSelect={showCreateModal} />,
+            okText: 'Yes',
+            okType: 'danger',
+            okButtonProps: {
+                disabled: true
+            },
+            cancelText: 'No',
+            onOk() {
+                console.log('OK');
+            },
+            onCancel() {
+                console.log('Cancel');
+            }
+        });
+    };
+
     const handleCancel = (): void => {
         hideCategoryForm();
     };
@@ -83,6 +105,7 @@ const CategoryDetailsContainer = (props: CategoryDetailsContainerProps): JSX.Ele
                                 category={category}
                                 onCategoryCreate={showCreateModal}
                                 onCategoryEdit={showEditModal}
+                                onCategoryDelete={showDeleteModal}
                                 onCategoryReset={onCategoryReset}
                             />
                         </>
@@ -110,6 +133,15 @@ const CategoryDetailsContainer = (props: CategoryDetailsContainerProps): JSX.Ele
                         )}
                     </Modal>
                 </Skeleton>
+
+                <Modal>
+                    <CategoryUsages
+                        categories={[]}
+                        onSelect={(): void => {
+                            console.log('asd');
+                        }}
+                    />
+                </Modal>
 
                 {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
             </div>
