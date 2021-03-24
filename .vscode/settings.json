@@ -27,6 +27,7 @@
         }
     ],
     "cSpell.words": [
+        "Appstore",
         "Formik",
         "Interop",
         "Parens",
@@ -35,6 +36,7 @@
         "browserslist",
         "camelcase",
         "esnext",
+        "hoverable",
         "loglevel",
         "middlewares",
         "onstatechange",
