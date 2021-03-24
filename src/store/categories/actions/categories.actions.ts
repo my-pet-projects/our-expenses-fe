@@ -43,11 +43,11 @@ const addChildCategory = (category: Category): ICategoryInsert => ({
 });
 
 export const addCategory = (category: Category) => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
-    await dispatch(addChildCategory(category));
+    dispatch(addChildCategory(category));
 };
 
 export const fetchCancel = () => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
-    await dispatch(canceledFetchCategories());
+    dispatch(canceledFetchCategories());
     cancelRequest();
 };
 
@@ -67,8 +67,8 @@ export const fetchCategories = (categoryId?: string) => async (dispatch: Dispatc
             description: error.getFullMessage(),
             error: error
         } as ApplicationError;
-        await dispatch(notifyFailure(appError));
-        await dispatch(failedToFetchCategories(appError));
+        dispatch(notifyFailure(appError));
+        dispatch(failedToFetchCategories(appError));
     }
 };
 

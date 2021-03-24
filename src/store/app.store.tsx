@@ -5,7 +5,7 @@ import reduxThunk, { ThunkMiddleware } from 'redux-thunk';
 
 import { RootActions, RootState } from './app.store.types';
 import { categoriesReducer } from './categories/reducers/categories.reducer';
-import { categoryReducer } from './category/reducers';
+import { categoryReducer, modalReducer } from './category/reducers';
 import { notifyReducer } from './notify/reducers';
 
 const logger = createLogger({});
@@ -13,7 +13,8 @@ const logger = createLogger({});
 const rootReducer = combineReducers<RootState>({
     categories: categoriesReducer,
     selectedCategory: categoryReducer,
-    notification: notifyReducer
+    notification: notifyReducer,
+    modalData: modalReducer
 });
 
 const middlewares = [reduxThunk as ThunkMiddleware<RootState, RootActions>, logger];

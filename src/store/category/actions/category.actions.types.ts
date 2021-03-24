@@ -1,5 +1,4 @@
 import { ApplicationError, Category } from 'src/models';
-import { CategoryModalType } from 'src/pages/Category/components';
 import { CategoryActionType } from 'src/store/category/constants';
 
 export interface IFetchCategoryInit {
@@ -19,33 +18,66 @@ export interface IFetchCategoryFail {
     error: boolean;
 }
 
-export interface IShowCategoryForm {
-    type: CategoryActionType.SHOW_MODAL;
-    payload: {
-        category: Category | null;
-        mode: CategoryModalType;
-    };
+export interface ICategoryCreateInit {
+    type: CategoryActionType.CREATE_INIT;
 }
 
-export interface IHideCategoryForm {
-    type: CategoryActionType.HIDE_MODAL;
+export interface ICategoryCreateDone {
+    type: CategoryActionType.CREATE_DONE;
 }
 
-export interface ICategoryProcessingInit {
-    type: CategoryActionType.PROCESSING_INIT;
-}
-
-export interface ICategoryProcessingDone {
-    type: CategoryActionType.PROCESSING_DONE;
-}
-
-export interface ICategoryProcessingFailed {
-    type: CategoryActionType.PROCESSING_FAILED;
+export interface ICategoryCreateFailed {
+    type: CategoryActionType.CREATE_FAILED;
     payload: ApplicationError;
     error: boolean;
 }
 
+export interface ICategoryUpdateInit {
+    type: CategoryActionType.UPDATE_INIT;
+}
+
 export interface ICategoryUpdateDone {
+    type: CategoryActionType.UPDATE_DONE;
+}
+
+export interface ICategoryUpdateFailed {
+    type: CategoryActionType.UPDATE_FAILED;
+    payload: ApplicationError;
+    error: boolean;
+}
+
+export interface ICategoryDeleteInit {
+    type: CategoryActionType.DELETE_INIT;
+}
+
+export interface ICategoryDeleteDone {
+    type: CategoryActionType.DELETE_DONE;
+}
+
+export interface ICategoryDeleteFailed {
+    type: CategoryActionType.DELETE_FAILED;
+    payload: ApplicationError;
+    error: boolean;
+}
+
+export interface ICategoryUsagesInit {
+    type: CategoryActionType.USAGES_INIT;
+}
+
+export interface ICategoryUsagesDone {
+    type: CategoryActionType.USAGES_DONE;
+    payload: {
+        categories: Category[];
+    };
+}
+
+export interface ICategoryUsagesFailed {
+    type: CategoryActionType.USAGES_FAILED;
+    payload: ApplicationError;
+    error: boolean;
+}
+
+export interface ICategoryRefresh {
     type: CategoryActionType.REFRESH;
     payload: {
         category: Category;
@@ -59,10 +91,17 @@ export type CategoryAction =
     | IFetchCategoryInit
     | IFetchCategorySuccess
     | IFetchCategoryFail
-    | IShowCategoryForm
-    | IHideCategoryForm
-    | ICategoryProcessingDone
-    | ICategoryProcessingInit
-    | ICategoryProcessingFailed
+    | ICategoryCreateInit
+    | ICategoryCreateDone
+    | ICategoryCreateFailed
+    | ICategoryUpdateInit
     | ICategoryUpdateDone
+    | ICategoryUpdateFailed
+    | ICategoryDeleteInit
+    | ICategoryDeleteDone
+    | ICategoryDeleteFailed
+    | ICategoryUsagesInit
+    | ICategoryUsagesDone
+    | ICategoryUsagesFailed
+    | ICategoryRefresh
     | ICategoryReset;

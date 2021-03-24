@@ -1,5 +1,4 @@
 export * from './CategoryList';
-export * from './CategoryForm';
 export * from './CategoryHeader';
-export * from './CategoryModalType';
-export * from './CategoryUsages';
+export * from './modals/DeleteConfirmationModal';
+export * from './modals/CategoryFormModal';

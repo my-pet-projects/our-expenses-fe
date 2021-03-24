@@ -6,14 +6,12 @@ import { CategoriesActionType } from 'src/store/categories/constants';
 
 export interface ICategoriesState {
     categories: Category[];
-    selectedCategoryId: string | null;
     isLoading: boolean;
     error?: ApplicationError;
 }
 
 const initialState: ICategoriesState = {
     categories: [],
-    selectedCategoryId: null,
     isLoading: false
 };
 

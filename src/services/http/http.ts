@@ -1,4 +1,5 @@
-import axios, { AxiosRequestConfig, AxiosError } from 'axios';
+import axios, { AxiosError, AxiosRequestConfig } from 'axios';
+
 import { IHttpRequestOptions, IHttpResponse } from './http.types';
 import { HttpError } from './httpError';
 
@@ -20,7 +21,7 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
             new Promise((resolve: (value: void | PromiseLike<void>) => void) => {
                 setTimeout(resolve, ms);
             });
-        await wait(1000);
+        await wait(200);
 
         const result = await axios.request<T>(config);
         return {
