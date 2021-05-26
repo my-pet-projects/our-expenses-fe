@@ -12,6 +12,9 @@ import {
     ICategoryDeleteDone,
     ICategoryDeleteFailed,
     ICategoryDeleteInit,
+    ICategoryMoveDone,
+    ICategoryMoveFailed,
+    ICategoryMoveInit,
     ICategoryRefresh,
     ICategoryReset,
     ICategoryUpdateDone,
@@ -89,6 +92,20 @@ const didDeleteCategory = (): ICategoryDeleteDone => ({
 
 const failedDeleteCategory = (error: ApplicationError): ICategoryDeleteFailed => ({
     type: CategoryActionType.DELETE_FAILED,
+    payload: error,
+    error: true
+});
+
+const willMoveCategory = (): ICategoryMoveInit => ({
+    type: CategoryActionType.MOVE_INIT
+});
+
+const didMoveCategory = (): ICategoryMoveDone => ({
+    type: CategoryActionType.MOVE_DONE
+});
+
+const failedMoveCategory = (error: ApplicationError): ICategoryMoveFailed => ({
+    type: CategoryActionType.MOVE_FAILED,
     payload: error,
     error: true
 });
@@ -245,6 +262,37 @@ export const deleteCategory = (category: Category): AppThunkResult<Promise<void>
         } as ApplicationError;
         dispatch(failedDeleteCategory(appError));
         dispatch(notifyFailure(appError));
+        throw error;
+    }
+};
+
+export const moveCategory = (category: Category, categoryId: string): AppThunkResult<Promise<void>> => async (
+    dispatch: AppThunkDispatch
+): Promise<void> => {
+    const options = {
+        path: `categories/${category.id}/move?destinationId=${categoryId ? categoryId : 'root'}`,
+        method: 'PUT',
+        payload: {
+            category: category,
+            destination: categoryId
+        }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } as IHttpRequestOptions<any>;
+
+    await dispatch(willMoveCategory());
+
+    try {
+        await sendRequest<Category>(options);
+        await dispatch(didMoveCategory());
+        await dispatch(notifySuccess('Category moved successfully!'));
+    } catch (error) {
+        const appError = {
+            message: 'Failed to move category!',
+            description: error.getFullMessage(),
+            error: error
+        } as ApplicationError;
+        await dispatch(failedMoveCategory(appError));
+        await dispatch(notifyFailure(appError));
         throw error;
     }
 };

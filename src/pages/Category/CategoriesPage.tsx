@@ -1,4 +1,10 @@
-import { CategoryFormModal, CategoryHeader, CategoryList, DeleteConfirmationModal } from './components';
+import {
+    CategoryFormModal,
+    CategoryHeader,
+    CategoryList,
+    CategoryMoveModal,
+    DeleteConfirmationModal
+} from './components';
 
 export const CategoriesPage = (): JSX.Element => (
     <>
@@ -7,5 +13,6 @@ export const CategoriesPage = (): JSX.Element => (
 
         <DeleteConfirmationModal />
         <CategoryFormModal />
+        <CategoryMoveModal />
     </>
 );

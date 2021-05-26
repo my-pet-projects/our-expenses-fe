@@ -4,10 +4,15 @@ import { ApplicationError, Category, CategoryModalType } from 'src/models';
 import { ModalAction } from 'src/store/category/actions';
 import { ModalActionType } from 'src/store/category/constants';
 
-export type ICategoryModalPayload = ICategoryPayload | ICategoryUsagesPayload;
+export type ICategoryModalPayload = ICategoryPayload | ICategoryUsagesPayload | ICategoryMovePayload;
 
 export interface ICategoryPayload {
     category: Category;
+}
+
+export interface ICategoryMovePayload {
+    category: Category;
+    allCategories: Category[];
 }
 
 export interface ICategoryUsagesPayload {

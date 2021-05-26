@@ -1,4 +1,4 @@
-import { DeleteOutlined, EditOutlined, PlusOutlined } from '@ant-design/icons';
+import { ArrowUpOutlined, DeleteOutlined, EditOutlined, PlusOutlined } from '@ant-design/icons';
 import { Alert, Button, PageHeader, Skeleton } from 'antd';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,6 +9,7 @@ import {
     fetchCategory,
     showDeleteModal,
     showEditCategoryModal,
+    showMoveCategoryModal,
     showNewCategoryModal
 } from 'src/store/category/actions';
 import { selectCategory } from 'src/store/category/selectors';
@@ -38,6 +39,13 @@ export const CategoryHeader = (): JSX.Element => {
             return;
         }
         dispatch(showEditCategoryModal(category));
+    };
+
+    const handleShowMoveModal = (): void => {
+        if (!category) {
+            return;
+        }
+        dispatch(showMoveCategoryModal(category));
     };
 
     const handleShowDeleteModal = (): void => {
@@ -71,6 +79,14 @@ export const CategoryHeader = (): JSX.Element => {
                                 <Button key="create" onClick={handleShowCreateModal}>
                                     <PlusOutlined />
                                     Create
+                                </Button>,
+                                <Button
+                                    key="move"
+                                    onClick={handleShowMoveModal}
+                                    style={{ display: category ? 'unset' : 'none' }}
+                                >
+                                    <ArrowUpOutlined />
+                                    Move
                                 </Button>,
                                 <Button
                                     key="delete"

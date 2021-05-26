@@ -5,7 +5,7 @@ import { notifyFailure } from 'src/store/notify/actions';
 
 import { ModalActionType } from '../constants';
 import { ICategoryModalPayload } from '../reducers';
-import { deleteCategory, saveCategory } from './category.actions';
+import { deleteCategory, moveCategory, saveCategory } from './category.actions';
 import {
     IHideCategoryForm,
     IModalInitializeDone,
@@ -70,6 +70,7 @@ export const showCategoryForm = (category: Category, mode: CategoryModalType): A
     }
     // dispatch(didShowCategoryModal(payload!, mode, { category: payload }));
 };
+
 export const showNewCategoryModal = (category?: Category): AppThunkResult<Promise<void>> => async (
     dispatch: AppThunkDispatch
 ): Promise<void> => {
@@ -79,7 +80,7 @@ export const showNewCategoryModal = (category?: Category): AppThunkResult<Promis
         icon: '',
         path: category ? category.path : '',
         parentId: category ? category.id : '',
-        level: category ? category.level : 1
+        level: category ? category.level + 1 : 1
     } as Category;
 
     dispatch(didShowCategoryModal(childCategory, 'create'));
@@ -97,6 +98,25 @@ export const showEditCategoryModal = (category: Category): AppThunkResult<Promis
     dispatch(didShowCategoryModal(category, 'edit'));
     const modalPayload = {
         category: category
+    } as ICategoryModalPayload;
+    dispatch(didInitializeModal(modalPayload));
+
+    // dispatch(didShowCategoryModal(payload!, mode, { category: payload }));
+};
+
+export const showMoveCategoryModal = (category: Category): AppThunkResult<Promise<void>> => async (
+    dispatch: AppThunkDispatch
+): Promise<void> => {
+    dispatch(didShowCategoryModal(category, 'move'));
+    const options = {
+        path: 'categories?all=true',
+        method: 'GET'
+    } as IHttpRequestOptions<Category[]>;
+    const result = await sendRequest<Category[]>(options);
+
+    const modalPayload = {
+        category: category,
+        allCategories: result.data
     } as ICategoryModalPayload;
     dispatch(didInitializeModal(modalPayload));
 
@@ -149,6 +169,24 @@ export const processCategorySave = (payload: Category): AppThunkResult<Promise<v
     } catch (error) {
         const appError = {
             message: 'Failed to process category!',
+            description: error.getFullMessage(),
+            error: error
+        } as ApplicationError;
+        dispatch(failedProcessModal(appError));
+    }
+};
+
+export const processCategoryMove = (payload: Category, categoryId: string): AppThunkResult<Promise<void>> => async (
+    dispatch: AppThunkDispatch
+): Promise<void> => {
+    try {
+        await dispatch(willProcessModal());
+        await dispatch(moveCategory(payload, categoryId));
+        await dispatch(didProcessModal());
+        await dispatch(hideCategoryModal());
+    } catch (error) {
+        const appError = {
+            message: 'Failed to process category move!',
             description: error.getFullMessage(),
             error: error
         } as ApplicationError;

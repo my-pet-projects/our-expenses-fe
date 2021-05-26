@@ -60,6 +60,20 @@ export interface ICategoryDeleteFailed {
     error: boolean;
 }
 
+export interface ICategoryMoveInit {
+    type: CategoryActionType.MOVE_INIT;
+}
+
+export interface ICategoryMoveDone {
+    type: CategoryActionType.MOVE_DONE;
+}
+
+export interface ICategoryMoveFailed {
+    type: CategoryActionType.MOVE_FAILED;
+    payload: ApplicationError;
+    error: boolean;
+}
+
 export interface ICategoryUsagesInit {
     type: CategoryActionType.USAGES_INIT;
 }

@@ -1,1 +1,1 @@
-export type CategoryModalType = 'create' | 'edit' | 'delete';
+export type CategoryModalType = 'create' | 'edit' | 'delete' | 'move';
