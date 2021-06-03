@@ -2,10 +2,10 @@ import { Layout } from 'antd';
 import React, { FunctionComponent } from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 
+import { CategoriesPage } from './category/CategoriesPage';
+import { ExpensesListComponent } from './expense/ExpensesPage';
 import { Header } from './Header';
-import { CategoriesPage } from './pages/Category/CategoriesPage';
-import { ExpensesListComponent } from './pages/Expense/ExpensesPage';
-import SystemNotificationPage from './pages/Notify/SystemNotificationPage';
+import SystemNotificationPage from './notify/SystemNotificationPage';
 
 import 'antd/dist/antd.css';
 import './App.scss';
