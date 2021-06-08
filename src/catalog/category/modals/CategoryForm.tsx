@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import { forwardRef, Ref, useImperativeHandle, useRef } from 'react';
 import * as Yup from 'yup';
 
-import { Icon } from 'src/core/components/Icon';
+import { Icon } from 'src/common/components';
 import { Category } from 'src/models';
 
 import './CategoryForm.scss';

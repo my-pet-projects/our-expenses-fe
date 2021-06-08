@@ -3,11 +3,14 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 
-import { Icon } from 'src/core/components/Icon';
+import { fetchCancel, fetchCategories } from 'src/catalog/category/state/actions';
+import {
+    selectCategories,
+    selectCategoriesError,
+    selectCategoriesIsLoading
+} from 'src/catalog/category/state/selectors';
+import { Icon } from 'src/common/components';
 import { Category } from 'src/models';
-
-import { fetchCancel, fetchCategories } from './state/actions';
-import { selectCategories, selectCategoriesError, selectCategoriesIsLoading } from './state/selectors';
 
 import './CategoryList.scss';
 

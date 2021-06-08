@@ -1,4 +1,4 @@
-import { addCategory } from 'src/category/state/actions';
+import { addCategory } from 'src/catalog/category/state/actions';
 import { ApplicationError, Category } from 'src/models';
 import { notifyFailure, notifySuccess } from 'src/notify/state/actions';
 import { AppThunkDispatch, AppThunkResult } from 'src/RootState';

@@ -1,8 +1,8 @@
 import { Action } from 'redux';
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 
-import { CategoriesAction } from 'src/category/state/actions';
-import { ICategoriesState, ICategoryModalState, ICategoryState } from 'src/category/state/reducers';
+import { CategoriesAction } from 'src/catalog/category/state/actions';
+import { ICategoriesState, ICategoryModalState, ICategoryState } from 'src/catalog/category/state/reducers';
 import { INotifyState } from 'src/notify/state/reducers';
 
 export interface RootState {

@@ -1,7 +1,7 @@
 import { Reducer } from 'redux';
 
-import { CategoriesAction } from 'src/category/state/actions';
-import { CategoriesActionType } from 'src/category/state/constants';
+import { CategoriesAction } from 'src/catalog/category/state/actions';
+import { CategoriesActionType } from 'src/catalog/category/state/constants';
 import { ApplicationError, Category } from 'src/models';
 
 export interface ICategoriesState {

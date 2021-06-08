@@ -2,7 +2,7 @@ import { Layout } from 'antd';
 import React, { FunctionComponent } from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 
-import { CategoriesPage } from './category/CategoriesPage';
+import { CategoriesPage } from './catalog/category/CategoryCatalogPage';
 import { ExpensesListComponent } from './expense/ExpensesPage';
 import { Header } from './Header';
 import SystemNotificationPage from './notify/SystemNotificationPage';

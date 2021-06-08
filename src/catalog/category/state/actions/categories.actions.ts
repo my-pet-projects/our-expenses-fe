@@ -1,7 +1,7 @@
 import { Dispatch } from 'react';
 import { AnyAction } from 'redux';
 
-import { CategoriesActionType } from 'src/category/state/constants';
+import { CategoriesActionType } from 'src/catalog/category/state/constants';
 import { ApplicationError, Category } from 'src/models';
 import { notifyFailure } from 'src/notify/state/actions';
 import { cancelRequest, IHttpRequestOptions, sendRequest } from 'src/services/http';

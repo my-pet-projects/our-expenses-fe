@@ -1,4 +1,4 @@
-import { CategoriesActionType } from 'src/category/state/constants';
+import { CategoriesActionType } from 'src/catalog/category/state/constants';
 import { ApplicationError, Category } from 'src/models';
 
 export interface IFetchCategoriesInit {

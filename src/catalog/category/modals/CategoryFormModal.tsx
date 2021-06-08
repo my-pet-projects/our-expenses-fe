@@ -3,7 +3,7 @@ import { Alert, Button, Modal } from 'antd';
 import { ElementRef, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { hideCategoryForm, processCategorySave } from 'src/category/state/actions';
+import { hideCategoryForm, processCategorySave } from 'src/catalog/category/state/actions';
 import {
     selectModalCategoryPayload,
     selectModalError,
@@ -11,7 +11,7 @@ import {
     selectModalIsOpen,
     selectModalIsProcessing,
     selectModalMode
-} from 'src/category/state/selectors';
+} from 'src/catalog/category/state/selectors';
 import { Category } from 'src/models';
 
 import { CategoryForm } from './CategoryForm';

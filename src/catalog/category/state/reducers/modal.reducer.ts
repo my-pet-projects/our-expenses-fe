@@ -1,7 +1,7 @@
 import { Reducer } from 'redux';
 
-import { ModalAction } from 'src/category/state/actions';
-import { ModalActionType } from 'src/category/state/constants';
+import { ModalAction } from 'src/catalog/category/state/actions';
+import { ModalActionType } from 'src/catalog/category/state/constants';
 import { ApplicationError, Category, CategoryModalType } from 'src/models';
 
 export type ICategoryModalPayload = ICategoryPayload | ICategoryUsagesPayload | ICategoryMovePayload;

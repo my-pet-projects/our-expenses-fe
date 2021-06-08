@@ -4,18 +4,17 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { Icon } from 'src/core/components/Icon';
-
-import { CategoryHeaderBreadcrumbs } from './CategoryHeaderBreadcrumbs';
 import {
     fetchCategory,
     showDeleteModal,
     showEditCategoryModal,
     showMoveCategoryModal,
     showNewCategoryModal
-} from './state/actions';
-import { selectCategory } from './state/selectors';
-import { selectCategoryError, selectCategoryIsLoading } from './state/selectors/category.selectors';
+} from 'src/catalog/category/state/actions';
+import { selectCategory, selectCategoryError, selectCategoryIsLoading } from 'src/catalog/category/state/selectors';
+import { Icon } from 'src/common/components';
+
+import { CategoryHeaderBreadcrumbs } from './CategoryHeaderBreadcrumbs';
 
 import './CategoryHeader.scss';
 

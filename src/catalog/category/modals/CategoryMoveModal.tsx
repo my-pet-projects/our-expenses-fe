@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
-import { hideCategoryForm, processCategoryMove } from '../state/actions';
+import { hideCategoryForm, processCategoryMove } from 'src/catalog/category/state/actions';
 import {
     selectAllCategories,
     selectModalCategoryMovePayload,
@@ -15,7 +15,7 @@ import {
     selectModalIsProcessing,
     selectModalMode,
     selectModalStatus
-} from '../state/selectors';
+} from 'src/catalog/category/state/selectors';
 
 type AntdTreeSelectInfo = {
     event: 'select';

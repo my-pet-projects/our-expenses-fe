@@ -3,7 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { createLogger } from 'redux-logger';
 import reduxThunk, { ThunkMiddleware } from 'redux-thunk';
 
-import { categoriesReducer, categoryReducer, modalReducer } from 'src/category/state/reducers';
+import { categoriesReducer, categoryReducer, modalReducer } from 'src/catalog/category/state/reducers';
 import { notifyReducer } from 'src/notify/state/reducers';
 
 import { RootActions, RootState } from './RootState';

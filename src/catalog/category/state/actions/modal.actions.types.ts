@@ -1,4 +1,4 @@
-import { ModalActionType } from 'src/category/state/constants';
+import { ModalActionType } from 'src/catalog/category/state/constants';
 import { ApplicationError, CategoryModalType } from 'src/models';
 
 import { ICategoryModalPayload } from '../reducers';

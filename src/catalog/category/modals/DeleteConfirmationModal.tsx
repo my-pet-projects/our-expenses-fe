@@ -3,9 +3,7 @@ import { Alert, Button, Modal, Spin } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import { Category } from 'src/models';
-
-import { hideCategoryForm, processCategoryDelete } from '../state/actions';
+import { hideCategoryForm, processCategoryDelete } from 'src/catalog/category/state/actions';
 import {
     selectModalCategoryUsagesPayload,
     selectModalError,
@@ -14,7 +12,9 @@ import {
     selectModalIsProcessing,
     selectModalMode,
     selectModalStatus
-} from '../state/selectors';
+} from 'src/catalog/category/state/selectors';
+import { Category } from 'src/models';
+
 import { CategoryUsages } from './CategoryUsages';
 
 export const DeleteConfirmationModal = (): JSX.Element => {
