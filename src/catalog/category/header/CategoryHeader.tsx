@@ -12,7 +12,7 @@ import {
     showNewCategoryModal
 } from 'src/catalog/category/state/actions';
 import { selectCategory, selectCategoryError, selectCategoryIsLoading } from 'src/catalog/category/state/selectors';
-import { Icon } from 'src/common/components';
+import { SvgIcon } from 'src/common/components';
 
 import { CategoryHeaderBreadcrumbs } from './CategoryHeaderBreadcrumbs';
 
@@ -62,46 +62,47 @@ export const CategoryHeader = (): JSX.Element => {
                 {!error && !isLoading && (
                     <>
                         <CategoryHeaderBreadcrumbs currentCategory={category} parentCategories={category?.parents} />
-                        <PageHeader
-                            title={category ? category.name : 'Category catalog'}
-                            className="catalog-header"
-                            extra={[
-                                <Button
-                                    key="edit"
-                                    onClick={handleShowEditModal}
-                                    type="primary"
-                                    style={{ display: category ? 'unset' : 'none' }}
-                                >
-                                    <EditOutlined />
-                                    Edit
-                                </Button>,
-                                <Button key="create" onClick={handleShowCreateModal}>
-                                    <PlusOutlined />
-                                    Create
-                                </Button>,
-                                <Button
-                                    key="move"
-                                    onClick={handleShowMoveModal}
-                                    style={{ display: category ? 'unset' : 'none' }}
-                                >
-                                    <ArrowUpOutlined />
-                                    Move
-                                </Button>,
-                                <Button
-                                    key="delete"
-                                    onClick={handleShowDeleteModal}
-                                    danger
-                                    style={{ display: category ? 'unset' : 'none' }}
-                                >
-                                    <DeleteOutlined />
-                                    Delete
-                                </Button>
-                            ]}
-                            avatar={{
-                                className: 'header-avatar',
-                                icon: <Icon className="category-title-icon" name={'bread'} />
-                            }}
-                        ></PageHeader>
+                        {category && (
+                            <PageHeader
+                                title={category.name}
+                                className="catalog-header"
+                                extra={[
+                                    <Button key="edit" onClick={handleShowEditModal} type="primary">
+                                        <EditOutlined />
+                                        Edit
+                                    </Button>,
+                                    <Button key="create" onClick={handleShowCreateModal}>
+                                        <PlusOutlined />
+                                        Create
+                                    </Button>,
+                                    <Button key="move" onClick={handleShowMoveModal}>
+                                        <ArrowUpOutlined />
+                                        Move
+                                    </Button>,
+                                    <Button key="delete" onClick={handleShowDeleteModal} danger>
+                                        <DeleteOutlined />
+                                        Delete
+                                    </Button>
+                                ]}
+                                avatar={{
+                                    className: 'header-avatar',
+                                    icon: <SvgIcon className="category-title-icon" svgString={'bread'} />
+                                }}
+                            ></PageHeader>
+                        )}
+
+                        {!category && (
+                            <PageHeader
+                                title={'Category catalog'}
+                                className="catalog-header"
+                                extra={[
+                                    <Button key="create" onClick={handleShowCreateModal}>
+                                        <PlusOutlined />
+                                        Create
+                                    </Button>
+                                ]}
+                            ></PageHeader>
+                        )}
                     </>
                 )}
 

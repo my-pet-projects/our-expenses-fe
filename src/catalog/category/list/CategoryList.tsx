@@ -9,7 +9,7 @@ import {
     selectCategoriesError,
     selectCategoriesIsLoading
 } from 'src/catalog/category/state/selectors';
-import { Icon } from 'src/common/components';
+import { SvgIcon } from 'src/common/components';
 import { Category } from 'src/models';
 
 import './CategoryList.scss';
@@ -54,7 +54,7 @@ export const CategoryList = (): JSX.Element => {
                                 >
                                     <div className="category-card-body">
                                         <div className="category-card-icon">
-                                            <Icon name={category.icon} fill="gray" width="24" />
+                                            <SvgIcon svgString={category.icon} />
                                         </div>
                                         <div className="category-card-title">
                                             <div className="category-card-title-overflow">{category.name}</div>

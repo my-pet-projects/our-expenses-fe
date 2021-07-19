@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import { forwardRef, Ref, useImperativeHandle, useRef } from 'react';
 import * as Yup from 'yup';
 
-import { Icon } from 'src/common/components';
+import { SvgIcon } from 'src/common/components';
 import { Category } from 'src/models';
 
 import './CategoryForm.scss';
@@ -127,11 +127,10 @@ export const CategoryForm = forwardRef(
                     </Form.Item>
 
                     <Form.Item label="Icon" help={formik.touched.icon && formik.errors.icon}>
-                        <Input
-                            prefix={<EditOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
+                        <Input.TextArea
+                            rows={4}
                             placeholder="Icon path"
                             autoComplete="off"
-                            type="text"
                             name="icon"
                             value={formik.values.icon}
                             onChange={formik.handleChange}
@@ -140,7 +139,7 @@ export const CategoryForm = forwardRef(
                     </Form.Item>
 
                     <Form.Item label="Icon preview" style={{ marginBottom: '0px' }}>
-                        <Icon name={formik.values.icon} fill="gray" width="24" />
+                        <SvgIcon svgString={formik.values.icon} />
                     </Form.Item>
 
                     <Form.Item label="Path">{formik.values.path}</Form.Item>
