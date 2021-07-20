@@ -1,7 +1,7 @@
 import { EditOutlined } from '@ant-design/icons';
 import { Form, Input } from 'antd';
 import { useFormik } from 'formik';
-import { forwardRef, Ref, useImperativeHandle, useRef } from 'react';
+import { forwardRef, Ref, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import * as Yup from 'yup';
 
 import { SvgIcon } from 'src/common/components';
@@ -42,10 +42,15 @@ type CategoryFormHandle = {
 };
 
 export const CategoryForm = forwardRef(
-    (props: CategoryFormProps, ref: Ref<CategoryFormHandle>): JSX.Element => {
-        const { category, onSave } = props;
-
+    ({ category, onSave }: CategoryFormProps, ref: Ref<CategoryFormHandle>): JSX.Element => {
         const formRef = useRef(null);
+        const [isIconValid, setIsIconValid] = useState(true);
+
+        useEffect(() => {
+            formik.validateForm();
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, [isIconValid]);
+
         useImperativeHandle(ref, () => ({
             submit: (): void => {
                 formik.submitForm();
@@ -54,6 +59,14 @@ export const CategoryForm = forwardRef(
 
         const handleSave = (category: Category): void => {
             onSave(category);
+        };
+
+        const handleIconError = (): void => {
+            setIsIconValid(false);
+        };
+
+        const handleIconLoad = (): void => {
+            setIsIconValid(true);
         };
 
         const formik = useFormik<CategoryFormValues>({
@@ -85,7 +98,13 @@ export const CategoryForm = forwardRef(
                 formik.setSubmitting(false);
             },
             validationSchema: Yup.object().shape({
-                name: Yup.string().max(50, 'Too Long!').required('Please input category name!')
+                name: Yup.string().max(50, 'Category name is too long!').required('Please input category name!'),
+                icon: Yup.string().test('svg-validation', 'SVG is not valid!', (value: string | undefined) => {
+                    if (!value) {
+                        return true;
+                    }
+                    return isIconValid;
+                })
             })
         });
 
@@ -126,7 +145,12 @@ export const CategoryForm = forwardRef(
                         />
                     </Form.Item>
 
-                    <Form.Item label="Icon" help={formik.touched.icon && formik.errors.icon}>
+                    <Form.Item
+                        label="Icon"
+                        help={formik.errors.icon}
+                        hasFeedback={!!formik.errors.icon}
+                        validateStatus={formik.errors.icon ? 'error' : 'success'}
+                    >
                         <Input.TextArea
                             rows={4}
                             placeholder="Icon path"
@@ -139,7 +163,7 @@ export const CategoryForm = forwardRef(
                     </Form.Item>
 
                     <Form.Item label="Icon preview" style={{ marginBottom: '0px' }}>
-                        <SvgIcon svgString={formik.values.icon} />
+                        <SvgIcon svgString={formik.values.icon} onLoad={handleIconLoad} onError={handleIconError} />
                     </Form.Item>
 
                     <Form.Item label="Path">{formik.values.path}</Form.Item>
