@@ -46,7 +46,6 @@ export const CategoryFormModal = (): JSX.Element => {
 
     return (
         <>
-            asd
             <Modal
                 title={mode === 'create' ? 'Create a new category' : 'Edit category'}
                 visible={isOpen}

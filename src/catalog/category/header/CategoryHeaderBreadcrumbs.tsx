@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 import { Category } from 'src/models';
 
 type CategoryHeaderBreadcrumbsProps = {
+    className?: string;
     currentCategory?: Category;
     parentCategories?: Category[];
 };
 
 export const CategoryHeaderBreadcrumbs = (props: CategoryHeaderBreadcrumbsProps): JSX.Element => {
-    const { currentCategory, parentCategories } = props;
+    const { className, currentCategory, parentCategories } = props;
 
     const parentBreadcrumbItems = (parentCategories || [])
         .sort((a: Category, b: Category) => (a.level > b.level ? 1 : -1))
@@ -26,7 +27,7 @@ export const CategoryHeaderBreadcrumbs = (props: CategoryHeaderBreadcrumbsProps)
         </Breadcrumb.Item>
     );
 
-    const breadcrumbItems = [
+    const rootBreadcrumbItems = [
         <Breadcrumb.Item key="home">
             <Link to="/">
                 <HomeOutlined />
@@ -35,9 +36,9 @@ export const CategoryHeaderBreadcrumbs = (props: CategoryHeaderBreadcrumbsProps)
         <Breadcrumb.Item key="categories">
             <Link to="/categories">Categories catalog</Link>
         </Breadcrumb.Item>
-    ]
-        .concat(parentBreadcrumbItems)
-        .concat(currentBreadcrumbItem || []);
+    ];
 
-    return <Breadcrumb>{breadcrumbItems}</Breadcrumb>;
+    const breadcrumbItems = rootBreadcrumbItems.concat(parentBreadcrumbItems).concat(currentBreadcrumbItem || []);
+
+    return <Breadcrumb className={className}>{breadcrumbItems}</Breadcrumb>;
 };

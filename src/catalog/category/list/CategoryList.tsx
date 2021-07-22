@@ -1,13 +1,15 @@
-import { Alert, Card, Col, Row, Skeleton } from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
+import { Alert, Button, Card, List } from 'antd';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 
-import { fetchCancel, fetchCategories } from 'src/catalog/category/state/actions';
+import { fetchCancel, fetchCategories, showNewCategoryModal } from 'src/catalog/category/state/actions';
 import {
     selectCategories,
     selectCategoriesError,
-    selectCategoriesIsLoading
+    selectCategoriesIsLoading,
+    selectCategory
 } from 'src/catalog/category/state/selectors';
 import { SvgIcon } from 'src/common/components';
 import { Category } from 'src/models';
@@ -17,14 +19,11 @@ import './CategoryList.scss';
 export const CategoryList = (): JSX.Element => {
     const history = useHistory();
     const { id: categoryId } = useParams<{ id: string }>();
+    const rootCategory = useSelector(selectCategory);
     const categories = useSelector(selectCategories);
     const isLoading = useSelector(selectCategoriesIsLoading);
     const error = useSelector(selectCategoriesError);
     const dispatch = useDispatch();
-
-    const onCategorySelect = (category: Category): void => {
-        history.push(`/categories/${category.id}`);
-    };
 
     useEffect(() => {
         dispatch(fetchCategories(categoryId));
@@ -37,34 +36,68 @@ export const CategoryList = (): JSX.Element => {
         .concat(categories || [])
         .sort((a: Category, b: Category) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1));
 
+    const handleCategorySelect = (category: Category): void => {
+        history.push(`/categories/${category.id}`);
+    };
+
+    const handleCategoryCreate = (): void => {
+        dispatch(showNewCategoryModal(rootCategory));
+    };
+
     return (
-        <div className="categories-wrap">
-            <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 20 }} />
-            {!error && !isLoading && (
-                <Row gutter={[16, 16]}>
-                    {sortedCategories.map((category: Category, categoryIndex: number) => (
-                        <Col key={categoryIndex} span={3}>
-                            <div className="category-card-wrap">
-                                <Card
-                                    hoverable
-                                    bordered={true}
-                                    className="category-card"
-                                    bodyStyle={{ height: '100%' }}
-                                    onClick={(): void => onCategorySelect(category)}
+        <div className="category-list">
+            {!error && (
+                <List
+                    rowKey="id"
+                    grid={{
+                        gutter: 16,
+                        xs: 2,
+                        sm: 4,
+                        md: 6,
+                        lg: 6,
+                        xl: 8,
+                        xxl: 8
+                    }}
+                    loading={isLoading}
+                    dataSource={[{} as Category, ...sortedCategories]}
+                    renderItem={(category: Category): JSX.Element => {
+                        if (category && category.id) {
+                            return (
+                                <List.Item>
+                                    <Card
+                                        hoverable
+                                        bordered={true}
+                                        className="category-list__category-card"
+                                        bodyStyle={{
+                                            height: '100%',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center'
+                                        }}
+                                        onClick={(): void => handleCategorySelect(category)}
+                                    >
+                                        <Card.Meta
+                                            avatar={<SvgIcon svgString={category.icon} />}
+                                            title={category.name}
+                                            className="category-list__category-card__meta"
+                                        />
+                                    </Card>
+                                </List.Item>
+                            );
+                        }
+                        return (
+                            <List.Item>
+                                <Button
+                                    type="dashed"
+                                    className="category-list__create-button"
+                                    onClick={handleCategoryCreate}
                                 >
-                                    <div className="category-card-body">
-                                        <div className="category-card-icon">
-                                            <SvgIcon svgString={category.icon} />
-                                        </div>
-                                        <div className="category-card-title">
-                                            <div className="category-card-title-overflow">{category.name}</div>
-                                        </div>
-                                    </div>
-                                </Card>
-                            </div>
-                        </Col>
-                    ))}
-                </Row>
+                                    <PlusOutlined /> New category
+                                </Button>
+                            </List.Item>
+                        );
+                    }}
+                />
             )}
 
             {error && <Alert message={error.message} description={error.description} type="error" showIcon />}

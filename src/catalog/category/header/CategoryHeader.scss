@@ -1,22 +1,14 @@
-.categories-title-wrap {
+.category-header {
     background-color: #fff;
     padding: 12px 24px;
-}
 
-.catalog-header {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    padding-top: 8px !important;
-}
+    &__headline {
+        padding-top: 4px !important;
+        padding-left: 0px !important;
+        padding-bottom: 12px !important;
+    }
 
-// Modify default And Design Avatar component background.
-.header-avatar {
-    background-color: transparent !important;
-    margin-right: 6px !important;
-}
-
-.category-title-icon {
-    height: 100%;
-    display: flex;
-    justify-content: center;
+    &__avatar {
+        background-color: transparent !important;
+    }
 }

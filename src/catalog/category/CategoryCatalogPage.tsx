@@ -4,8 +4,10 @@ import { CategoryFormModal, CategoryMoveModal, DeleteConfirmationModal } from '.
 
 export const CategoriesPage = (): JSX.Element => (
     <>
-        <CategoryHeader />
-        <CategoryList />
+        <article>
+            <CategoryHeader />
+            <CategoryList />
+        </article>
 
         <DeleteConfirmationModal />
         <CategoryFormModal />

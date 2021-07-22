@@ -1,4 +1,4 @@
-import { ArrowUpOutlined, DeleteOutlined, EditOutlined, PlusOutlined } from '@ant-design/icons';
+import { ArrowUpOutlined, DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import { Alert, Button, PageHeader, Skeleton } from 'antd';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,8 +8,7 @@ import {
     fetchCategory,
     showDeleteModal,
     showEditCategoryModal,
-    showMoveCategoryModal,
-    showNewCategoryModal
+    showMoveCategoryModal
 } from 'src/catalog/category/state/actions';
 import { selectCategory, selectCategoryError, selectCategoryIsLoading } from 'src/catalog/category/state/selectors';
 import { SvgIcon } from 'src/common/components';
@@ -28,10 +27,6 @@ export const CategoryHeader = (): JSX.Element => {
     useEffect(() => {
         dispatch(fetchCategory(categoryId));
     }, [categoryId, dispatch]);
-
-    const handleShowCreateModal = (): void => {
-        dispatch(showNewCategoryModal(category));
-    };
 
     const handleShowEditModal = (): void => {
         if (!category) {
@@ -55,59 +50,40 @@ export const CategoryHeader = (): JSX.Element => {
     };
 
     return (
-        <>
-            <div className="categories-title-wrap">
-                <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 2 }} />
-
-                {!error && !isLoading && (
-                    <>
-                        <CategoryHeaderBreadcrumbs currentCategory={category} parentCategories={category?.parents} />
-                        {category && (
-                            <PageHeader
-                                title={category.name}
-                                className="catalog-header"
-                                extra={[
-                                    <Button key="edit" onClick={handleShowEditModal} type="primary">
-                                        <EditOutlined />
-                                        Edit
-                                    </Button>,
-                                    <Button key="create" onClick={handleShowCreateModal}>
-                                        <PlusOutlined />
-                                        Create
-                                    </Button>,
-                                    <Button key="move" onClick={handleShowMoveModal}>
-                                        <ArrowUpOutlined />
-                                        Move
-                                    </Button>,
-                                    <Button key="delete" onClick={handleShowDeleteModal} danger>
-                                        <DeleteOutlined />
-                                        Delete
-                                    </Button>
-                                ]}
-                                avatar={{
-                                    className: 'header-avatar',
-                                    icon: <SvgIcon className="category-title-icon" svgString={'bread'} />
-                                }}
-                            ></PageHeader>
-                        )}
-
-                        {!category && (
-                            <PageHeader
-                                title={'Category catalog'}
-                                className="catalog-header"
-                                extra={[
-                                    <Button key="create" onClick={handleShowCreateModal}>
-                                        <PlusOutlined />
-                                        Create
-                                    </Button>
-                                ]}
-                            ></PageHeader>
-                        )}
-                    </>
-                )}
-
-                {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
-            </div>
-        </>
+        <div className="category-header">
+            <CategoryHeaderBreadcrumbs currentCategory={category} parentCategories={category?.parents} />
+            <Skeleton loading={isLoading} active title={true} paragraph={{ rows: 0 }} />
+            {!error && !isLoading && (
+                <>
+                    {category && (
+                        <PageHeader
+                            title={category.name}
+                            className="category-header__headline"
+                            extra={[
+                                <Button key="edit" onClick={handleShowEditModal} type="primary">
+                                    <EditOutlined />
+                                    Edit
+                                </Button>,
+                                <Button key="move" onClick={handleShowMoveModal}>
+                                    <ArrowUpOutlined />
+                                    Move
+                                </Button>,
+                                <Button key="delete" onClick={handleShowDeleteModal} danger>
+                                    <DeleteOutlined />
+                                    Delete
+                                </Button>
+                            ]}
+                            avatar={{
+                                className: 'category-header__avatar',
+                                icon: <SvgIcon svgString={category.icon} />,
+                                style: { display: category.icon ? 'unset' : 'none' }
+                            }}
+                        />
+                    )}
+                    {!category && <PageHeader title={'Category catalog'} className="category-header__headline" />}
+                </>
+            )}
+            {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
+        </div>
     );
 };

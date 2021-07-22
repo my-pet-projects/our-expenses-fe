@@ -7,8 +7,6 @@ import * as Yup from 'yup';
 import { SvgIcon } from 'src/common/components';
 import { Category } from 'src/models';
 
-import './CategoryForm.scss';
-
 interface CategoryFormValues {
     id: string;
     name: string;
@@ -162,9 +160,11 @@ export const CategoryForm = forwardRef(
                         />
                     </Form.Item>
 
-                    <Form.Item label="Icon preview" style={{ marginBottom: '0px' }}>
-                        <SvgIcon svgString={formik.values.icon} onLoad={handleIconLoad} onError={handleIconError} />
-                    </Form.Item>
+                    {formik.values.icon && (
+                        <Form.Item label="Icon preview" style={{ marginBottom: '0px' }}>
+                            <SvgIcon svgString={formik.values.icon} onLoad={handleIconLoad} onError={handleIconError} />
+                        </Form.Item>
+                    )}
 
                     <Form.Item label="Path">{formik.values.path}</Form.Item>
                     <Form.Item label="Level">{formik.values.level}</Form.Item>
