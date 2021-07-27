@@ -4,6 +4,7 @@ import { createLogger } from 'redux-logger';
 import reduxThunk, { ThunkMiddleware } from 'redux-thunk';
 
 import { categoriesReducer, categoryReducer, modalReducer } from 'src/catalog/category/state/reducers';
+import { expenseReducer } from 'src/expense/state/reducers';
 import { notifyReducer } from 'src/notify/state/reducers';
 
 import { RootActions, RootState } from './RootState';
@@ -14,7 +15,8 @@ const rootReducer = combineReducers<RootState>({
     categories: categoriesReducer,
     selectedCategory: categoryReducer,
     notification: notifyReducer,
-    modalData: modalReducer
+    modalData: modalReducer,
+    expense: expenseReducer
 });
 
 const middlewares = [reduxThunk as ThunkMiddleware<RootState, RootActions>, logger];

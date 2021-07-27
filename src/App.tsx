@@ -3,7 +3,7 @@ import React, { FunctionComponent } from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 
 import { CategoriesPage } from './catalog/category/CategoryCatalogPage';
-import { ExpensesListComponent } from './expense/ExpensesPage';
+import { ExpensesPage } from './expense/ExpensesPage';
 import { Header } from './Header';
 import SystemNotificationPage from './notify/SystemNotificationPage';
 
@@ -20,7 +20,7 @@ const App: FunctionComponent = (): JSX.Element => (
                 <Switch>
                     <Route exact path="/" render={(): JSX.Element => <Redirect to="/categories" />} />
                     <Route path="/categories/:id?" render={(): JSX.Element => <CategoriesPage />} />
-                    <Route path="/expenses" component={ExpensesListComponent}></Route>
+                    <Route path="/expenses" component={ExpensesPage}></Route>
                 </Switch>
             </div>
         </Layout.Content>

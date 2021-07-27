@@ -3,6 +3,7 @@ import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 
 import { CategoriesAction } from 'src/catalog/category/state/actions';
 import { ICategoriesState, ICategoryModalState, ICategoryState } from 'src/catalog/category/state/reducers';
+import { IExpenseState } from 'src/expense/state/reducers';
 import { INotifyState } from 'src/notify/state/reducers';
 
 export interface RootState {
@@ -10,6 +11,7 @@ export interface RootState {
     readonly selectedCategory: ICategoryState;
     readonly modalData: ICategoryModalState;
     readonly notification: INotifyState;
+    readonly expense: IExpenseState;
 }
 
 export type RootActions = CategoriesAction; // | CommentsAction | etc.
