@@ -62,7 +62,7 @@ export const ExpenseForm = (): JSX.Element => {
             }
 
             const categoryToSave = {
-                category: category,
+                categoryId: category,
                 comment: comment,
                 price: price,
                 quantity: quantity,
