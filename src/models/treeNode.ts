@@ -3,3 +3,9 @@ export interface TreeNode {
     title: string;
     children: TreeNode[];
 }
+
+export interface TreeSelectNode {
+    value: string;
+    title: string;
+    children: TreeSelectNode[];
+}

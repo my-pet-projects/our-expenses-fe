@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-import { Category, TreeNode } from 'src/models';
+import { Category, TreeSelectNode } from 'src/models';
 import { RootState } from 'src/RootState';
 
 import { ICategoriesState } from '../reducers';
@@ -19,9 +19,9 @@ export const selectCategoriesError = createSelector(selectCategoriesState, (stat
 export const selectCategoriesHierarchy = createSelector(selectCategoriesState, (state: ICategoriesState) => {
     const allCategories = state.categories.sort((a: Category, b: Category) => (a.path > b.path ? 1 : -1));
 
-    const nodes = [] as TreeNode[];
+    const nodes = [] as TreeSelectNode[];
 
-    const currentParentHierarchy: Record<string, TreeNode> = {};
+    const currentParentHierarchy: Record<string, TreeSelectNode> = {};
 
     for (let index = 0; index < allCategories.length; index++) {
         const category = allCategories[index];
@@ -29,8 +29,7 @@ export const selectCategoriesHierarchy = createSelector(selectCategoriesState, (
             value: category.id,
             title: category.name,
             children: []
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        } as any;
+        } as TreeSelectNode;
 
         if (currentParentHierarchy[category.parentId]) {
             currentParentHierarchy[category.parentId].children.push(currentNode);
@@ -42,12 +41,5 @@ export const selectCategoriesHierarchy = createSelector(selectCategoriesState, (
         nodes.push(currentNode);
     }
 
-    const rootNode = {
-        value: 'root',
-        title: 'Catalog',
-        children: nodes
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } as any;
-
-    return [rootNode];
+    return nodes;
 });
