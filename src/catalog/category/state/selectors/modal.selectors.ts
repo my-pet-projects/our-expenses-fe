@@ -55,6 +55,7 @@ export const selectAllCategories = createSelector(selectModalState, (state: ICat
         const category = allCategories[index];
         const currentNode = {
             key: category.id,
+            value: category.name,
             title: category.name,
             children: []
         } as TreeNode;
@@ -71,6 +72,7 @@ export const selectAllCategories = createSelector(selectModalState, (state: ICat
 
     const rootNode = {
         key: 'root',
+        value: 'Catalog',
         title: 'Catalog',
         children: nodes
     } as TreeNode;

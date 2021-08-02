@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-import { Category, TreeSelectNode } from 'src/models';
+import { Category, TreeNode } from 'src/models';
 import { RootState } from 'src/RootState';
 
 import { ICategoriesState } from '../reducers';
@@ -19,17 +19,18 @@ export const selectCategoriesError = createSelector(selectCategoriesState, (stat
 export const selectCategoriesHierarchy = createSelector(selectCategoriesState, (state: ICategoriesState) => {
     const allCategories = state.categories.sort((a: Category, b: Category) => (a.path > b.path ? 1 : -1));
 
-    const nodes = [] as TreeSelectNode[];
+    const nodes = [] as TreeNode[];
 
-    const currentParentHierarchy: Record<string, TreeSelectNode> = {};
+    const currentParentHierarchy: Record<string, TreeNode> = {};
 
     for (let index = 0; index < allCategories.length; index++) {
         const category = allCategories[index];
         const currentNode = {
+            key: category.id,
             value: category.id,
             title: category.name,
             children: []
-        } as TreeSelectNode;
+        } as TreeNode;
 
         if (currentParentHierarchy[category.parentId]) {
             currentParentHierarchy[category.parentId].children.push(currentNode);
