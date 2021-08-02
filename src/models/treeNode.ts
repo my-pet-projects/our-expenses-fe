@@ -1,6 +1,7 @@
 export interface TreeNode {
-    key: string;
+    key: string | number;
     value: string;
     title: string;
     children: TreeNode[];
+    disabled?: boolean;
 }
