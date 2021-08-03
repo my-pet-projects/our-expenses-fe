@@ -71,26 +71,6 @@ export const fetchCategories = (categoryId?: string) => async (dispatch: Dispatc
         dispatch(failedToFetchCategories(appError));
     }
 };
-export const fetchCategoriesCatalog = () => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
-    const options = {
-        path: 'categories?all=true',
-        method: 'GET'
-    } as IHttpRequestOptions;
-
-    await dispatch(willFetchCategories());
-    try {
-        const result = await sendRequest<Category[]>(options);
-        await dispatch(didFetchCategories(result.data || []));
-    } catch (error) {
-        const appError = {
-            message: 'Failed to fetch categories catalog!',
-            description: error.getFullMessage(),
-            error: error
-        } as ApplicationError;
-        dispatch(notifyFailure(appError));
-        dispatch(failedToFetchCategories(appError));
-    }
-};
 
 // race conditions
 // https://medium.com/dailyjs/handling-race-conditions-with-redux-thunk-c348a7a5a839

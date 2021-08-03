@@ -8,3 +8,7 @@ export interface Expense {
     comment: string;
     date: Date;
 }
+
+export interface NewExpenseResponse {
+    id: string;
+}

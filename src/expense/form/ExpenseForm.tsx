@@ -1,15 +1,14 @@
 import { CloseOutlined } from '@ant-design/icons';
-import { Button, Card, DatePicker, Form, Input, Select, TreeSelect } from 'antd';
+import { Alert, Button, Card, DatePicker, Form, Input, Select, TreeSelect } from 'antd';
 import { useFormik } from 'formik';
 import moment, { Moment } from 'moment';
 import { KeyboardEvent, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 
-import { fetchCategoriesCatalog } from 'src/catalog/category/state/actions';
-import { selectCategoriesHierarchy, selectCategoriesIsLoading } from 'src/catalog/category/state/selectors';
 import { useFocus } from 'src/common/hooks';
-import { createExpense } from 'src/expense/state/actions';
+import { createExpense, fetchCategoriesCatalog } from 'src/expense/state/actions';
+import { selectCategoriesCatalog, selectError, selectIsLoading } from 'src/expense/state/selectors';
 import { Expense } from 'src/models';
 
 import './ExpenseForm.scss';
@@ -42,8 +41,9 @@ const buttonItemLayout = {
 const dateFormat = 'DD.MM.YYYY';
 
 export const ExpenseForm = (): JSX.Element => {
-    const categories = useSelector(selectCategoriesHierarchy);
-    const isLoading = useSelector(selectCategoriesIsLoading);
+    const categories = useSelector(selectCategoriesCatalog);
+    const isLoading = useSelector(selectIsLoading);
+    const error = useSelector(selectError);
     const dispatch = useDispatch();
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -244,6 +244,8 @@ export const ExpenseForm = (): JSX.Element => {
                         </Button>
                     </Form.Item>
                 </Form>
+
+                {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
             </Card>
         </div>
     );
