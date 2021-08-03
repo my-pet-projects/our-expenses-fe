@@ -1,5 +1,5 @@
 import { ExpenseActionType } from 'src/expense/state/constants';
-import { ApplicationError, Category } from 'src/models';
+import { ApplicationError, Category, Expense } from 'src/models';
 
 export interface IExpenseCreateInit {
     type: ExpenseActionType.CREATE_INIT;
@@ -7,6 +7,9 @@ export interface IExpenseCreateInit {
 
 export interface IExpenseCreateDone {
     type: ExpenseActionType.CREATE_DONE;
+    payload: {
+        expense: Expense;
+    };
 }
 
 export interface IExpenseCreateFailed {

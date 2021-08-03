@@ -37,8 +37,11 @@ const willCreateExpense = (): IExpenseCreateInit => ({
     type: ExpenseActionType.CREATE_INIT
 });
 
-const didCreateExpense = (): IExpenseCreateDone => ({
-    type: ExpenseActionType.CREATE_DONE
+const didCreateExpense = (expense: Expense): IExpenseCreateDone => ({
+    type: ExpenseActionType.CREATE_DONE,
+    payload: {
+        expense: expense
+    }
 });
 
 const failedCreateExpense = (error: ApplicationError): IExpenseCreateFailed => ({
@@ -63,7 +66,7 @@ export const createExpense = (expense: Expense): AppThunkResult<Promise<void>> =
             throw new Error('Unexpected response from the server.');
         }
         expense.id = response.data.id;
-        dispatch(didCreateExpense());
+        dispatch(didCreateExpense(expense));
         dispatch(notifySuccess('Expense added successfully!'));
     } catch (error) {
         const appError = new ApplicationError('Failed to add expense!', error);

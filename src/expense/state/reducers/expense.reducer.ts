@@ -7,13 +7,15 @@ import { ApplicationError, Category, Expense } from 'src/models';
 export interface IExpenseState {
     expense?: Expense;
     categories: Category[];
+    recentlyAdded: Expense[];
     isLoading: boolean;
     error?: ApplicationError;
 }
 
 const initialExpenseState: IExpenseState = {
     isLoading: false,
-    categories: []
+    categories: [],
+    recentlyAdded: []
 };
 
 export const expenseReducer: Reducer<IExpenseState, ExpenseAction> = (
@@ -44,9 +46,12 @@ export const expenseReducer: Reducer<IExpenseState, ExpenseAction> = (
                 isLoading: true
             };
         case ExpenseActionType.CREATE_DONE:
+            const expenses = state.recentlyAdded.slice();
+            expenses.splice(0, 0, action.payload.expense);
             return {
                 ...state,
-                isLoading: false
+                isLoading: false,
+                recentlyAdded: expenses
             };
         case ExpenseActionType.CREATE_FAILED:
             return {

@@ -40,3 +40,5 @@ export const selectCategoriesCatalog = createSelector(selectExpenseState, (state
 
     return nodes;
 });
+
+export const selectRecentExpenses = createSelector(selectExpenseState, (state: IExpenseState) => state.recentlyAdded);
