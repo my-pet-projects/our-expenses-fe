@@ -1,5 +1,7 @@
-import { Button, Card, Form, Input, Select, TreeSelect } from 'antd';
+import { CloseOutlined } from '@ant-design/icons';
+import { Button, Card, DatePicker, Form, Input, Select, TreeSelect } from 'antd';
 import { useFormik } from 'formik';
+import moment, { Moment } from 'moment';
 import { KeyboardEvent, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
@@ -13,11 +15,13 @@ import { Expense } from 'src/models';
 import './ExpenseForm.scss';
 
 interface ExpenseFormValues {
-    category?: string;
+    categoryId?: string;
+    categoryName?: string;
     price?: number;
     quantity?: number;
     comment?: string;
     currency?: string;
+    date?: Moment;
 }
 
 const layout = {
@@ -35,13 +39,18 @@ const buttonItemLayout = {
     wrapperCol: { span: 14, offset: 4 }
 };
 
+const dateFormat = 'DD.MM.YYYY';
+
 export const ExpenseForm = (): JSX.Element => {
     const categories = useSelector(selectCategoriesHierarchy);
     const isLoading = useSelector(selectCategoriesIsLoading);
     const dispatch = useDispatch();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const [dateInputRef, setDateInputFocus] = useFocus<any>();
+    const [categoryInputRef, setCategoryInputFocus] = useFocus();
     const [priceInputRef, setPriceInputFocus] = useFocus();
-    const [quantityInputRef, setQuantityInputRef] = useFocus();
+    const [quantityInputRef, setQuantityInputFocus] = useFocus();
 
     useEffect(() => {
         dispatch(fetchCategoriesCatalog());
@@ -53,20 +62,20 @@ export const ExpenseForm = (): JSX.Element => {
     const formik = useFormik<ExpenseFormValues>({
         enableReinitialize: true,
         initialValues: {
-            currency: 'EUR'
+            currency: 'EUR',
+            quantity: 1
         },
         validateOnMount: true,
-        onSubmit: async ({ category, price, quantity, currency, comment }: ExpenseFormValues) => {
-            if (!quantity) {
-                quantity = 1;
-            }
-
+        onSubmit: async ({ categoryId, categoryName, price, quantity, currency, comment, date }: ExpenseFormValues) => {
+            const dateObj = moment.utc(date).startOf('day').toDate();
             const categoryToSave = {
-                categoryId: category,
+                categoryId: categoryId,
+                categoryName: categoryName,
                 comment: comment,
                 price: price,
                 quantity: quantity,
-                currency: currency
+                currency: currency,
+                date: dateObj
             } as Expense;
 
             try {
@@ -77,68 +86,106 @@ export const ExpenseForm = (): JSX.Element => {
                 formik.setStatus(error);
             }
             formik.setSubmitting(false);
-            formik.resetForm();
-            formik.validateForm();
         },
         validationSchema: Yup.object().shape({
-            category: Yup.string().required('Please select a category!'),
-            price: Yup.string().required('Please input price!')
+            categoryId: Yup.string().required('Please select a category!'),
+            price: Yup.string().required('Please input price!'),
+            quantity: Yup.string().required('Please input quantity!'),
+            date: Yup.string().nullable().required('Please select a date!')
         })
     });
-    const onChange = (value: string): void => {
-        formik.setFieldValue('category', value);
+
+    const handleCategoryChange = async (value: string, labelList: React.ReactNode[]): Promise<void> => {
+        let name;
+        if (labelList.length !== 0) {
+            name = labelList[0]?.toString();
+        }
+        await formik.setFieldValue('categoryId', value, true);
+        await formik.setFieldValue('categoryName', name);
         setPriceInputFocus();
     };
 
-    const onKeyDown = (event: KeyboardEvent): void => {
+    const handleCategoryKeyDown = (event: KeyboardEvent): void => {
         const keyCode = event.key;
         if (keyCode === 'Enter') {
             event.preventDefault();
         }
     };
 
+    const handleDateChange = async (value: Moment | null): Promise<void> => {
+        await formik.setFieldValue('date', value);
+        setCategoryInputFocus();
+    };
+
     const handleCurrencyChange = (value: string): void => {
         formik.setFieldValue('currency', value);
     };
 
-    const selectCurrency = (
-        <Select defaultValue={formik.values.currency} onChange={handleCurrencyChange}>
-            <Select.Option value="RUB">RUB</Select.Option>
-            <Select.Option value="EUR">EUR</Select.Option>
-        </Select>
+    const currencySelector = (
+        <Form.Item name="currency" noStyle>
+            <Select onChange={handleCurrencyChange}>
+                <Select.Option value="RUB">RUB</Select.Option>
+                <Select.Option value="EUR">EUR</Select.Option>
+            </Select>
+        </Form.Item>
     );
 
     return (
         <div className="expense-form">
             <Card title="New expense">
-                <Form {...layout} onFinish={formik.handleSubmit}>
+                <Form
+                    {...layout}
+                    initialValues={{ currency: 'EUR' }}
+                    onFinish={formik.handleSubmit}
+                    onReset={formik.handleReset}
+                >
+                    <Form.Item
+                        label="Date"
+                        help={formik.touched.date && formik.errors.date}
+                        validateStatus={formik.touched.date && formik.errors.date ? 'error' : 'success'}
+                    >
+                        <DatePicker
+                            ref={dateInputRef}
+                            name="date"
+                            value={formik.values.date}
+                            format={dateFormat}
+                            onChange={handleDateChange}
+                            onBlur={formik.handleBlur}
+                        />
+                    </Form.Item>
+
                     <Form.Item
                         label="Category"
-                        help={formik.touched.category && formik.errors.category}
-                        hasFeedback={formik.touched.category && !!formik.errors.category}
-                        validateStatus={formik.touched.category && formik.errors.category ? 'error' : 'success'}
+                        help={formik.touched.categoryId && formik.errors.categoryId}
+                        validateStatus={formik.touched.categoryId && formik.errors.categoryId ? 'error' : 'success'}
                     >
                         <TreeSelect
+                            ref={categoryInputRef}
+                            id="categoryId"
                             showSearch
                             style={{ width: '100%' }}
-                            value={formik.values.category}
+                            value={formik.values.categoryId}
                             dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
                             placeholder="Select category"
                             allowClear
                             treeDefaultExpandAll
-                            onChange={onChange}
+                            treeNodeFilterProp={'title'}
                             treeData={categories}
-                            onInputKeyDown={onKeyDown}
+                            loading={isLoading}
+                            onInputKeyDown={handleCategoryKeyDown}
+                            onChange={handleCategoryChange}
                             onBlur={formik.handleBlur}
-                            treeNodeFilterProp="title"
                         />
                     </Form.Item>
 
-                    <Form.Item label="Price" style={{ marginBottom: 0 }}>
+                    <Form.Item name="categoryName" noStyle>
+                        <Input type="hidden" value={formik.values.categoryName} />
+                    </Form.Item>
+
+                    <Form.Item label="Price x Quantity" style={{ marginBottom: 0 }}>
                         <Form.Item
-                            style={{ display: 'inline-block', width: 'calc(50% - 8px)' }}
+                            style={{ display: 'inline-block', width: '25%' }}
                             help={formik.touched.price && formik.errors.price}
-                            hasFeedback={formik.touched.price && !!formik.errors.price}
                             validateStatus={formik.touched.price && formik.errors.price ? 'error' : 'success'}
                         >
                             <Input
@@ -150,32 +197,34 @@ export const ExpenseForm = (): JSX.Element => {
                                 value={formik.values.price}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                addonAfter={selectCurrency}
+                                addonAfter={<CloseOutlined />}
                             />
                         </Form.Item>
                         <Form.Item
-                            style={{ display: 'inline-block', width: 'calc(50% - 8px)', margin: '0 0 0 16px' }}
+                            style={{ display: 'inline-block', width: '25%', margin: '0 0 0 -1px' }}
                             help={formik.touched.quantity && formik.errors.quantity}
-                            hasFeedback={formik.touched.quantity && !!formik.errors.quantity}
                             validateStatus={formik.touched.quantity && formik.errors.quantity ? 'error' : 'success'}
                         >
                             <Input
+                                name="quantity"
                                 ref={quantityInputRef}
                                 placeholder="Quantity"
                                 type="number"
-                                name="quantity"
+                                autoComplete="off"
                                 value={formik.values.quantity}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
+                                addonAfter={currencySelector}
                             />
                         </Form.Item>
                     </Form.Item>
 
                     <Form.Item label="Comment">
                         <Input
+                            name="comment"
                             placeholder="Comment"
                             type="text"
-                            name="comment"
+                            autoComplete="off"
                             value={formik.values.comment}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
@@ -186,11 +235,11 @@ export const ExpenseForm = (): JSX.Element => {
                         <Button
                             htmlType="submit"
                             type="primary"
-                            disabled={isLoading || formik.isValidating || !formik.isValid}
+                            disabled={isLoading || formik.isValidating || !formik.isValid || !formik.dirty}
                         >
                             Submit
                         </Button>
-                        <Button htmlType="button" style={{ margin: '0 8px' }}>
+                        <Button htmlType="reset" style={{ margin: '0 8px' }} disabled={!formik.dirty}>
                             Reset
                         </Button>
                     </Form.Item>
