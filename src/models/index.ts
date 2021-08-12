@@ -4,3 +4,4 @@ export * from './applicationError';
 export * from './categoryModalType';
 export * from './treeNode';
 export * from './expense';
+export * from './report';

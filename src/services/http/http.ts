@@ -24,6 +24,9 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
         await wait(200);
 
         const result = await axios.request<T>(config);
+        if (!result.data) {
+            throw new Error('Unexpected response from the server.');
+        }
         return {
             data: result.data
         };

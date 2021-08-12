@@ -1,3 +1,5 @@
+import { Category } from './category';
+
 export interface Expense {
     id: string;
     categoryId: string;
@@ -7,6 +9,7 @@ export interface Expense {
     currency: string;
     comment: string;
     date: Date;
+    category: Category;
 }
 
 export interface NewExpenseResponse {

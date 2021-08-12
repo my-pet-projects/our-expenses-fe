@@ -6,12 +6,15 @@ import { ICategoriesState, ICategoryModalState, ICategoryState } from 'src/catal
 import { IExpenseState } from 'src/expense/state/reducers';
 import { INotifyState } from 'src/notify/state/reducers';
 
+import { IReportState } from './report/state/reducers';
+
 export interface RootState {
     readonly categories: ICategoriesState;
     readonly selectedCategory: ICategoryState;
     readonly modalData: ICategoryModalState;
     readonly notification: INotifyState;
     readonly expense: IExpenseState;
+    readonly report: IReportState;
 }
 
 export type RootActions = CategoriesAction; // | CommentsAction | etc.

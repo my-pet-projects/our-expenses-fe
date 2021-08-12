@@ -6,6 +6,7 @@ import { CategoriesPage } from './catalog/category/CategoryCatalogPage';
 import { ExpensesPage } from './expense/ExpensesPage';
 import { Header } from './Header';
 import SystemNotificationPage from './notify/SystemNotificationPage';
+import { ReportPage } from './report/ReportPage';
 
 import 'antd/dist/antd.css';
 import './App.scss';
@@ -21,6 +22,7 @@ const App: FunctionComponent = (): JSX.Element => (
                     <Route exact path="/" render={(): JSX.Element => <Redirect to="/categories" />} />
                     <Route path="/categories/:id?" render={(): JSX.Element => <CategoriesPage />} />
                     <Route path="/expenses" component={ExpensesPage}></Route>
+                    <Route path="/reports" component={ReportPage}></Route>
                 </Switch>
             </div>
         </Layout.Content>

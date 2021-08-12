@@ -1,8 +1,7 @@
+import { DeleteOutlined } from '@ant-design/icons';
 import Menu from 'antd/lib/menu';
 import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
-
-import { DeleteOutlined } from '@ant-design/icons';
 
 export const Header: FunctionComponent = (): JSX.Element => (
     <>
@@ -22,6 +21,11 @@ export const Header: FunctionComponent = (): JSX.Element => (
                 <DeleteOutlined />
                 <span>Expenses</span>
                 <Link to="/expenses" />
+            </Menu.Item>
+            <Menu.Item key="report">
+                <DeleteOutlined />
+                <span>Reports</span>
+                <Link to="/reports" />
             </Menu.Item>
         </Menu>
     </>
