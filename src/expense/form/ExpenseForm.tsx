@@ -79,9 +79,10 @@ export const ExpenseForm = (): JSX.Element => {
             } as Expense;
 
             try {
-                console.log('categoryToSave', categoryToSave);
                 await dispatch(createExpense(categoryToSave));
                 formik.resetForm();
+                formik.setFieldValue('date', date);
+                setCategoryInputFocus();
             } catch (error) {
                 formik.setStatus(error);
             }
@@ -126,6 +127,7 @@ export const ExpenseForm = (): JSX.Element => {
             <Select onChange={handleCurrencyChange}>
                 <Select.Option value="RUB">RUB</Select.Option>
                 <Select.Option value="EUR">EUR</Select.Option>
+                <Select.Option value="HRK">HRK</Select.Option>
             </Select>
         </Form.Item>
     );
@@ -200,6 +202,7 @@ export const ExpenseForm = (): JSX.Element => {
                                 addonAfter={<CloseOutlined />}
                             />
                         </Form.Item>
+
                         <Form.Item
                             style={{ display: 'inline-block', width: '25%', margin: '0 0 0 -1px' }}
                             help={formik.touched.quantity && formik.errors.quantity}
