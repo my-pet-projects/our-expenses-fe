@@ -1,6 +1,4 @@
-import { report } from 'process';
-
-import { ApplicationError, Report } from 'src/models';
+import { ApplicationError, Report, ReportDateRange } from 'src/models';
 import { notifyFailure } from 'src/notify/state/actions';
 import { ReportActionType } from 'src/report/state/constants';
 import { AppThunkDispatch, AppThunkResult } from 'src/RootState';
@@ -25,14 +23,13 @@ const failedToGenerateReport = (error: ApplicationError): IFetchReportFail => ({
     error: true
 });
 
-export const generateReport = (): AppThunkResult<Promise<void>> => async (
+export const generateReport = (dateRange: ReportDateRange): AppThunkResult<Promise<void>> => async (
     dispatch: AppThunkDispatch
 ): Promise<void> => {
     const options = {
-        path: 'reports',
-        method: 'GET',
-        payload: report
-    } as IHttpRequestOptions<Report>;
+        path: `reports?from=${dateRange.from.toISOString()}&to=${dateRange.to.toISOString()}`,
+        method: 'GET'
+    } as IHttpRequestOptions<ReportDateRange>;
 
     try {
         dispatch(willGenerateReport());

@@ -1,6 +1,10 @@
 import { Category } from './category';
 import { Expense } from './expense';
 
+export interface ReportDateRange {
+    from: Date;
+    to: Date;
+}
 export interface Report {
     byDate: ByDateReport[];
 }

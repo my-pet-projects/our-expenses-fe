@@ -1,16 +1,16 @@
-import { Alert, Card, Col, Row } from 'antd';
-import Moment from 'moment';
+import { Alert, Card, Col, DatePicker, Row } from 'antd';
+import moment, { Moment } from 'moment';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { ByCategoryEntity, ByDateReport, Expense } from 'src/models';
+import { ByCategoryEntity, ByDateReport, Expense, ReportDateRange } from 'src/models';
 import { selectError, selectIsLoading, selectReport } from 'src/report/state/selectors';
 
 import { generateReport } from '../state/actions';
 
 import './Report.scss';
 
-const dateFormat = 'DD.MM.YYYY';
+const dateFormat = 'MMMM YYYY';
 
 export const Report = (): JSX.Element => {
     const report = useSelector(selectReport);
@@ -24,11 +24,34 @@ export const Report = (): JSX.Element => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(generateReport());
+        const currentDate = Date.now();
+        const dateFrom = moment.utc(currentDate).startOf('month').toDate();
+        const dateTo = moment.utc(currentDate).endOf('month').toDate();
+        const dateRange = {
+            from: dateFrom,
+            to: dateTo
+        } as ReportDateRange;
+        dispatch(generateReport(dateRange));
     }, [dispatch]);
+
+    const handleDateChange = (value: Moment | null): void => {
+        console.log('date', value);
+        if (!value) {
+            return;
+        }
+
+        const dateFrom = moment.utc(value).startOf('month').toDate();
+        const dateTo = moment.utc(value).endOf('month').toDate();
+        const dateRange = {
+            from: dateFrom,
+            to: dateTo
+        } as ReportDateRange;
+        dispatch(generateReport(dateRange));
+    };
 
     return (
         <div className="report">
+            <DatePicker onChange={handleDateChange} picker="month" format={dateFormat} />
             <Card title="Monthly report" loading={isLoading}>
                 {!error && report && (
                     <>
@@ -36,7 +59,7 @@ export const Report = (): JSX.Element => {
                             .sort((a: ByDateReport, b: ByDateReport) => +new Date(a.date) - +new Date(b.date))
                             .map((byDate: ByDateReport, index: number) => (
                                 <Row key={index}>
-                                    <Col>{Moment(byDate.date).format(dateFormat)}</Col>
+                                    <Col>{moment(byDate.date).format(dateFormat)}</Col>
                                     <Col>
                                         {byDate.byCategory.map((byCategory: ByCategoryEntity) => (
                                             <>
