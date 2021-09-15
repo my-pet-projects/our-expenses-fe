@@ -10,6 +10,7 @@ export interface Expense {
     comment: string;
     date: Date;
     category: Category;
+    trip: string;
 }
 
 export interface NewExpenseResponse {

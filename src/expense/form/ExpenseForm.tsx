@@ -21,6 +21,7 @@ interface ExpenseFormValues {
     comment?: string;
     currency?: string;
     date?: Moment;
+    trip?: string;
 }
 
 const layout = {
@@ -66,7 +67,16 @@ export const ExpenseForm = (): JSX.Element => {
             quantity: 1
         },
         validateOnMount: true,
-        onSubmit: async ({ categoryId, categoryName, price, quantity, currency, comment, date }: ExpenseFormValues) => {
+        onSubmit: async ({
+            categoryId,
+            categoryName,
+            price,
+            quantity,
+            currency,
+            comment,
+            date,
+            trip
+        }: ExpenseFormValues) => {
             const dateObj = moment.utc(date).startOf('day').toDate();
             const categoryToSave = {
                 categoryId: categoryId,
@@ -75,13 +85,15 @@ export const ExpenseForm = (): JSX.Element => {
                 price: price,
                 quantity: quantity,
                 currency: currency,
-                date: dateObj
+                date: dateObj,
+                trip: trip
             } as Expense;
 
             try {
                 await dispatch(createExpense(categoryToSave));
                 formik.resetForm();
                 formik.setFieldValue('date', date);
+                formik.setFieldValue('trip', trip);
                 setCategoryInputFocus();
             } catch (error) {
                 formik.setStatus(error);
@@ -229,6 +241,18 @@ export const ExpenseForm = (): JSX.Element => {
                             type="text"
                             autoComplete="off"
                             value={formik.values.comment}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                        />
+                    </Form.Item>
+
+                    <Form.Item label="Trip">
+                        <Input
+                            name="trip"
+                            placeholder="Trip"
+                            type="text"
+                            autoComplete="off"
+                            value={formik.values.trip}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                         />
