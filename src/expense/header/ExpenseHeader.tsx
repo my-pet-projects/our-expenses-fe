@@ -1,5 +1,6 @@
-import { HomeOutlined } from '@ant-design/icons';
 import { PageHeader } from 'antd';
+
+import { WalletIcon } from 'src/common/components';
 
 import './ExpenseHeader.scss';
 
@@ -9,8 +10,8 @@ export const ExpenseHeader = (): JSX.Element => (
             title={'Expenses'}
             className="expense-header__headline"
             avatar={{
-                className: 'expense-header__avatar',
-                icon: <HomeOutlined className="expense-header__icon" style={{ color: 'rgba(0, 0, 0, 0.85)' }} />
+                shape: 'square',
+                src: <WalletIcon style={{ fontSize: '32px', color: '#000000' }} />
             }}
         />
     </div>

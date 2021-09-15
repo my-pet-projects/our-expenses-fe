@@ -3,6 +3,8 @@ import Menu from 'antd/lib/menu';
 import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 
+import { WalletIcon } from './common/components';
+
 export const Header: FunctionComponent = (): JSX.Element => (
     <>
         <div className="logo" />
@@ -18,7 +20,7 @@ export const Header: FunctionComponent = (): JSX.Element => (
                 <Link to="/categories" />
             </Menu.Item>
             <Menu.Item key="3">
-                <DeleteOutlined />
+                <WalletIcon />
                 <span>Expenses</span>
                 <Link to="/expenses" />
             </Menu.Item>
