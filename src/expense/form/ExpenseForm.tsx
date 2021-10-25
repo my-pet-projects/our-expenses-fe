@@ -207,6 +207,7 @@ export const ExpenseForm = (): JSX.Element => {
                                 placeholder="Price"
                                 autoComplete="off"
                                 type="number"
+                                step="0.001"
                                 name="price"
                                 value={formik.values.price}
                                 onChange={formik.handleChange}
@@ -225,6 +226,7 @@ export const ExpenseForm = (): JSX.Element => {
                                 ref={quantityInputRef}
                                 placeholder="Quantity"
                                 type="number"
+                                step="0.01"
                                 autoComplete="off"
                                 value={formik.values.quantity}
                                 onChange={formik.handleChange}
