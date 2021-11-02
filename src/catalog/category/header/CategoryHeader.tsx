@@ -18,7 +18,7 @@ import { CategoryHeaderBreadcrumbs } from './CategoryHeaderBreadcrumbs';
 import './CategoryHeader.scss';
 
 export const CategoryHeader = (): JSX.Element => {
-    const { id: categoryId } = useParams<{ id: string }>();
+    const { id: categoryId } = useParams();
     const category = useSelector(selectCategory);
     const isLoading = useSelector(selectCategoryIsLoading);
     const error = useSelector(selectCategoryError);

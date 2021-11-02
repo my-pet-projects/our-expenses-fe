@@ -3,7 +3,7 @@ import { Alert, Button, Modal, Spin, Tree } from 'antd';
 import { DataNode, EventDataNode } from 'antd/lib/tree';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { hideCategoryForm, processCategoryMove } from 'src/catalog/category/state/actions';
 import {
@@ -26,7 +26,7 @@ type AntdTreeSelectInfo = {
 };
 
 export const CategoryMoveModal = (): JSX.Element => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const [selectedNode, setSelectedNode] = useState<DataNode | null>(null);
     const modalPayload = useSelector(selectModalCategoryMovePayload);
     const allCategories = useSelector(selectAllCategories);
@@ -44,8 +44,8 @@ export const CategoryMoveModal = (): JSX.Element => {
 
     if (status === 'finished') {
         // do a force reload
-        history.push('/');
-        setTimeout(() => history.push(`/categories/${modalPayload.category.id}`));
+        navigate('/');
+        setTimeout(() => navigate(`/categories/${modalPayload.category.id}`));
         dispatch(hideCategoryForm());
         return <></>;
     }

@@ -2,7 +2,7 @@ import { PlusOutlined } from '@ant-design/icons';
 import { Alert, Button, Card, List } from 'antd';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { fetchCancel, fetchCategories, showNewCategoryModal } from 'src/catalog/category/state/actions';
 import {
@@ -17,8 +17,8 @@ import { Category } from 'src/models';
 import './CategoryList.scss';
 
 export const CategoryList = (): JSX.Element => {
-    const history = useHistory();
-    const { id: categoryId } = useParams<{ id: string }>();
+    const navigate = useNavigate();
+    const { id: categoryId } = useParams();
     const rootCategory = useSelector(selectCategory);
     const categories = useSelector(selectCategories);
     const isLoading = useSelector(selectCategoriesIsLoading);
@@ -37,7 +37,7 @@ export const CategoryList = (): JSX.Element => {
         .sort((a: Category, b: Category) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1));
 
     const handleCategorySelect = (category: Category): void => {
-        history.push(`/categories/${category.id}`);
+        navigate(`/categories/${category.id}`);
     };
 
     const handleCategoryCreate = (): void => {

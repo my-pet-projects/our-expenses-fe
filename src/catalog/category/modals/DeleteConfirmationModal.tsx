@@ -1,7 +1,7 @@
 import { DeleteOutlined, StopOutlined } from '@ant-design/icons';
 import { Alert, Button, Modal, Spin } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { hideCategoryForm, processCategoryDelete } from 'src/catalog/category/state/actions';
 import {
@@ -18,6 +18,7 @@ import { Category } from 'src/models';
 import { CategoryUsages } from './CategoryUsages';
 
 export const DeleteConfirmationModal = (): JSX.Element => {
+    const navigate = useNavigate();
     const modalPayload = useSelector(selectModalCategoryUsagesPayload);
     const isOpen = useSelector(selectModalIsOpen);
     const isProcessing = useSelector(selectModalIsProcessing);
@@ -33,14 +34,16 @@ export const DeleteConfirmationModal = (): JSX.Element => {
 
     if (status === 'finished') {
         if (!modalPayload.category.parents) {
-            return <Redirect to={'/categories'} />;
+            navigate('/categories');
+            return <></>;
         }
         const nearestParent = modalPayload.category.parents.sort((a: Category, b: Category) =>
             a.level < b.level ? 1 : -1
         );
 
         if (nearestParent) {
-            return <Redirect to={`/categories/${nearestParent[0].id}`} />;
+            navigate(`/categories/${nearestParent[0].id}`);
+            return <></>;
         }
     }
 

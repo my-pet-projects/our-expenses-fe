@@ -1,6 +1,6 @@
 import { Layout } from 'antd';
 import React, { FunctionComponent } from 'react';
-import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import { CategoriesPage } from './catalog/category/CategoryCatalogPage';
 import { ExpensesPage } from './expense/ExpensesPage';
@@ -18,12 +18,13 @@ const App: FunctionComponent = (): JSX.Element => (
         </Layout.Header>
         <Layout.Content>
             <div className="site-layout-content">
-                <Switch>
-                    <Route exact path="/" render={(): JSX.Element => <Redirect to="/categories" />} />
-                    <Route path="/categories/:id?" render={(): JSX.Element => <CategoriesPage />} />
-                    <Route path="/expenses" component={ExpensesPage}></Route>
-                    <Route path="/reports" component={ReportPage}></Route>
-                </Switch>
+                <Routes>
+                    <Route path="/" element={<CategoriesPage />} />
+                    <Route path="/categories" element={<CategoriesPage />} />
+                    <Route path="/categories/:id" element={<CategoriesPage />} />
+                    <Route path="/expenses" element={<ExpensesPage />} />
+                    <Route path="/reports" element={<ReportPage />} />
+                </Routes>
             </div>
         </Layout.Content>
         <Layout.Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Layout.Footer>
@@ -31,4 +32,4 @@ const App: FunctionComponent = (): JSX.Element => (
     </Layout>
 );
 
-export default withRouter(App);
+export default App;
