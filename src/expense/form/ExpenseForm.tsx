@@ -77,7 +77,8 @@ export const ExpenseForm = (): JSX.Element => {
             date,
             trip
         }: ExpenseFormValues) => {
-            const dateObj = moment.utc(date).startOf('day').toDate();
+            const dateMoment = moment(date);
+            const dateObj = dateMoment.utc().startOf('day').toDate();
             const categoryToSave = {
                 categoryId: categoryId,
                 categoryName: categoryName,

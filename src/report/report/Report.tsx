@@ -1,12 +1,14 @@
-import { Alert, Card, Col, DatePicker, Row } from 'antd';
+import { Alert, Card, Col, DatePicker, Row, Typography } from 'antd';
 import moment, { Moment } from 'moment';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { ByCategoryEntity, ByDateReport, Expense, ReportDateRange } from 'src/models';
+import { ReportDateRange } from 'src/models';
+import { generateReport } from 'src/report/state/actions';
 import { selectError, selectIsLoading, selectReport } from 'src/report/state/selectors';
 
-import { generateReport } from '../state/actions';
+import { DateCategory } from './DateCategory';
+import { TotalAmount } from './TotalAmount';
 
 import './Report.scss';
 
@@ -48,38 +50,25 @@ export const Report = (): JSX.Element => {
         } as ReportDateRange;
         dispatch(generateReport(dateRange));
     };
-
     return (
         <div className="report">
             <DatePicker onChange={handleDateChange} picker="month" format={dateFormat} />
-            <Card title="Monthly report" loading={isLoading}>
+            <Card title={<Typography.Title level={3}>Monthly report</Typography.Title>} loading={isLoading}>
                 {!error && report && (
                     <>
-                        {report.byDate
-                            .sort((a: ByDateReport, b: ByDateReport) => +new Date(a.date) - +new Date(b.date))
-                            .map((byDate: ByDateReport, index: number) => (
-                                <Row key={index}>
-                                    <Col>{moment(byDate.date).format(dateFormat)}</Col>
-                                    <Col>
-                                        {byDate.byCategory.map((byCategory: ByCategoryEntity) => (
-                                            <>
-                                                <strong>{byCategory.category.name}</strong>
-                                                <div>
-                                                    {byCategory.expenses.map((expense: Expense) => (
-                                                        <>
-                                                            <div>
-                                                                {expense.category.name}
-                                                                {expense.price} {expense.currency}
-                                                            </div>
-                                                        </>
-                                                    ))}
-                                                    ----
-                                                </div>
-                                            </>
-                                        ))}
-                                    </Col>
-                                </Row>
-                            ))}
+                        <Row justify="space-between">
+                            <Col flex={1}>
+                                <DateCategory dateExpenses={report.dateReports} />
+                            </Col>
+                        </Row>
+                        <Row justify="end">
+                            <Col>
+                                <Typography.Title level={4}>
+                                    Total:
+                                    <TotalAmount total={report.total} />
+                                </Typography.Title>
+                            </Col>
+                        </Row>
                     </>
                 )}
                 {error && <Alert message={error.message} description={error.description} type="error" showIcon />}

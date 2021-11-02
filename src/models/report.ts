@@ -5,16 +5,27 @@ export interface ReportDateRange {
     from: Date;
     to: Date;
 }
+
 export interface Report {
-    byDate: ByDateReport[];
+    dateReports: DateExpensesReport[];
+    total: Total;
 }
 
-export interface ByDateReport {
+export interface DateExpensesReport {
     date: string;
-    byCategory: ByCategoryEntity[];
+    categoryExpenses: CategoryExpenses[];
+    total: Total;
 }
 
-export interface ByCategoryEntity {
+export interface CategoryExpenses {
     category: Category;
+    subCategories: CategoryExpenses[];
     expenses: Expense[];
+    total: Total;
+}
+
+export interface Total {
+    currency: string;
+    debug: string;
+    sum: string;
 }
