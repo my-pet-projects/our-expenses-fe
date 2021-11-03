@@ -2,8 +2,12 @@ import { Category } from './category';
 import { Expense } from './expense';
 
 export interface ReportDateRange {
-    from: Date;
-    to: Date;
+    from: string;
+    to: string;
+}
+
+export interface ReportFilter {
+    dateRange: ReportDateRange;
 }
 
 export interface Report {

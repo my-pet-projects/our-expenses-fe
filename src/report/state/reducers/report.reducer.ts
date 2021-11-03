@@ -1,11 +1,12 @@
 import { Reducer } from 'redux';
 
-import { ApplicationError, Report } from 'src/models';
+import { ApplicationError, Report, ReportFilter } from 'src/models';
 import { ReportAction } from 'src/report/state/actions';
 import { ReportActionType } from 'src/report/state/constants';
 
 export interface IReportState {
     report?: Report;
+    filter?: ReportFilter;
     isLoading: boolean;
     error?: ApplicationError;
 }
@@ -35,6 +36,11 @@ export const reportReducer: Reducer<IReportState, ReportAction> = (
                 ...state,
                 error: action.payload,
                 isLoading: false
+            };
+        case ReportActionType.REPORT_SET_FILTER:
+            return {
+                ...state,
+                filter: action.payload.filter
             };
         default:
             return state;

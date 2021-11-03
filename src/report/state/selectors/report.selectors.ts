@@ -10,3 +10,5 @@ export const selectIsLoading = createSelector(selectReportState, (state: IReport
 export const selectError = createSelector(selectReportState, (state: IReportState) => state.error);
 
 export const selectReport = createSelector(selectReportState, (state: IReportState) => state.report);
+
+export const selectReportFilter = createSelector(selectReportState, (state: IReportState) => state.filter);

@@ -1,4 +1,4 @@
-import { ApplicationError, Report } from 'src/models';
+import { ApplicationError, Report, ReportFilter } from 'src/models';
 import { ReportActionType } from 'src/report/state/constants';
 
 export interface IFetchReportInit {
@@ -18,4 +18,11 @@ export interface IFetchReportFail {
     error: boolean;
 }
 
-export type ReportAction = IFetchReportInit | IFetchReportSuccess | IFetchReportFail;
+export interface ISetReportFilter {
+    type: ReportActionType.REPORT_SET_FILTER;
+    payload: {
+        filter: ReportFilter;
+    };
+}
+
+export type ReportAction = IFetchReportInit | IFetchReportSuccess | IFetchReportFail | ISetReportFilter;
