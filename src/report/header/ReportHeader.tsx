@@ -1,5 +1,6 @@
-import { BarChartOutlined } from '@ant-design/icons';
 import { PageHeader } from 'antd';
+
+import { ReportIcon } from 'src/common/components';
 
 import './ReportHeader.scss';
 
@@ -9,8 +10,8 @@ export const ReportHeader = (): JSX.Element => (
             title={'Report'}
             className="report-header__headline"
             avatar={{
-                className: 'report-header__avatar',
-                icon: <BarChartOutlined className="report-header__icon" style={{ color: 'rgba(0, 0, 0, 0.85)' }} />
+                shape: 'square',
+                src: <ReportIcon style={{ fontSize: '32px', color: '#000000' }} />
             }}
         />
     </div>
