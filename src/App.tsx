@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import { CategoriesPage } from './catalog/category/CategoryCatalogPage';
 import { ExpensesPage } from './expense/ExpensesPage';
 import { Header } from './Header';
-import SystemNotificationPage from './notify/SystemNotificationPage';
+import { SystemNotificationPage } from './notify/SystemNotificationPage';
 import { ReportPage } from './report/ReportPage';
 
 import 'antd/dist/antd.css';

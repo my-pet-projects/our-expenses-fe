@@ -5,8 +5,7 @@ import { CategoriesAction } from 'src/catalog/category/state/actions';
 import { ICategoriesState, ICategoryModalState, ICategoryState } from 'src/catalog/category/state/reducers';
 import { IExpenseState } from 'src/expense/state/reducers';
 import { INotifyState } from 'src/notify/state/reducers';
-
-import { IReportState } from './report/state/reducers';
+import { IReportState } from 'src/report/state/reducers';
 
 export interface RootState {
     readonly categories: ICategoriesState;

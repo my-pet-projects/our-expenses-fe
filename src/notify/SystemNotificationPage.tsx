@@ -1,18 +1,11 @@
 import { notification } from 'antd';
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import { SystemNotification } from 'src/models/notification';
-import { RootState } from 'src/RootState';
+import { selectNotification } from 'src/notify/state/selectors';
 
-interface PropsFromState {
-    systemNotification?: SystemNotification;
-}
-
-type SystemNotificationPageProps = PropsFromState;
-
-const SystemNotificationPage = (props: SystemNotificationPageProps): JSX.Element => {
-    const { systemNotification } = props;
+export const SystemNotificationPage = (): JSX.Element => {
+    const systemNotification = useSelector(selectNotification);
 
     useEffect(() => {
         if (systemNotification) {
@@ -26,12 +19,5 @@ const SystemNotificationPage = (props: SystemNotificationPageProps): JSX.Element
         }
     }, [systemNotification]);
 
-    return <React.Fragment />;
+    return <></>;
 };
-
-const mapStateToProps = ({ notification: notificationState }: RootState): PropsFromState => ({
-    systemNotification: notificationState.notification
-});
-
-const enhance = connect(mapStateToProps);
-export default enhance(SystemNotificationPage);
