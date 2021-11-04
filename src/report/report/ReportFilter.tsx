@@ -82,7 +82,7 @@ export const ReportFilter = (): JSX.Element => {
                 <Row justify="space-between">
                     <Col>
                         {!(from && to) && (
-                            <Space>
+                            <Space direction="horizontal">
                                 Month
                                 <DatePicker
                                     onChange={handleMonthChange}
@@ -93,7 +93,7 @@ export const ReportFilter = (): JSX.Element => {
                             </Space>
                         )}
                         {from && to && (
-                            <Space>
+                            <Space direction="horizontal">
                                 Date range
                                 <DatePicker.RangePicker
                                     onChange={handleDateRangeChange}
