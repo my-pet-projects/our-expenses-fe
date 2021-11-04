@@ -12,22 +12,20 @@ import 'antd/dist/antd.css';
 import './App.scss';
 
 const App: FunctionComponent = (): JSX.Element => (
-    <Layout className="layout" style={{ minHeight: '100vh' }}>
+    <Layout className="layout">
         <Layout.Header>
             <Header />
         </Layout.Header>
         <Layout.Content>
-            <div className="site-layout-content">
-                <Routes>
-                    <Route path="/" element={<CategoriesPage />} />
-                    <Route path="/categories" element={<CategoriesPage />} />
-                    <Route path="/categories/:id" element={<CategoriesPage />} />
-                    <Route path="/expenses" element={<ExpensesPage />} />
-                    <Route path="/reports" element={<ReportPage />} />
-                </Routes>
-            </div>
+            <Routes>
+                <Route path="/" element={<CategoriesPage />} />
+                <Route path="/categories" element={<CategoriesPage />} />
+                <Route path="/categories/:id" element={<CategoriesPage />} />
+                <Route path="/expenses" element={<ExpensesPage />} />
+                <Route path="/reports" element={<ReportPage />} />
+            </Routes>
         </Layout.Content>
-        <Layout.Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Layout.Footer>
+        <Layout.Footer className="footer">©{new Date().getFullYear()} Our Expenses</Layout.Footer>
         <SystemNotificationPage />
     </Layout>
 );
