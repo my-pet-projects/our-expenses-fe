@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import { CategoriesPage } from './catalog/category/CategoryCatalogPage';
 import { ExpensesPage } from './expense/ExpensesPage';
 import { Header } from './Header';
+import { HomePage } from './home/HomePage';
 import { SystemNotificationPage } from './notify/SystemNotificationPage';
 import { ReportPage } from './report/ReportPage';
 
@@ -18,7 +19,7 @@ const App: FunctionComponent = (): JSX.Element => (
         </Layout.Header>
         <Layout.Content>
             <Routes>
-                <Route path="/" element={<CategoriesPage />} />
+                <Route path="/" element={<HomePage />} />
                 <Route path="/categories" element={<CategoriesPage />} />
                 <Route path="/categories/:id" element={<CategoriesPage />} />
                 <Route path="/expenses" element={<ExpensesPage />} />
