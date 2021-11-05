@@ -2,13 +2,12 @@ import { Alert, Card, Col, Row, Typography } from 'antd';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { AppPanel } from 'src/common/components';
 import { generateReport } from 'src/report/state/actions';
 import { selectError, selectIsLoading, selectReport, selectReportFilter } from 'src/report/state/selectors';
 
 import { DateCategory } from './DateCategory';
 import { TotalAmount } from './TotalAmount';
-
-import './Report.scss';
 
 export const Report = (): JSX.Element => {
     const report = useSelector(selectReport);
@@ -30,7 +29,7 @@ export const Report = (): JSX.Element => {
     }
 
     return (
-        <div className="report">
+        <AppPanel>
             <Card title={<Typography.Title level={3}>Monthly report</Typography.Title>} loading={isLoading}>
                 {!error && report && (
                     <>
@@ -51,6 +50,6 @@ export const Report = (): JSX.Element => {
                 )}
                 {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
             </Card>
-        </div>
+        </AppPanel>
     );
 };

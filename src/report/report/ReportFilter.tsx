@@ -5,10 +5,9 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 
+import { AppPanel } from 'src/common/components';
 import { ReportDateRange } from 'src/models';
 import { applyReportFilter } from 'src/report/state/actions';
-
-import './ReportFilter.scss';
 
 export const ReportFilter = (): JSX.Element => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -77,7 +76,7 @@ export const ReportFilter = (): JSX.Element => {
     };
 
     return (
-        <div className="report-filter">
+        <AppPanel>
             <Card>
                 <Row justify="space-between">
                     <Col>
@@ -113,6 +112,6 @@ export const ReportFilter = (): JSX.Element => {
                     </Col>
                 </Row>
             </Card>
-        </div>
+        </AppPanel>
     );
 };

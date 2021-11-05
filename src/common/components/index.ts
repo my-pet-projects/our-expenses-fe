@@ -1,4 +1,5 @@
 export * from './icon/SvgIcon';
 export * from './icon/WalletIcon';
 export * from './icon/ReportIcon';
-export * from './Panel';
+export * from './AppPanel';
+export * from './AppHeader';

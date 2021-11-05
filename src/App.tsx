@@ -23,7 +23,7 @@ const App: FunctionComponent = (): JSX.Element => (
                 <Route path="/categories" element={<CategoriesPage />} />
                 <Route path="/categories/:id" element={<CategoriesPage />} />
                 <Route path="/expenses" element={<ExpensesPage />} />
-                <Route path="/reports" element={<ReportPage />} />
+                <Route path="/reports/*" element={<ReportPage />} />
             </Routes>
         </Layout.Content>
         <Layout.Footer className="footer">©{new Date().getFullYear()} Our Expenses</Layout.Footer>

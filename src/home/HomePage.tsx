@@ -1,9 +1,9 @@
 import { Col, Row, Typography } from 'antd';
 
-import { Panel } from 'src/common/components';
+import { AppPanel } from 'src/common/components';
 
 export const HomePage = (): JSX.Element => (
-    <Panel>
+    <AppPanel>
         <Row justify="center" align="middle" style={{ height: '70vh' }}>
             <Col>
                 <img src="piggy.svg" width="200px" />
@@ -14,5 +14,5 @@ export const HomePage = (): JSX.Element => (
                 </Typography.Paragraph>
             </Col>
         </Row>
-    </Panel>
+    </AppPanel>
 );
