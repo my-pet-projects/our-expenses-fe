@@ -43,9 +43,9 @@ export const CategoryMoveModal = (): JSX.Element => {
     }
 
     if (status === 'finished') {
-        // do a force reload
+        // do a force reload, TODO: remove?
         navigate('/');
-        setTimeout(() => navigate(`/categories/${modalPayload.category.id}`));
+        setTimeout(() => navigate(`/app/categories/${modalPayload.category.id}`));
         dispatch(hideCategoryForm());
         return <></>;
     }

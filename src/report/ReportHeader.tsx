@@ -1,15 +1,16 @@
 import { Tabs } from 'antd';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 import { AppHeader, BreadcrumbData, ReportIcon } from 'src/common/components';
 
 export const ReportHeader = (): JSX.Element => {
     const navigate = useNavigate();
+    const location = useLocation();
 
-    const reportBreadcrumbLinks = [{ title: 'Reports', url: '/reports' } as BreadcrumbData];
+    const reportBreadcrumbLinks = [{ title: 'Reports', url: '/app/reports' } as BreadcrumbData];
 
     const onTabChange = (activeKey: string): void => {
-        navigate(activeKey);
+        navigate(`${activeKey}${location.search}`);
     };
 
     return (

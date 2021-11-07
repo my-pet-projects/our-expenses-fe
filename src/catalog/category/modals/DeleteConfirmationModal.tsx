@@ -34,7 +34,7 @@ export const DeleteConfirmationModal = (): JSX.Element => {
 
     if (status === 'finished') {
         if (!modalPayload.category.parents) {
-            navigate('/categories');
+            navigate('/app/categories');
             return <></>;
         }
         const nearestParent = modalPayload.category.parents.sort((a: Category, b: Category) =>
@@ -42,7 +42,7 @@ export const DeleteConfirmationModal = (): JSX.Element => {
         );
 
         if (nearestParent) {
-            navigate(`/categories/${nearestParent[0].id}`);
+            navigate(`/app/categories/${nearestParent[0].id}`);
             return <></>;
         }
     }

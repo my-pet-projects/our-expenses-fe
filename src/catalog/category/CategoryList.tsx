@@ -37,7 +37,7 @@ export const CategoryList = (): JSX.Element => {
         .sort((a: Category, b: Category) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1));
 
     const handleCategorySelect = (category: Category): void => {
-        navigate(`/categories/${category.id}`);
+        navigate(`/app/categories/${category.id}`);
     };
 
     const handleCategoryCreate = (): void => {

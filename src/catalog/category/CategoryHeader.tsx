@@ -47,7 +47,7 @@ export const CategoryHeader = (): JSX.Element => {
     };
 
     const prepareBreadcrumbsData = (): BreadcrumbData[] => {
-        const breadcrumbs = [{ title: 'Categories catalog', url: '/categories' } as BreadcrumbData];
+        const breadcrumbs = [{ title: 'Categories catalog', url: '/app/categories' } as BreadcrumbData];
         if (!category) {
             return breadcrumbs;
         }
@@ -57,13 +57,13 @@ export const CategoryHeader = (): JSX.Element => {
             .map((category: Category) =>
                 breadcrumbs.push({
                     title: category.name,
-                    url: `/categories/${category.id}`
+                    url: `/app/categories/${category.id}`
                 })
             );
 
         breadcrumbs.push({
             title: category.name,
-            url: `/categories/${category.id}`
+            url: `/app/categories/${category.id}`
         });
 
         return breadcrumbs;

@@ -24,13 +24,13 @@ export const Header: FunctionComponent = (): JSX.Element => {
                     <Link to="/">Home</Link>
                 </Menu.Item>
                 <Menu.Item key="/categories" icon={<AppstoreOutlined />}>
-                    <Link to="/categories">Categories</Link>
+                    <Link to="/app/categories">Categories</Link>
                 </Menu.Item>
                 <Menu.Item key="/expenses" icon={<WalletIcon />}>
-                    <Link to="/expenses">Expenses</Link>
+                    <Link to="/app/expenses">Expenses</Link>
                 </Menu.Item>
                 <Menu.Item key="/reports" icon={<ReportIcon />}>
-                    <Link to="/reports">Reports</Link>
+                    <Link to="/app/reports">Reports</Link>
                 </Menu.Item>
             </Menu>
         </>
