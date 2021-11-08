@@ -8,7 +8,17 @@ import { Report } from './report/report/Report';
 import { ReportByCategory } from './report/report/ReportByCategory';
 import { ReportPage } from './report/ReportPage';
 
-export const routes = (isLoggedIn: boolean): RouteObject[] => [
+export const appRoutes = {
+    Root: '/',
+    Categories: '/app/categories',
+    CategoryDetails: '/app/categories/:id',
+    Expenses: '/app/expenses',
+    Reports: '/app/reports',
+    ReportByDate: '/app/reports/date',
+    ReportByCategory: '/app/reports/category'
+};
+
+export const routes = (isLoggedIn?: boolean): RouteObject[] => [
     {
         path: '/',
         element: <HomePage />,
@@ -39,6 +49,7 @@ export const routes = (isLoggedIn: boolean): RouteObject[] => [
                 path: 'reports',
                 element: <ReportPage />,
                 children: [
+                    { path: '', element: <Navigate to="date" /> },
                     {
                         path: 'date',
                         element: <Report />
