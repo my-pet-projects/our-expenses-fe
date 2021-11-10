@@ -25,4 +25,8 @@ export interface ISetReportFilter {
     };
 }
 
-export type ReportAction = IFetchReportInit | IFetchReportSuccess | IFetchReportFail | ISetReportFilter;
+export interface IResetReport {
+    type: ReportActionType.REPORT_RESET;
+}
+
+export type ReportAction = IFetchReportInit | IFetchReportSuccess | IFetchReportFail | ISetReportFilter | IResetReport;

@@ -42,13 +42,15 @@ export const SubCategoryExpenses = ({ categoryExpenses }: SubCategoriesProps): J
         return children;
     };
 
-    const q = flatten(categoryExpenses.subCategories);
+    const getFlattenCategories = (): Cat[] => {
+        const q = flatten(categoryExpenses.subCategories);
+        const sorted = q.sort((a: Cat, b: Cat) => a.name.localeCompare(b.name));
 
-    const sortedCategories = q.sort((a: Cat, b: Cat) => a.name.localeCompare(b.name));
-    console.log('result1', q);
+        return sorted;
+    };
     return (
         <>
-            {sortedCategories.map((cat: Cat, i: number) => (
+            {getFlattenCategories().map((cat: Cat, i: number) => (
                 <Row key={i} gutter={[16, 16]}>
                     <Col span={12}>{cat.name}</Col>
                     <Col span={12}>

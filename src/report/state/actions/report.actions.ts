@@ -4,7 +4,13 @@ import { ReportActionType } from 'src/report/state/constants';
 import { AppThunkDispatch, AppThunkResult } from 'src/RootState';
 import { IHttpRequestOptions, sendRequest } from 'src/services/http';
 
-import { IFetchReportFail, IFetchReportInit, IFetchReportSuccess, ISetReportFilter } from './report.actions.types';
+import {
+    IFetchReportFail,
+    IFetchReportInit,
+    IFetchReportSuccess,
+    IResetReport,
+    ISetReportFilter
+} from './report.actions.types';
 
 const willGenerateReport = (): IFetchReportInit => ({
     type: ReportActionType.REPORT_FETCH_INIT
@@ -30,11 +36,15 @@ const didApplyReportFilter = (filter: ReportFilter): ISetReportFilter => ({
     }
 });
 
+const didResetFilter = (): IResetReport => ({
+    type: ReportActionType.REPORT_RESET
+});
+
 export const generateReport = (filter: ReportFilter): AppThunkResult<Promise<void>> => async (
     dispatch: AppThunkDispatch
 ): Promise<void> => {
     const options = {
-        path: `reports?from=${filter.dateRange.from}&to=${filter.dateRange.to}`,
+        path: `reports?from=${filter.dateRange.from}&to=${filter.dateRange.to}&interval=day`,
         method: 'GET'
     } as IHttpRequestOptions<ReportDateRange>;
 
@@ -59,4 +69,8 @@ export const applyReportFilter = (dateRange: ReportDateRange): AppThunkResult<Pr
         dateRange: dateRange
     } as ReportFilter;
     dispatch(didApplyReportFilter(filter));
+};
+
+export const resetReport = (): AppThunkResult<Promise<void>> => async (dispatch: AppThunkDispatch): Promise<void> => {
+    dispatch(didResetFilter());
 };
