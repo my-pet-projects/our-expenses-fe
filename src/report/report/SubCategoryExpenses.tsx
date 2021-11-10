@@ -1,12 +1,14 @@
-import { Col, Row, Typography } from 'antd';
+import { Typography } from 'antd';
 
 import { CategoryExpenses, Expense, Total } from 'src/models';
 
 import { ExpenseAmount } from './ExpenseAmount';
 
-interface Cat {
+import './SubCategoryExpenses.scss';
+
+interface Category {
     name: string;
-    subCategories: Cat[];
+    children: Category[];
     expenses: Expense[];
     total: Total;
 }
@@ -20,50 +22,47 @@ export const SubCategoryExpenses = ({ categoryExpenses }: SubCategoriesProps): J
         return <></>;
     }
 
-    const flatten = (categoryExpenses: CategoryExpenses[], parentName?: string): Cat[] => {
+    const flatten = (categoryExpenses: CategoryExpenses[], parentName?: string): Category[] => {
         if (!categoryExpenses) {
             return [];
         }
 
-        let children: Cat[] = [];
+        let children: Category[] = [];
         categoryExpenses.forEach((catExpenses: CategoryExpenses) => {
             const name = parentName ? parentName + ' / ' + catExpenses.category.name : catExpenses.category.name;
-            const ch = flatten(catExpenses.subCategories, name);
+            const catExpensesChild = flatten(catExpenses.subCategories, name);
             children.push({
                 name: name,
-                subCategories: ch,
+                children: catExpensesChild,
                 expenses: catExpenses.expenses,
                 total: catExpenses.total
             });
         });
-
-        children = children.concat(children.flatMap((x: Cat) => x.subCategories)).filter((x: Cat) => x.expenses);
+        children = children.concat(children.flatMap((x: Category) => x.children)).filter((x: Category) => x.expenses);
 
         return children;
     };
 
-    const getFlattenCategories = (): Cat[] => {
-        const q = flatten(categoryExpenses.subCategories);
-        const sorted = q.sort((a: Cat, b: Cat) => a.name.localeCompare(b.name));
+    const sortedFlatCategories = flatten(categoryExpenses.subCategories).sort((a: Category, b: Category) =>
+        a.name.localeCompare(b.name)
+    );
 
-        return sorted;
-    };
     return (
         <>
-            {getFlattenCategories().map((cat: Cat, i: number) => (
-                <Row key={i} gutter={[16, 16]}>
-                    <Col span={12}>{cat.name}</Col>
-                    <Col span={12}>
-                        {cat.expenses &&
-                            cat.expenses.map((expense: Expense, expenseIndex: number) => (
-                                <Row key={expenseIndex}>
-                                    <Typography.Text type="secondary">
-                                        <ExpenseAmount expense={expense} />
-                                    </Typography.Text>
-                                </Row>
+            {sortedFlatCategories.map((category: Category, categoryIndex: number) => (
+                <div key={categoryIndex} className="subcategory">
+                    <div className="subcategory__name">
+                        <Typography.Text type="secondary">{category.name}</Typography.Text>
+                    </div>
+                    <div className="subcategory__expenses">
+                        {category.expenses &&
+                            category.expenses.map((expense: Expense, expenseIndex: number) => (
+                                <Typography.Text key={expenseIndex} type="secondary">
+                                    <ExpenseAmount expense={expense} />
+                                </Typography.Text>
                             ))}
-                    </Col>
-                </Row>
+                    </div>
+                </div>
             ))}
         </>
     );

@@ -1,0 +1,19 @@
+.category-expense-item {
+    margin: 10px;
+
+    &__category {
+        display: flex;
+    }
+
+    &__collapse-btn {
+        margin-right: 10px;
+    }
+
+    &__name {
+        width: 250px;
+    }
+
+    &__subcategories {
+        margin-left: 34px;
+    }
+}

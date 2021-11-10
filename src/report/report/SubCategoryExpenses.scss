@@ -1,0 +1,13 @@
+.subcategory {
+    display: flex;
+    margin-bottom: 0;
+
+    &__name {
+        width: 216px;
+    }
+
+    &__expenses {
+        display: flex;
+        flex-direction: column;
+    }
+}

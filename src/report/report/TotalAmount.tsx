@@ -5,7 +5,7 @@ type TotalAmountProps = {
 };
 
 export const TotalAmount = ({ total }: TotalAmountProps): JSX.Element => (
-    <span>
+    <>
         {total.sum} {total.currency}
-    </span>
+    </>
 );
