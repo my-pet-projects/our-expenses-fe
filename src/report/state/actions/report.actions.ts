@@ -44,7 +44,7 @@ export const generateReport = (filter: ReportFilter): AppThunkResult<Promise<voi
     dispatch: AppThunkDispatch
 ): Promise<void> => {
     const options = {
-        path: `reports?from=${filter.dateRange.from}&to=${filter.dateRange.to}&interval=day`,
+        path: `reports?from=${filter.dateRange.from}&to=${filter.dateRange.to}&interval=${filter.interval}`,
         method: 'GET'
     } as IHttpRequestOptions<ReportDateRange>;
 
@@ -62,12 +62,9 @@ export const generateReport = (filter: ReportFilter): AppThunkResult<Promise<voi
     }
 };
 
-export const applyReportFilter = (dateRange: ReportDateRange): AppThunkResult<Promise<void>> => async (
+export const applyReportFilter = (filter: ReportFilter): AppThunkResult<Promise<void>> => async (
     dispatch: AppThunkDispatch
 ): Promise<void> => {
-    const filter = {
-        dateRange: dateRange
-    } as ReportFilter;
     dispatch(didApplyReportFilter(filter));
 };
 

@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 
 import { AppPanel } from 'src/common/components';
-import { ReportDateRange } from 'src/models';
+import { Interval, ReportDateRange } from 'src/models';
 import { applyReportFilter } from 'src/report/state/actions';
 
 export const ReportFilter = (): JSX.Element => {
@@ -26,14 +26,14 @@ export const ReportFilter = (): JSX.Element => {
         if (month) {
             const monthFromQuery = moment.utc(month, queryMonthFormat);
             const dateRange = dateRangeFromMonth(monthFromQuery);
-            dispatch(applyReportFilter(dateRange));
+            dispatch(applyReportFilter({ dateRange: dateRange, interval: Interval.Day }));
             return;
         }
         if (from && to) {
             const fromQuery = moment.utc(from, queryDateFormat);
             const toQuery = moment.utc(to, queryDateFormat);
             const dateRange = dateRangeFromRange(fromQuery, toQuery);
-            dispatch(applyReportFilter(dateRange));
+            dispatch(applyReportFilter({ dateRange: dateRange, interval: Interval.Month }));
             return;
         }
     }, [dispatch, month, from, to]);

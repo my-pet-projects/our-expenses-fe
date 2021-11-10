@@ -1,6 +1,12 @@
 import { Category } from './category';
 import { Expense } from './expense';
 
+export enum Interval {
+    Day = 'day',
+    Month = 'month',
+    Year = 'year'
+}
+
 export interface ReportDateRange {
     from: string;
     to: string;
@@ -8,6 +14,7 @@ export interface ReportDateRange {
 
 export interface ReportFilter {
     dateRange: ReportDateRange;
+    interval: Interval;
 }
 
 export interface Report {
