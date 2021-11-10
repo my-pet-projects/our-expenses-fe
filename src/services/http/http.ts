@@ -17,14 +17,8 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
     } as AxiosRequestConfig;
 
     try {
-        const wait = (ms: number): Promise<void> =>
-            new Promise((resolve: (value: void | PromiseLike<void>) => void) => {
-                setTimeout(resolve, ms);
-            });
-        await wait(200);
-
         const result = await axios.request<T>(config);
-        if (!result.data) {
+        if (result.status === 200 && !result.data) {
             throw new Error('Unexpected response from the server.');
         }
         return {
