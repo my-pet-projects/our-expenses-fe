@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nivo/core": "^0.74.0",
+    "@nivo/pie": "^0.74.0",
     "antd": "^4.16.9",
     "axios": "^0.21.1",
     "chalk": "^4.1.0",

@@ -1,0 +1,16 @@
+.date-category {
+    &__wrapper {
+        display: flex;
+    }
+
+    &__expenses {
+        flex: 1;
+        align-self: top;
+    }
+
+    &__chart {
+        flex: 1;
+        align-self: top;
+        height: 300px;
+    }
+}

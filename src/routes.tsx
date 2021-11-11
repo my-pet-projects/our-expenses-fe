@@ -4,8 +4,8 @@ import { LoginPage } from './auth/LoginPage';
 import { CategoriesPage } from './catalog/category/CategoryCatalogPage';
 import { ExpensesPage } from './expense/ExpensesPage';
 import { HomePage } from './home/HomePage';
+import { Interval } from './models';
 import { Report } from './report/report/Report';
-import { ReportByCategory } from './report/report/ReportByCategory';
 import { ReportPage } from './report/ReportPage';
 
 export const appRoutes = {
@@ -52,11 +52,11 @@ export const routes = (isLoggedIn?: boolean): RouteObject[] => [
                     { path: '', element: <Navigate to="date" /> },
                     {
                         path: 'date',
-                        element: <Report />
+                        element: <Report interval={Interval.Day} />
                     },
                     {
                         path: 'category',
-                        element: <ReportByCategory />
+                        element: <Report interval={Interval.Month} />
                     }
                 ]
             }

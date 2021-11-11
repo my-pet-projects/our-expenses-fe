@@ -36,7 +36,7 @@ const didApplyReportFilter = (filter: ReportFilter): ISetReportFilter => ({
     }
 });
 
-const didResetFilter = (): IResetReport => ({
+const didResetReport = (): IResetReport => ({
     type: ReportActionType.REPORT_RESET
 });
 
@@ -69,5 +69,5 @@ export const applyReportFilter = (filter: ReportFilter): AppThunkResult<Promise<
 };
 
 export const resetReport = (): AppThunkResult<Promise<void>> => async (dispatch: AppThunkDispatch): Promise<void> => {
-    dispatch(didResetFilter());
+    dispatch(didResetReport());
 };
