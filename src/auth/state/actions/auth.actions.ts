@@ -27,34 +27,34 @@ const didLogout = (): ILogout => ({
     type: AuthActionType.LOGOUT
 });
 
-export const login = (username: string, password: string): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    const options = {
-        path: 'login',
-        method: 'POST',
-        payload: {
-            username: username,
-            password: password
-        }
-    } as IHttpRequestOptions<LoginData>;
+export const login = (username: string, password: string): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        const options = {
+            path: 'login',
+            method: 'POST',
+            payload: {
+                username: username,
+                password: password
+            }
+        } as IHttpRequestOptions<LoginData>;
 
-    try {
-        dispatch(willLogin());
-        const response = await sendRequest<AuthData>(options);
-        if (!response.data) {
-            throw new Error('Unexpected response from the server.');
+        try {
+            dispatch(willLogin());
+            const response = await sendRequest<AuthData>(options);
+            if (!response.data) {
+                throw new Error('Unexpected response from the server.');
+            }
+            dispatch(didLogin(response.data));
+            localStorage.setItem('user', JSON.stringify(response.data));
+        } catch (error) {
+            const appError = new ApplicationError('Failed to login!', error);
+            dispatch(failedToLogin(appError));
+            dispatch(notifyFailure(appError));
         }
-        dispatch(didLogin(response.data));
-        localStorage.setItem('user', JSON.stringify(response.data));
-    } catch (error) {
-        const appError = new ApplicationError('Failed to login!', error);
-        dispatch(failedToLogin(appError));
-        dispatch(notifyFailure(appError));
-    }
-};
+    };
 
-export const logout = (): AppThunkResult<Promise<void>> => async (dispatch: AppThunkDispatch): Promise<void> => {
-    localStorage.removeItem('user');
-    dispatch(didLogout());
-};
+export const logout = (): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        localStorage.removeItem('user');
+        dispatch(didLogout());
+    };

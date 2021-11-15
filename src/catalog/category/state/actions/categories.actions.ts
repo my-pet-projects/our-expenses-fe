@@ -42,35 +42,34 @@ const addChildCategory = (category: Category): ICategoryInsert => ({
     }
 });
 
-export const addCategory = (category: Category) => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
-    dispatch(addChildCategory(category));
-};
+export const addCategory = (category: Category) =>
+    async function (dispatch: Dispatch<AnyAction>): Promise<void> {
+        dispatch(addChildCategory(category));
+    };
 
-export const fetchCancel = () => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
-    dispatch(canceledFetchCategories());
-    cancelRequest();
-};
+export const fetchCancel = () =>
+    async function (dispatch: Dispatch<AnyAction>): Promise<void> {
+        dispatch(canceledFetchCategories());
+        cancelRequest();
+    };
 
-export const fetchCategories = (categoryId?: string) => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
-    const options = {
-        path: categoryId ? `categories?parentId=${categoryId}` : 'categories',
-        method: 'GET'
-    } as IHttpRequestOptions;
+export const fetchCategories = (categoryId?: string) =>
+    async function (dispatch: Dispatch<AnyAction>): Promise<void> {
+        const options = {
+            path: categoryId ? `categories?parentId=${categoryId}` : 'categories',
+            method: 'GET'
+        } as IHttpRequestOptions;
 
-    await dispatch(willFetchCategories());
-    try {
-        const result = await sendRequest<Category[]>(options);
-        await dispatch(didFetchCategories(result.data || []));
-    } catch (error) {
-        const appError = {
-            message: 'Failed to fetch categories!',
-            description: error.getFullMessage(),
-            error: error
-        } as ApplicationError;
-        dispatch(notifyFailure(appError));
-        dispatch(failedToFetchCategories(appError));
-    }
-};
+        await dispatch(willFetchCategories());
+        try {
+            const result = await sendRequest<Category[]>(options);
+            await dispatch(didFetchCategories(result.data || []));
+        } catch (error) {
+            const appError = new ApplicationError('Failed to fetch categories!', error);
+            dispatch(notifyFailure(appError));
+            dispatch(failedToFetchCategories(appError));
+        }
+    };
 
 // race conditions
 // https://medium.com/dailyjs/handling-race-conditions-with-redux-thunk-c348a7a5a839

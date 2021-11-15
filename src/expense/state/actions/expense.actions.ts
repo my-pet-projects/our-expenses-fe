@@ -50,45 +50,45 @@ const failedCreateExpense = (error: ApplicationError): IExpenseCreateFailed => (
     error: true
 });
 
-export const createExpense = (expense: Expense): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    const options = {
-        path: 'expenses',
-        method: 'POST',
-        payload: expense
-    } as IHttpRequestOptions<Expense>;
+export const createExpense = (expense: Expense): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        const options = {
+            path: 'expenses',
+            method: 'POST',
+            payload: expense
+        } as IHttpRequestOptions<Expense>;
 
-    try {
-        dispatch(willCreateExpense());
-        const response = await sendRequest<NewExpenseResponse>(options);
-        if (!response.data || !response.data.id) {
-            throw new Error('Unexpected response from the server.');
+        try {
+            dispatch(willCreateExpense());
+            const response = await sendRequest<NewExpenseResponse>(options);
+            if (!response.data || !response.data.id) {
+                throw new Error('Unexpected response from the server.');
+            }
+            expense.id = response.data.id;
+            dispatch(didCreateExpense(expense));
+            dispatch(notifySuccess('Expense added successfully!'));
+        } catch (error) {
+            const appError = new ApplicationError('Failed to add expense!', error);
+            dispatch(failedCreateExpense(appError));
+            dispatch(notifyFailure(appError));
+            throw error;
         }
-        expense.id = response.data.id;
-        dispatch(didCreateExpense(expense));
-        dispatch(notifySuccess('Expense added successfully!'));
-    } catch (error) {
-        const appError = new ApplicationError('Failed to add expense!', error);
-        dispatch(failedCreateExpense(appError));
-        dispatch(notifyFailure(appError));
-        throw error;
-    }
-};
+    };
 
-export const fetchCategoriesCatalog = () => async (dispatch: Dispatch<AnyAction>): Promise<void> => {
-    const options = {
-        path: 'categories?all=true',
-        method: 'GET'
-    } as IHttpRequestOptions;
+export const fetchCategoriesCatalog = () =>
+    async function (dispatch: Dispatch<AnyAction>): Promise<void> {
+        const options = {
+            path: 'categories?all=true',
+            method: 'GET'
+        } as IHttpRequestOptions;
 
-    dispatch(willFetchCategories());
-    try {
-        const response = await sendRequest<Category[]>(options);
-        dispatch(didFetchCategories(response.data || []));
-    } catch (error) {
-        const appError = new ApplicationError('Failed to fetch categories catalog!', error);
-        dispatch(notifyFailure(appError));
-        dispatch(failedToFetchCategories(appError));
-    }
-};
+        dispatch(willFetchCategories());
+        try {
+            const response = await sendRequest<Category[]>(options);
+            dispatch(didFetchCategories(response.data || []));
+        } catch (error) {
+            const appError = new ApplicationError('Failed to fetch categories catalog!', error);
+            dispatch(notifyFailure(appError));
+            dispatch(failedToFetchCategories(appError));
+        }
+    };

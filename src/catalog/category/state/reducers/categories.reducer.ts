@@ -41,7 +41,7 @@ export const categoriesReducer: Reducer<ICategoriesState, CategoriesAction> = (
                 error: action.payload,
                 isLoading: false
             };
-        case CategoriesActionType.ITEM_UPDATE:
+        case CategoriesActionType.ITEM_UPDATE: {
             const categories = state.categories.map((item: Category) => {
                 if (item.id !== action.payload.category.id) {
                     return item;
@@ -57,13 +57,15 @@ export const categoriesReducer: Reducer<ICategoriesState, CategoriesAction> = (
                 ...state,
                 categories: categories
             };
-        case CategoriesActionType.ITEM_INSERT:
+        }
+        case CategoriesActionType.ITEM_INSERT: {
             const newArray = state.categories.slice();
             newArray.splice(0, 0, action.payload.category);
             return {
                 ...state,
                 categories: newArray
             };
+        }
         case CategoriesActionType.ITEM_REMOVE:
             // let newArray = array.slice();
             // newArray.splice(action.index, 1);

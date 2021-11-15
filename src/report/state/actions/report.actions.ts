@@ -40,34 +40,33 @@ const didResetReport = (): IResetReport => ({
     type: ReportActionType.REPORT_RESET
 });
 
-export const generateReport = (filter: ReportFilter): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    const options = {
-        path: `reports?from=${filter.dateRange.from}&to=${filter.dateRange.to}&interval=${filter.interval}`,
-        method: 'GET'
-    } as IHttpRequestOptions<ReportDateRange>;
+export const generateReport = (filter: ReportFilter): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        const options = {
+            path: `reports?from=${filter.dateRange.from}&to=${filter.dateRange.to}&interval=${filter.interval}`,
+            method: 'GET'
+        } as IHttpRequestOptions<ReportDateRange>;
 
-    try {
-        dispatch(willGenerateReport());
-        const response = await sendRequest<Report>(options);
-        if (!response.data) {
-            throw new Error('Unexpected response from the server.');
+        try {
+            dispatch(willGenerateReport());
+            const response = await sendRequest<Report>(options);
+            if (!response.data) {
+                throw new Error('Unexpected response from the server.');
+            }
+            dispatch(didGenerateReport(response.data));
+        } catch (error) {
+            const appError = new ApplicationError('Failed to generate report!', error);
+            dispatch(failedToGenerateReport(appError));
+            dispatch(notifyFailure(appError));
         }
-        dispatch(didGenerateReport(response.data));
-    } catch (error) {
-        const appError = new ApplicationError('Failed to generate report!', error);
-        dispatch(failedToGenerateReport(appError));
-        dispatch(notifyFailure(appError));
-    }
-};
+    };
 
-export const applyReportFilter = (filter: ReportFilter): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    dispatch(didApplyReportFilter(filter));
-};
+export const applyReportFilter = (filter: ReportFilter): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        dispatch(didApplyReportFilter(filter));
+    };
 
-export const resetReport = (): AppThunkResult<Promise<void>> => async (dispatch: AppThunkDispatch): Promise<void> => {
-    dispatch(didResetReport());
-};
+export const resetReport = (): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        dispatch(didResetReport());
+    };

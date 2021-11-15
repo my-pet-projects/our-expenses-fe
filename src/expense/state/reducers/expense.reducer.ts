@@ -45,7 +45,7 @@ export const expenseReducer: Reducer<IExpenseState, ExpenseAction> = (
                 ...state,
                 isLoading: true
             };
-        case ExpenseActionType.CREATE_DONE:
+        case ExpenseActionType.CREATE_DONE: {
             const expenses = state.recentlyAdded.slice();
             expenses.splice(0, 0, action.payload.expense);
             return {
@@ -53,6 +53,7 @@ export const expenseReducer: Reducer<IExpenseState, ExpenseAction> = (
                 isLoading: false,
                 recentlyAdded: expenses
             };
+        }
         case ExpenseActionType.CREATE_FAILED:
             return {
                 ...state,

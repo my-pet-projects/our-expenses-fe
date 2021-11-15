@@ -134,191 +134,158 @@ const refreshCategory = (category: Category): ICategoryRefresh => ({
     }
 });
 
-export const fetchCategory = (id?: string): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    if (!id) {
-        dispatch(resetSelectedCategory());
-        return;
-    }
-
-    const options = {
-        path: `categories/${id}`,
-        method: 'GET'
-    } as IHttpRequestOptions;
-
-    try {
-        // TODO: cancel only relevant requests
-        //cancelRequest();
-
-        dispatch(willFetchCategory());
-        const result = await sendRequest<Category>(options);
-
-        // ensure that we got back category that was expected
-        if (id === result?.data?.id) {
-            dispatch(didFetchedCategory(result.data));
+export const fetchCategory = (id?: string): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        if (!id) {
+            dispatch(resetSelectedCategory());
+            return;
         }
-    } catch (error) {
-        const appError = {
-            message: 'Failed to get category details!',
-            description: error.getFullMessage(),
-            error: error
-        } as ApplicationError;
-        dispatch(notifyFailure(appError));
-        dispatch(failedToFetchCategory(appError));
-    }
-};
 
-export const saveCategory = (category: Category): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    if (category.id) {
-        dispatch(updateCategory(category));
-    } else {
-        dispatch(createCategory(category));
-    }
-};
+        const options = {
+            path: `categories/${id}`,
+            method: 'GET'
+        } as IHttpRequestOptions;
 
-const createCategory = (category: Category): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    const options = {
-        path: 'categories',
-        method: 'POST',
-        payload: category
-    } as IHttpRequestOptions<Category>;
+        try {
+            // TODO: cancel only relevant requests
+            //cancelRequest();
+            dispatch(willFetchCategory());
+            const result = await sendRequest<Category>(options);
 
-    try {
-        dispatch(willCreateCategory());
-        const newCategory = await sendRequest<string>(options);
-        if (!newCategory.data) {
-            // TODO: throw
-            throw new Error('');
+            // ensure that we got back category that was expected
+            if (id === result?.data?.id) {
+                dispatch(didFetchedCategory(result.data));
+            }
+        } catch (error) {
+            const appError = new ApplicationError('Failed to get category details!', error);
+            dispatch(notifyFailure(appError));
+            dispatch(failedToFetchCategory(appError));
         }
-        category.id = newCategory.data;
-        dispatch(didCreateCategory());
-        dispatch(addCategory(category));
-        dispatch(notifySuccess('Category created successfully!'));
-        // dispatch(hideCategoryForm());
-    } catch (error) {
-        const appError = {
-            message: 'Failed to create category!',
-            description: error.getFullMessage(),
-            error: error
-        } as ApplicationError;
-        dispatch(failedCreateCategory(appError));
-        dispatch(notifyFailure(appError));
-        throw error;
-    }
-};
+    };
 
-const updateCategory = (category: Category): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    const options = {
-        path: `categories/${category.id}`,
-        method: 'PUT',
-        payload: category
-    } as IHttpRequestOptions<Category>;
-
-    dispatch(willUpdateCategory());
-
-    try {
-        await sendRequest<Category>(options);
-        dispatch(didUpdateCategory());
-        dispatch(refreshCategory(category));
-        dispatch(notifySuccess('Category updated successfully!'));
-        // dispatch(hideCategoryForm());
-    } catch (error) {
-        const appError = {
-            message: 'Failed to update category!',
-            description: error.getFullMessage(),
-            error: error
-        } as ApplicationError;
-        dispatch(failedUpdateCategory(appError));
-        dispatch(notifyFailure(appError));
-        throw error;
-    }
-};
-
-export const deleteCategory = (category: Category): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    const options = {
-        path: `categories/${category.id}`,
-        method: 'DELETE'
-    } as IHttpRequestOptions<Category>;
-
-    dispatch(willDeleteCategory());
-
-    try {
-        const result = await sendRequest<number>(options);
-        await dispatch(didDeleteCategory());
-        await dispatch(notifySuccess(`Category deleted successfully! Total deleted items: ${result.data}`));
-    } catch (error) {
-        const appError = {
-            message: 'Failed to delete category!',
-            description: error.getFullMessage(),
-            error: error
-        } as ApplicationError;
-        dispatch(failedDeleteCategory(appError));
-        dispatch(notifyFailure(appError));
-        throw error;
-    }
-};
-
-export const moveCategory = (category: Category, categoryId: string): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    const options = {
-        path: `categories/${category.id}/move?destinationId=${categoryId ? categoryId : 'root'}`,
-        method: 'PUT',
-        payload: {
-            category: category,
-            destination: categoryId
+export const saveCategory = (category: Category): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        if (category.id) {
+            dispatch(updateCategory(category));
+        } else {
+            dispatch(createCategory(category));
         }
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } as IHttpRequestOptions<any>;
+    };
 
-    await dispatch(willMoveCategory());
+const createCategory = (category: Category): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        const options = {
+            path: 'categories',
+            method: 'POST',
+            payload: category
+        } as IHttpRequestOptions<Category>;
 
-    try {
-        await sendRequest<Category>(options);
-        await dispatch(didMoveCategory());
-        await dispatch(notifySuccess('Category moved successfully!'));
-    } catch (error) {
-        const appError = {
-            message: 'Failed to move category!',
-            description: error.getFullMessage(),
-            error: error
-        } as ApplicationError;
-        await dispatch(failedMoveCategory(appError));
-        await dispatch(notifyFailure(appError));
-        throw error;
-    }
-};
+        try {
+            dispatch(willCreateCategory());
+            const newCategory = await sendRequest<string>(options);
+            if (!newCategory.data) {
+                // TODO: throw
+                throw new Error('');
+            }
+            category.id = newCategory.data;
+            dispatch(didCreateCategory());
+            dispatch(addCategory(category));
+            dispatch(notifySuccess('Category created successfully!'));
+            // dispatch(hideCategoryForm());
+        } catch (error) {
+            const appError = new ApplicationError('Failed to create category!', error);
+            dispatch(failedCreateCategory(appError));
+            dispatch(notifyFailure(appError));
+            throw error;
+        }
+    };
 
-export const fetchCategoryUsages = (category: Category): AppThunkResult<Promise<void>> => async (
-    dispatch: AppThunkDispatch
-): Promise<void> => {
-    const options = {
-        path: `categories/${category.id}/usages`,
-        method: 'GET'
-    } as IHttpRequestOptions<Category>;
+const updateCategory = (category: Category): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        const options = {
+            path: `categories/${category.id}`,
+            method: 'PUT',
+            payload: category
+        } as IHttpRequestOptions<Category>;
 
-    dispatch(willFetchCategoryUsages());
+        dispatch(willUpdateCategory());
 
-    try {
-        const result = await sendRequest<Category[]>(options);
-        dispatch(didFetchCategoryUsages(result.data || []));
-    } catch (error) {
-        const appError = {
-            message: 'Failed to fetch category usages!',
-            description: error.getFullMessage(),
-            error: error
-        } as ApplicationError;
-        dispatch(failedFetchCategoryUsages(appError));
-        dispatch(notifyFailure(appError));
-        throw error;
-    }
-};
+        try {
+            await sendRequest<Category>(options);
+            dispatch(didUpdateCategory());
+            dispatch(refreshCategory(category));
+            dispatch(notifySuccess('Category updated successfully!'));
+            // dispatch(hideCategoryForm());
+        } catch (error) {
+            const appError = new ApplicationError('Failed to update category!', error);
+            dispatch(failedUpdateCategory(appError));
+            dispatch(notifyFailure(appError));
+            throw error;
+        }
+    };
+
+export const deleteCategory = (category: Category): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        const options = {
+            path: `categories/${category.id}`,
+            method: 'DELETE'
+        } as IHttpRequestOptions<Category>;
+        dispatch(willDeleteCategory());
+
+        try {
+            const result = await sendRequest<number>(options);
+            await dispatch(didDeleteCategory());
+            await dispatch(notifySuccess(`Category deleted successfully! Total deleted items: ${result.data}`));
+        } catch (error) {
+            const appError = new ApplicationError('Failed to delete category!', error);
+            dispatch(failedDeleteCategory(appError));
+            dispatch(notifyFailure(appError));
+            throw error;
+        }
+    };
+
+export const moveCategory = (category: Category, categoryId: string): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        const options = {
+            path: `categories/${category.id}/move?destinationId=${categoryId ? categoryId : 'root'}`,
+            method: 'PUT',
+            payload: {
+                category: category,
+                destination: categoryId
+            }
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } as IHttpRequestOptions<any>;
+
+        await dispatch(willMoveCategory());
+
+        try {
+            await sendRequest<Category>(options);
+            await dispatch(didMoveCategory());
+            await dispatch(notifySuccess('Category moved successfully!'));
+        } catch (error) {
+            const appError = new ApplicationError('Failed to move category!', error);
+            await dispatch(failedMoveCategory(appError));
+            await dispatch(notifyFailure(appError));
+            throw error;
+        }
+    };
+
+export const fetchCategoryUsages = (category: Category): AppThunkResult<Promise<void>> =>
+    async function (dispatch: AppThunkDispatch): Promise<void> {
+        const options = {
+            path: `categories/${category.id}/usages`,
+            method: 'GET'
+        } as IHttpRequestOptions<Category>;
+
+        dispatch(willFetchCategoryUsages());
+
+        try {
+            const result = await sendRequest<Category[]>(options);
+            dispatch(didFetchCategoryUsages(result.data || []));
+        } catch (error) {
+            const appError = new ApplicationError('Failed to fetch category usages!', error);
+            dispatch(failedFetchCategoryUsages(appError));
+            dispatch(notifyFailure(appError));
+            throw error;
+        }
+    };
