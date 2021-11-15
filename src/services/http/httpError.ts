@@ -1,4 +1,4 @@
-import { AxiosRequestConfig, AxiosError, AxiosResponse } from 'axios';
+import { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 export class HttpError<T> extends Error {
     private requestConfig: AxiosRequestConfig;
@@ -20,7 +20,7 @@ export class HttpError<T> extends Error {
         if (this.response && this.response?.status === 404) {
             return `${this.customMessage} Resource not found.`;
         }
-        return `${this.customMessage} ${this.message}`;
+        return `${this.customMessage}`;
     }
 
     public getRequestConfig(): AxiosRequestConfig {
