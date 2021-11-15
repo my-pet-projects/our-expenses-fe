@@ -7,7 +7,7 @@ const cancelToken = axios.CancelToken;
 let source = cancelToken.source();
 
 export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHttpResponse<T>> => {
-    const baseUrl = 'http://localhost:8080/api';
+    const baseUrl = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
     const config = {
         url: `${baseUrl}/${options.path}`,
