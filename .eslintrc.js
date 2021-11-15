@@ -8,12 +8,7 @@ module.exports = {
         serviceworker: true
     },
     parser: '@typescript-eslint/parser',
-    extends: [
-        'plugin:react/recommended',
-        'plugin:@typescript-eslint/recommended',
-        'prettier/@typescript-eslint',
-        'plugin:prettier/recommended'
-    ],
+    extends: ['plugin:react/recommended', 'plugin:@typescript-eslint/recommended'],
     plugins: ['react-hooks', 'prefer-arrow'],
     parserOptions: {
         sourceType: 'module',
@@ -62,7 +57,7 @@ module.exports = {
                 variableDeclaration: false
             }
         ],
-        '@typescript-eslint/member-ordering': 'error',
+        // '@typescript-eslint/member-ordering': 'error',
         '@typescript-eslint/explicit-member-accessibility': [
             'error',
             {
