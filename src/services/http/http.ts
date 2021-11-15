@@ -13,7 +13,8 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
         url: `${baseUrl}/${options.path}`,
         method: options.method,
         cancelToken: source.token,
-        data: options.payload
+        data: options.payload,
+        headers: authHeader()
     } as AxiosRequestConfig;
 
     try {
@@ -32,11 +33,13 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
                 isCanceled: true
             };
         }
-
         const err = error as AxiosError;
         let customMessage;
         if (err.response) {
             customMessage = 'Unsuccessful response from the service.';
+            if (err.response.data.error) {
+                customMessage = err.response.data.error;
+            }
         } else if (err.request) {
             customMessage = 'No response from the service.';
         } else {
@@ -50,4 +53,16 @@ export const cancelRequest = (): void => {
     source.cancel('Request canceled by the user.');
     // regenerate cancellation token
     source = cancelToken.source();
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const authHeader = (): any => {
+    const userJson = localStorage.getItem('user');
+    const user = userJson ? JSON.parse(userJson) : {};
+
+    if (user && user.token) {
+        return { Authorization: 'Bearer ' + user.token };
+    } else {
+        return {};
+    }
 };

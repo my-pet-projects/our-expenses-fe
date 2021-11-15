@@ -3,6 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { createLogger } from 'redux-logger';
 import reduxThunk, { ThunkMiddleware } from 'redux-thunk';
 
+import { authReducer } from 'src/auth/state/reducers';
 import { categoriesReducer, categoryReducer, modalReducer } from 'src/catalog/category/state/reducers';
 import { expenseReducer } from 'src/expense/state/reducers';
 import { notifyReducer } from 'src/notify/state/reducers';
@@ -18,7 +19,8 @@ const rootReducer = combineReducers<RootState>({
     notification: notifyReducer,
     modalData: modalReducer,
     expense: expenseReducer,
-    report: reportReducer
+    report: reportReducer,
+    authData: authReducer
 });
 
 const middlewares = [reduxThunk as ThunkMiddleware<RootState, RootActions>, logger];

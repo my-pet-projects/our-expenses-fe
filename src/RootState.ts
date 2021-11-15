@@ -1,6 +1,7 @@
 import { Action } from 'redux';
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 
+import { IAuthState } from 'src/auth/state/reducers';
 import { CategoriesAction } from 'src/catalog/category/state/actions';
 import { ICategoriesState, ICategoryModalState, ICategoryState } from 'src/catalog/category/state/reducers';
 import { IExpenseState } from 'src/expense/state/reducers';
@@ -14,6 +15,7 @@ export interface RootState {
     readonly notification: INotifyState;
     readonly expense: IExpenseState;
     readonly report: IReportState;
+    readonly authData: IAuthState;
 }
 
 export type RootActions = CategoriesAction; // | CommentsAction | etc.

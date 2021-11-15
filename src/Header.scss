@@ -27,3 +27,28 @@
         line-height: 32px;
     }
 }
+
+.header {
+    &__profile {
+        float: right;
+
+        &__account {
+            display: flex;
+            align-items: center;
+            height: 64px;
+            padding: 0 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &__avatar {
+                margin-right: 8px !important;
+                color: #001529 !important;
+                background: hsla(0, 0%, 100%, 0.85) !important;
+            }
+        }
+
+        &__name {
+            color: #fff;
+        }
+    }
+}

@@ -5,3 +5,5 @@ export * from './categoryModalType';
 export * from './treeNode';
 export * from './expense';
 export * from './report';
+export * from './authData';
+export * from './loginData';

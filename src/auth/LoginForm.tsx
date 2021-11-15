@@ -1,5 +1,11 @@
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Alert, Button, Checkbox, Form, Input } from 'antd';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
+
+import { login } from 'src/auth/state/actions';
+import { selectAuthError, selectAuthIsLoading, selectIsLoggedIn } from 'src/auth/state/selectors';
 
 import './LoginForm.scss';
 
@@ -10,8 +16,20 @@ interface LoginFormValues {
 }
 
 export const LoginForm = (): JSX.Element => {
+    const error = useSelector(selectAuthError);
+    const isLoggedIn = useSelector(selectIsLoggedIn);
+    const isLoading = useSelector(selectAuthIsLoading);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            navigate('/');
+        }
+    }, [isLoggedIn, navigate]);
+
     const onFinish = (values: LoginFormValues): void => {
-        console.log('Received values of form: ', values);
+        dispatch(login(values.username, values.password));
     };
 
     return (
@@ -31,10 +49,12 @@ export const LoginForm = (): JSX.Element => {
             </Form.Item>
 
             <Form.Item>
-                <Button type="primary" htmlType="submit" className="login-form__button">
+                <Button type="primary" htmlType="submit" className="login-form__button" loading={isLoading}>
                     Log in
                 </Button>
             </Form.Item>
+
+            {error && <Alert message={error.message} description={error.description} type="error" showIcon />}
         </Form>
     );
 };

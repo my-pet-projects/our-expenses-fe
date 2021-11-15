@@ -1,0 +1,6 @@
+export enum AuthActionType {
+    LOGIN_INIT = 'AUTH/LOGIN_INIT',
+    LOGIN_SUCCESS = 'AUTH/LOGIN_SUCCESS',
+    LOGIN_FAILED = 'AUTH/LOGIN_FAILED',
+    LOGOUT = 'AUTH/LOGOUT'
+}
