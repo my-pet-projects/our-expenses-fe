@@ -9,7 +9,7 @@ type SvgIconProps = {
 
 export const SvgIcon = ({ svgString, className, onError, onLoad }: SvgIconProps): JSX.Element => {
     const [isFailed, setIsFailed] = useState(false);
-    const [isLoaded, setIsLoaded] = useState(false);
+    const [, setIsLoaded] = useState(false);
 
     useEffect(() => {
         setIsFailed(false);

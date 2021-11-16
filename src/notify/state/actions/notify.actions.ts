@@ -1,7 +1,6 @@
 import { ApplicationError } from 'src/models';
-import { SystemNotification } from 'src/models/notification';
+import { NotifyActionType } from 'src/notify/state/constants';
 
-import { NotifyActionType } from '../constants';
 import { INotifyFailure, INotifySuccess } from './notify.actions.types';
 
 export const notifySuccess = (message: string): INotifySuccess => ({
@@ -9,7 +8,7 @@ export const notifySuccess = (message: string): INotifySuccess => ({
     payload: {
         type: 'success',
         message: message
-    } as SystemNotification
+    }
 });
 
 export const notifyFailure = (error: ApplicationError): INotifyFailure => ({
@@ -18,5 +17,5 @@ export const notifyFailure = (error: ApplicationError): INotifyFailure => ({
         type: 'error',
         message: error.message,
         details: error.description
-    } as SystemNotification
+    }
 });
