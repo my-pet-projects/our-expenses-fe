@@ -21,11 +21,11 @@ export const appRoutes = {
 export const routes = (isLoggedIn?: boolean): RouteObject[] => [
     {
         path: '/',
-        element: isLoggedIn ? <Outlet /> : <Navigate to="/login" />,
+        element: <Outlet />,
         children: [
             {
                 path: '',
-                element: <HomePage />
+                element: isLoggedIn ? <HomePage /> : <Navigate to="login" />
             },
             {
                 path: 'login',
