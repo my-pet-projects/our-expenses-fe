@@ -1,5 +1,8 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 
+import { AuthActionType } from 'src/auth/state/constants';
+import { store } from 'src/rootReducer';
+
 import { IHttpRequestOptions, IHttpResponse, RequestHeaders } from './http.types';
 import { HttpError } from './httpError';
 
@@ -32,6 +35,9 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
         const err = error as AxiosError;
         let customMessage;
         if (err.response) {
+            if (err.response.status === 401) {
+                store.dispatch({ type: AuthActionType.LOGOUT });
+            }
             customMessage = 'Unsuccessful response from the service.';
             if (err.response.data.error) {
                 customMessage = err.response.data.error;
