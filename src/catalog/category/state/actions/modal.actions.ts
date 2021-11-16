@@ -1,6 +1,6 @@
 import { ApplicationError, Category, CategoryModalType } from 'src/models';
 import { notifyFailure } from 'src/notify/state/actions';
-import { AppThunkDispatch, AppThunkResult, RootState } from 'src/RootState';
+import { AppThunkAction, AppThunkDispatch, RootState } from 'src/RootState';
 import { IHttpRequestOptions, sendRequest } from 'src/services/http';
 
 import { ModalActionType } from '../constants';
@@ -54,7 +54,7 @@ const failedProcessModal = (error: ApplicationError): IModalProcessingFailed => 
     error: true
 });
 
-export const showCategoryForm = (category: Category, mode: CategoryModalType): AppThunkResult<Promise<void>> =>
+export const showCategoryForm = (category: Category, mode: CategoryModalType): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         let payload = category;
         if (mode === 'create') {
@@ -70,7 +70,7 @@ export const showCategoryForm = (category: Category, mode: CategoryModalType): A
         // dispatch(didShowCategoryModal(payload!, mode, { category: payload }));
     };
 
-export const showNewCategoryModal = (category?: Category): AppThunkResult<Promise<void>> =>
+export const showNewCategoryModal = (category?: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         const childCategory = {
             id: '',
@@ -90,7 +90,7 @@ export const showNewCategoryModal = (category?: Category): AppThunkResult<Promis
 
         // dispatch(didShowCategoryModal(payload!, mode, { category: payload }));
     };
-export const showEditCategoryModal = (category: Category): AppThunkResult<Promise<void>> =>
+export const showEditCategoryModal = (category: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         dispatch(didShowCategoryModal(category, 'edit'));
         const modalPayload = {
@@ -101,7 +101,7 @@ export const showEditCategoryModal = (category: Category): AppThunkResult<Promis
         // dispatch(didShowCategoryModal(payload!, mode, { category: payload }));
     };
 
-export const showMoveCategoryModal = (category: Category): AppThunkResult<Promise<void>> =>
+export const showMoveCategoryModal = (category: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         dispatch(didShowCategoryModal(category, 'move'));
         const options = {
@@ -119,7 +119,7 @@ export const showMoveCategoryModal = (category: Category): AppThunkResult<Promis
         // dispatch(didShowCategoryModal(payload!, mode, { category: payload }));
     };
 
-export const showDeleteModal = (category: Category): AppThunkResult<Promise<void>> =>
+export const showDeleteModal = (category: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch, getState: () => RootState): Promise<void> {
         const options = {
             path: `categories/${category.id}/usages`,
@@ -142,12 +142,12 @@ export const showDeleteModal = (category: Category): AppThunkResult<Promise<void
         }
     };
 
-export const hideCategoryForm = (): AppThunkResult<Promise<void>> =>
+export const hideCategoryForm = (): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         dispatch(hideCategoryModal());
     };
 
-export const processCategorySave = (payload: Category): AppThunkResult<Promise<void>> =>
+export const processCategorySave = (payload: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         try {
             dispatch(willProcessModal());
@@ -160,7 +160,7 @@ export const processCategorySave = (payload: Category): AppThunkResult<Promise<v
         }
     };
 
-export const processCategoryMove = (payload: Category, categoryId: string): AppThunkResult<Promise<void>> =>
+export const processCategoryMove = (payload: Category, categoryId: string): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         try {
             await dispatch(willProcessModal());
@@ -173,7 +173,7 @@ export const processCategoryMove = (payload: Category, categoryId: string): AppT
         }
     };
 
-export const processCategoryDelete = (payload: Category): AppThunkResult<Promise<void>> =>
+export const processCategoryDelete = (payload: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         try {
             await dispatch(willProcessModal());

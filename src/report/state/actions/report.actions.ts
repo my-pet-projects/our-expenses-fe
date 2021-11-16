@@ -1,7 +1,7 @@
 import { ApplicationError, Report, ReportDateRange, ReportFilter } from 'src/models';
 import { notifyFailure } from 'src/notify/state/actions';
 import { ReportActionType } from 'src/report/state/constants';
-import { AppThunkDispatch, AppThunkResult } from 'src/RootState';
+import { AppThunkAction, AppThunkDispatch } from 'src/RootState';
 import { IHttpRequestOptions, sendRequest } from 'src/services/http';
 
 import {
@@ -40,7 +40,7 @@ const didResetReport = (): IResetReport => ({
     type: ReportActionType.REPORT_RESET
 });
 
-export const generateReport = (filter: ReportFilter): AppThunkResult<Promise<void>> =>
+export const generateReport = (filter: ReportFilter): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         const options = {
             path: `reports?from=${filter.dateRange.from}&to=${filter.dateRange.to}&interval=${filter.interval}`,
@@ -61,12 +61,12 @@ export const generateReport = (filter: ReportFilter): AppThunkResult<Promise<voi
         }
     };
 
-export const applyReportFilter = (filter: ReportFilter): AppThunkResult<Promise<void>> =>
+export const applyReportFilter = (filter: ReportFilter): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         dispatch(didApplyReportFilter(filter));
     };
 
-export const resetReport = (): AppThunkResult<Promise<void>> =>
+export const resetReport = (): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         dispatch(didResetReport());
     };

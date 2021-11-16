@@ -1,10 +1,7 @@
-import { Dispatch } from 'react';
-import { AnyAction } from 'redux';
-
 import { ExpenseActionType } from 'src/expense/state/constants';
 import { ApplicationError, Category, Expense, NewExpenseResponse } from 'src/models';
 import { notifyFailure, notifySuccess } from 'src/notify/state/actions';
-import { AppThunkDispatch, AppThunkResult } from 'src/RootState';
+import { AppThunkAction, AppThunkDispatch } from 'src/RootState';
 import { IHttpRequestOptions, sendRequest } from 'src/services/http';
 
 import {
@@ -50,7 +47,7 @@ const failedCreateExpense = (error: ApplicationError): IExpenseCreateFailed => (
     error: true
 });
 
-export const createExpense = (expense: Expense): AppThunkResult<Promise<void>> =>
+export const createExpense = (expense: Expense): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         const options = {
             path: 'expenses',
@@ -76,7 +73,7 @@ export const createExpense = (expense: Expense): AppThunkResult<Promise<void>> =
     };
 
 export const fetchCategoriesCatalog = () =>
-    async function (dispatch: Dispatch<AnyAction>): Promise<void> {
+    async function (dispatch: AppThunkDispatch): Promise<void> {
         const options = {
             path: 'categories?all=true',
             method: 'GET'

@@ -1,7 +1,7 @@
 import { addCategory } from 'src/catalog/category/state/actions';
 import { ApplicationError, Category } from 'src/models';
 import { notifyFailure, notifySuccess } from 'src/notify/state/actions';
-import { AppThunkDispatch, AppThunkResult } from 'src/RootState';
+import { AppThunkAction, AppThunkDispatch } from 'src/RootState';
 import { IHttpRequestOptions, sendRequest } from 'src/services/http';
 
 import { CategoryActionType } from '../constants';
@@ -134,7 +134,7 @@ const refreshCategory = (category: Category): ICategoryRefresh => ({
     }
 });
 
-export const fetchCategory = (id?: string): AppThunkResult<Promise<void>> =>
+export const fetchCategory = (id?: string): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         if (!id) {
             dispatch(resetSelectedCategory());
@@ -163,7 +163,7 @@ export const fetchCategory = (id?: string): AppThunkResult<Promise<void>> =>
         }
     };
 
-export const saveCategory = (category: Category): AppThunkResult<Promise<void>> =>
+export const saveCategory = (category: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         if (category.id) {
             dispatch(updateCategory(category));
@@ -172,7 +172,7 @@ export const saveCategory = (category: Category): AppThunkResult<Promise<void>> 
         }
     };
 
-const createCategory = (category: Category): AppThunkResult<Promise<void>> =>
+const createCategory = (category: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         const options = {
             path: 'categories',
@@ -200,7 +200,7 @@ const createCategory = (category: Category): AppThunkResult<Promise<void>> =>
         }
     };
 
-const updateCategory = (category: Category): AppThunkResult<Promise<void>> =>
+const updateCategory = (category: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         const options = {
             path: `categories/${category.id}`,
@@ -224,7 +224,7 @@ const updateCategory = (category: Category): AppThunkResult<Promise<void>> =>
         }
     };
 
-export const deleteCategory = (category: Category): AppThunkResult<Promise<void>> =>
+export const deleteCategory = (category: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         const options = {
             path: `categories/${category.id}`,
@@ -244,7 +244,7 @@ export const deleteCategory = (category: Category): AppThunkResult<Promise<void>
         }
     };
 
-export const moveCategory = (category: Category, categoryId: string): AppThunkResult<Promise<void>> =>
+export const moveCategory = (category: Category, categoryId: string): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         const options = {
             path: `categories/${category.id}/move?destinationId=${categoryId ? categoryId : 'root'}`,
@@ -270,7 +270,7 @@ export const moveCategory = (category: Category, categoryId: string): AppThunkRe
         }
     };
 
-export const fetchCategoryUsages = (category: Category): AppThunkResult<Promise<void>> =>
+export const fetchCategoryUsages = (category: Category): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         const options = {
             path: `categories/${category.id}/usages`,

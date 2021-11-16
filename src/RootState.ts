@@ -1,8 +1,7 @@
-import { Action } from 'redux';
+import { AnyAction } from 'redux';
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 
 import { IAuthState } from 'src/auth/state/reducers';
-import { CategoriesAction } from 'src/catalog/category/state/actions';
 import { ICategoriesState, ICategoryModalState, ICategoryState } from 'src/catalog/category/state/reducers';
 import { IExpenseState } from 'src/expense/state/reducers';
 import { INotifyState } from 'src/notify/state/reducers';
@@ -18,8 +17,7 @@ export interface RootState {
     readonly authData: IAuthState;
 }
 
-export type RootActions = CategoriesAction; // | CommentsAction | etc.
+type AppThunkExtraArg = unknown;
 
-type AppThunkExtraArg = undefined;
-export type AppThunkResult<R> = ThunkAction<R, RootState, AppThunkExtraArg, Action>;
-export type AppThunkDispatch = ThunkDispatch<RootState, AppThunkExtraArg, Action>;
+export type AppThunkAction<ReturnType = void> = ThunkAction<ReturnType, RootState, AppThunkExtraArg, AnyAction>;
+export type AppThunkDispatch = ThunkDispatch<RootState, AppThunkExtraArg, AnyAction>;

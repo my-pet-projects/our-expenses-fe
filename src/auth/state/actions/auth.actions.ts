@@ -1,7 +1,7 @@
 import { AuthActionType } from 'src/auth/state/constants';
 import { ApplicationError, AuthData, LoginData } from 'src/models';
 import { notifyFailure } from 'src/notify/state/actions';
-import { AppThunkDispatch, AppThunkResult } from 'src/RootState';
+import { AppThunkAction, AppThunkDispatch } from 'src/RootState';
 import { IHttpRequestOptions, sendRequest } from 'src/services/http';
 
 import { ILoginFail, ILoginInit, ILoginSuccess, ILogout } from './auth.actions.types';
@@ -27,7 +27,7 @@ const didLogout = (): ILogout => ({
     type: AuthActionType.LOGOUT
 });
 
-export const login = (username: string, password: string): AppThunkResult<Promise<void>> =>
+export const login = (username: string, password: string): AppThunkAction =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         const options = {
             path: 'login',
@@ -53,7 +53,7 @@ export const login = (username: string, password: string): AppThunkResult<Promis
         }
     };
 
-export const logout = (): AppThunkResult<Promise<void>> =>
+export const logout = (): AppThunkAction<Promise<void>> =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         localStorage.removeItem('user');
         dispatch(didLogout());
