@@ -41,9 +41,6 @@ export const login = (username: string, password: string): AppThunkAction =>
         try {
             dispatch(willLogin());
             const response = await sendRequest<AuthData>(options);
-            if (!response.data) {
-                throw new Error('Unexpected response from the server.');
-            }
             dispatch(didLogin(response.data));
             localStorage.setItem('user', JSON.stringify(response.data));
         } catch (error) {
@@ -53,7 +50,7 @@ export const login = (username: string, password: string): AppThunkAction =>
         }
     };
 
-export const logout = (): AppThunkAction<Promise<void>> =>
+export const logout = (): AppThunkAction =>
     async function (dispatch: AppThunkDispatch): Promise<void> {
         localStorage.removeItem('user');
         dispatch(didLogout());

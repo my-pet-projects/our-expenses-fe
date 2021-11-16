@@ -21,7 +21,7 @@ export const appRoutes = {
 export const routes = (isLoggedIn?: boolean): RouteObject[] => [
     {
         path: '/',
-        element: <Outlet />,
+        element: isLoggedIn ? <Outlet /> : <Navigate to="/login" />,
         children: [
             {
                 path: '',

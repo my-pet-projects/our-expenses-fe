@@ -11,13 +11,16 @@ export interface IAuthState {
     error?: ApplicationError | null;
 }
 
-const localStorageItem = localStorage.getItem('user');
-
 const initialLoginState: IAuthState = {
     isLoading: false,
-    authData: localStorageItem ? JSON.parse(localStorageItem) : null,
-    loggedIn: localStorageItem ? true : false
+    loggedIn: false
 };
+
+const localStorageItem = localStorage.getItem('user');
+if (localStorageItem) {
+    initialLoginState.authData = JSON.parse(localStorageItem);
+    initialLoginState.loggedIn = true;
+}
 
 export const authReducer: Reducer<IAuthState, AuthAction> = (
     state: IAuthState = initialLoginState,
