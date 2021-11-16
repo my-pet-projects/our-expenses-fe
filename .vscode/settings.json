@@ -2,10 +2,10 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "[javascript]": {
-        "editor.formatOnSave": true
-    },
+    "eslint.alwaysShowStatus": true,
     "importSorter.generalConfiguration.sortOnBeforeSave": true,
     "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 120,
     "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
@@ -15,7 +15,7 @@
         {
             "type": "importMember",
             "regex": "^$",
-            "orderLevel": 100,
+            "orderLevel": 100
         },
         {
             "regex": "^[.]",
@@ -27,21 +27,25 @@
         }
     ],
     "cSpell.words": [
-        "Appstore",
-        "Formik",
-        "Interop",
-        "Parens",
-        "Unmount",
         "antd",
+        "anticon",
+        "Appstore",
         "browserslist",
         "camelcase",
         "esnext",
+        "Formik",
+        "gcloud",
         "hoverable",
+        "Interop",
         "loglevel",
         "middlewares",
+        "nivo",
         "onstatechange",
         "onupdatefound",
+        "Parens",
         "precached",
-        "serviceworker"
+        "serviceworker",
+        "Submenu",
+        "Unmount"
     ]
 }
