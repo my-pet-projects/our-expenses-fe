@@ -1,12 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export interface IHttpRequestOptions<T = any> {
+export interface IHttpRequestOptions<T = unknown> {
     path: string;
     method: 'GET' | 'POST' | 'PUT' | 'DELETE';
     payload?: T;
 }
 
 export interface IHttpResponse<T> {
-    data?: T;
+    data: T;
     error?: Error;
     isCanceled?: boolean;
 }
@@ -14,3 +13,5 @@ export interface IHttpResponse<T> {
 export interface IHttpError {
     code: string;
 }
+
+export type RequestHeaders = { [name: string]: string };

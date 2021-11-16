@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 
-import { IHttpRequestOptions, IHttpResponse } from './http.types';
+import { IHttpRequestOptions, IHttpResponse, RequestHeaders } from './http.types';
 import { HttpError } from './httpError';
 
 const cancelToken = axios.CancelToken;
@@ -14,7 +14,7 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
         method: options.method,
         cancelToken: source.token,
         data: options.payload,
-        headers: authHeader()
+        headers: getHeaders()
     } as AxiosRequestConfig;
 
     try {
@@ -27,11 +27,7 @@ export const sendRequest = async <T>(options: IHttpRequestOptions): Promise<IHtt
         };
     } catch (error) {
         if (axios.isCancel(error)) {
-            // eslint-disable-next-line no-console
             console.log('request was canceled');
-            return {
-                isCanceled: true
-            };
         }
         const err = error as AxiosError;
         let customMessage;
@@ -55,14 +51,16 @@ export const cancelRequest = (): void => {
     source = cancelToken.source();
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const authHeader = (): any => {
+export const getHeaders = (): RequestHeaders => {
+    const headers: RequestHeaders = {};
+    headers['Content-Type'] = 'application/json';
+    headers['Accept'] = 'application/json';
+
     const userJson = localStorage.getItem('user');
     const user = userJson ? JSON.parse(userJson) : {};
-
     if (user && user.token) {
-        return { Authorization: 'Bearer ' + user.token };
-    } else {
-        return {};
+        headers['Authorization'] = 'Bearer ' + user.token;
     }
+
+    return headers;
 };
