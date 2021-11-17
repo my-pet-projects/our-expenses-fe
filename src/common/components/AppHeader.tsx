@@ -18,7 +18,7 @@ type AppHeaderProps = {
     breadcrumbs?: BreadcrumbData[];
     extra?: React.ReactNode;
     tabs?: React.ReactNode;
-    error?: ApplicationError;
+    error?: ApplicationError | null;
     isLoading?: boolean;
 };
 

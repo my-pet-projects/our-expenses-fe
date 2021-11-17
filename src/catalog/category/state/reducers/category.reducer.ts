@@ -7,7 +7,7 @@ import { ApplicationError, Category } from 'src/models';
 export interface ICategoryState {
     category?: Category;
     isLoading: boolean;
-    error?: ApplicationError;
+    error?: ApplicationError | null;
 }
 
 const initialCategoryState: ICategoryState = {
@@ -37,31 +37,6 @@ export const categoryReducer: Reducer<ICategoryState, CategoryAction> = (
                 isLoading: false,
                 isProcessing: false
             };
-        // case CategoryActionType.PROCESSING_INIT:
-        //     return {
-        //         ...state,
-        //         modalData: {
-        //             ...state.modalData,
-        //             isProcessing: true
-        //         }
-        //     };
-        // case CategoryActionType.PROCESSING_DONE:
-        //     return {
-        //         ...state,
-        //         modalData: {
-        //             ...state.modalData,
-        //             isProcessing: false
-        //         }
-        //     };
-        // case CategoryActionType.PROCESSING_FAILED:
-        //     return {
-        //         ...state,
-        //         modalData: {
-        //             ...state.modalData,
-        //             isProcessing: false,
-        //             error: action.payload
-        //         }
-        //     };
         case CategoryActionType.REFRESH:
             return {
                 ...state,

@@ -7,7 +7,7 @@ import { ApplicationError, Category } from 'src/models';
 export interface ICategoriesState {
     categories: Category[];
     isLoading: boolean;
-    error?: ApplicationError;
+    error?: ApplicationError | null;
 }
 
 const initialState: ICategoriesState = {
@@ -23,9 +23,11 @@ export const categoriesReducer: Reducer<ICategoriesState, CategoriesAction> = (
         case CategoriesActionType.FETCH_INIT:
             return {
                 ...state,
-                isLoading: true
+                isLoading: true,
+                error: null
             };
         case CategoriesActionType.FETCH_CANCEL:
+            // TODO: remove?
             return {
                 ...state
             };
@@ -42,11 +44,10 @@ export const categoriesReducer: Reducer<ICategoriesState, CategoriesAction> = (
                 isLoading: false
             };
         case CategoriesActionType.ITEM_UPDATE: {
-            const categories = state.categories.map((item: Category) => {
+            const newCategories = state.categories.map((item: Category) => {
                 if (item.id !== action.payload.category.id) {
                     return item;
                 }
-
                 return {
                     ...item,
                     ...action.payload.category
@@ -55,7 +56,7 @@ export const categoriesReducer: Reducer<ICategoriesState, CategoriesAction> = (
 
             return {
                 ...state,
-                categories: categories
+                categories: newCategories
             };
         }
         case CategoriesActionType.ITEM_INSERT: {
@@ -70,6 +71,7 @@ export const categoriesReducer: Reducer<ICategoriesState, CategoriesAction> = (
             // let newArray = array.slice();
             // newArray.splice(action.index, 1);
             // return newArray;
+            // TODO: implement
             return {
                 ...state
             };
