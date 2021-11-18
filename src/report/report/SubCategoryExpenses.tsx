@@ -1,6 +1,6 @@
 import { Typography } from 'antd';
 
-import { CategoryExpenses, Expense, Total } from 'src/models';
+import { CategoryExpenses, Expense, GrandTotal } from 'src/models';
 
 import { ExpenseAmount } from './ExpenseAmount';
 
@@ -10,7 +10,7 @@ interface Category {
     name: string;
     children: Category[];
     expenses: Expense[];
-    total: Total;
+    grandTotal: GrandTotal;
 }
 
 type SubCategoriesProps = {
@@ -35,7 +35,7 @@ export const SubCategoryExpenses = ({ categoryExpenses }: SubCategoriesProps): J
                 name: name,
                 children: catExpensesChild,
                 expenses: catExpenses.expenses,
-                total: catExpenses.total
+                grandTotal: catExpenses.grandTotal
             });
         });
         children = children.concat(children.flatMap((x: Category) => x.children)).filter((x: Category) => x.expenses);

@@ -19,20 +19,24 @@ export interface ReportFilter {
 
 export interface Report {
     dateReports: DateExpensesReport[];
-    total: Total;
+    grandTotal: GrandTotal;
 }
 
 export interface DateExpensesReport {
     date: string;
     categoryExpenses: CategoryExpenses[];
-    total: Total;
+    grandTotal: GrandTotal;
 }
 
 export interface CategoryExpenses {
     category: Category;
     subCategories: CategoryExpenses[];
     expenses: Expense[];
-    total: Total;
+    grandTotal: GrandTotal;
+}
+
+export interface GrandTotal {
+    totals: Total[];
 }
 
 export interface Total {

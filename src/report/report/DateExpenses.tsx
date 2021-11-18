@@ -5,7 +5,7 @@ import { CategoryExpenses, DateExpensesReport, Interval } from 'src/models';
 
 import { CategoryExpenseItem } from './CategoryExpenseItem';
 import { DateExpensesPieChart } from './DateExpensesPieChart';
-import { TotalAmount } from './TotalAmount';
+import { GrandTotalAmount } from './GrandTotalAmount';
 
 import './DateExpenses.scss';
 
@@ -41,7 +41,7 @@ export const DateExpenses = ({ dateExpenses, interval }: DateExpensesProps): JSX
                         title={<Typography.Title level={5}>{getTitle(dateReport.date, interval)}</Typography.Title>}
                         extra={
                             <Typography.Title level={5} style={{ marginBottom: 0 }}>
-                                <TotalAmount total={dateReport.total} />
+                                <GrandTotalAmount grandTotal={dateReport.grandTotal} />
                             </Typography.Title>
                         }
                         style={{ marginTop: 16 }}

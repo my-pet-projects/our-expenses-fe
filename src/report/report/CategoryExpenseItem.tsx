@@ -5,8 +5,8 @@ import { useState } from 'react';
 
 import { CategoryExpenses } from 'src/models';
 
+import { GrandTotalAmount } from './GrandTotalAmount';
 import { SubCategoryExpenses } from './SubCategoryExpenses';
-import { TotalAmount } from './TotalAmount';
 
 import './CategoryExpenseItem.scss';
 
@@ -33,7 +33,7 @@ export const CategoryExpenseItem = ({ categoryExpense }: CategoryExpenseItemProp
                     <Typography.Text>{categoryExpense.category.name}</Typography.Text>
                 </div>
                 <Typography.Text>
-                    <TotalAmount total={categoryExpense.total} />
+                    <GrandTotalAmount grandTotal={categoryExpense.grandTotal} />
                 </Typography.Text>
             </div>
             <div className="category-expense-item__subcategories" style={{ display: isVisible ? 'block' : 'none' }}>

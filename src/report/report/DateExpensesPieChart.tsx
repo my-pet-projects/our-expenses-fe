@@ -20,7 +20,7 @@ export const DateExpensesPieChart = ({ categoryExpenses }: DateExpensesPieChartP
         const chartData = categoryExpenses.map((catExp: CategoryExpenses) => ({
             id: catExp.category.name,
             label: catExp.category.name,
-            value: catExp.total.sum
+            value: catExp.grandTotal.totals[0].sum
         }));
         setLocalData(chartData);
     }, [categoryExpenses]);
