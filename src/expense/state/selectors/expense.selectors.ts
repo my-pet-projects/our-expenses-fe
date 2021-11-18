@@ -29,6 +29,7 @@ export const selectCategoriesCatalog = createSelector(selectExpenseState, (state
         } as TreeNode;
 
         if (currentParentHierarchy[category.parentId]) {
+            currentParentHierarchy[category.parentId].disabled = true;
             currentParentHierarchy[category.parentId].children.push(currentNode);
             currentParentHierarchy[category.id] = currentNode;
             continue;

@@ -95,6 +95,7 @@ export const ExpenseForm = (): JSX.Element => {
                 formik.resetForm();
                 formik.setFieldValue('date', date);
                 formik.setFieldValue('trip', trip);
+                formik.setFieldValue('currency', currency);
                 setCategoryInputFocus();
             } catch (error) {
                 formik.setStatus(error);
