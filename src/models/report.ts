@@ -36,11 +36,35 @@ export interface CategoryExpenses {
 }
 
 export interface GrandTotal {
-    totals: Total[];
+    subTotals: TotalInfo[];
+    total: Total;
 }
 
 export interface Total {
     currency: string;
-    debug: string;
     sum: string;
+}
+
+export interface TotalInfo {
+    original: Total;
+    converted: Total;
+    rate: ExchangeRate;
+}
+
+export interface ExchangeRates {
+    date: Date;
+    currency: string;
+    rates: Rate[];
+}
+
+export interface ExchangeRate {
+    date: Date;
+    baseCurrency: string;
+    targetCurrency: string;
+    rate: number;
+}
+
+export interface Rate {
+    currency: string;
+    price: number;
 }

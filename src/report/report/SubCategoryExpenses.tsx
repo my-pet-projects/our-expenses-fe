@@ -2,7 +2,8 @@ import { Typography } from 'antd';
 
 import { CategoryExpenses, Expense, GrandTotal } from 'src/models';
 
-import { ExpenseAmount } from './ExpenseAmount';
+import { ExpenseAmountDetails } from './ExpenseAmountDetails';
+import { TotalAmount } from './TotalAmount';
 
 import './SubCategoryExpenses.scss';
 
@@ -57,8 +58,13 @@ export const SubCategoryExpenses = ({ categoryExpenses }: SubCategoriesProps): J
                     <div className="subcategory__expenses">
                         {category.expenses &&
                             category.expenses.map((expense: Expense, expenseIndex: number) => (
-                                <Typography.Text key={expenseIndex} type="secondary">
-                                    <ExpenseAmount expense={expense} />
+                                <Typography.Text
+                                    key={expenseIndex}
+                                    type="secondary"
+                                    className="subcategory__expenses__total"
+                                >
+                                    <TotalAmount total={expense.totalInfo.original} />
+                                    <ExpenseAmountDetails expense={expense} />
                                 </Typography.Text>
                             ))}
                     </div>

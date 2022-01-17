@@ -32,6 +32,7 @@
         "Appstore",
         "browserslist",
         "camelcase",
+        "dinero",
         "esnext",
         "Formik",
         "gcloud",

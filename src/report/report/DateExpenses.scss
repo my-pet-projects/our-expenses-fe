@@ -1,16 +1,32 @@
-.date-category {
-    &__wrapper {
+.date-expenses {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    &__report {
         display: flex;
+        flex-direction: column;
     }
 
     &__expenses {
-        flex: 1;
+        flex-basis: auto;
         align-self: top;
     }
 
+    &__total {
+        margin: 10px;
+    }
+
     &__chart {
-        flex: 1;
-        align-self: top;
-        height: 300px;
+        height: 550px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: block;
+
+        @media (max-width: 576px) {
+            display: none;
+        }
     }
 }

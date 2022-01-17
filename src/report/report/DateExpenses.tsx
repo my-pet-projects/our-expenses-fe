@@ -1,11 +1,11 @@
-import { Card, Typography } from 'antd';
+import { Card, Divider, Typography } from 'antd';
 
 import { dateDayFormat, dateMonthFormat } from 'src/common/formatters';
 import { CategoryExpenses, DateExpensesReport, Interval } from 'src/models';
 
 import { CategoryExpenseItem } from './CategoryExpenseItem';
 import { DateExpensesPieChart } from './DateExpensesPieChart';
-import { GrandTotalAmount } from './GrandTotalAmount';
+import { ReportTotalAmount } from './ReportTotalAmount';
 
 import './DateExpenses.scss';
 
@@ -39,26 +39,39 @@ export const DateExpenses = ({ dateExpenses, interval }: DateExpensesProps): JSX
                         key={index}
                         type="inner"
                         title={<Typography.Title level={5}>{getTitle(dateReport.date, interval)}</Typography.Title>}
-                        extra={
-                            <Typography.Title level={5} style={{ marginBottom: 0 }}>
-                                <GrandTotalAmount grandTotal={dateReport.grandTotal} />
-                            </Typography.Title>
-                        }
                         style={{ marginTop: 16 }}
                     >
-                        <div className="date-category__wrapper">
-                            <div className="date-category__expenses">
-                                {dateReport.categoryExpenses
-                                    .sort((a: CategoryExpenses, b: CategoryExpenses) =>
-                                        a.category.name.localeCompare(b.category.name)
-                                    )
-                                    .map((catExpenses: CategoryExpenses, catExpenseIndex: number) => (
-                                        <CategoryExpenseItem key={catExpenseIndex} categoryExpense={catExpenses} />
-                                    ))}
+                        <div className="date-expenses">
+                            <div className="date-expenses__report">
+                                <div className="date-expenses__list">
+                                    {dateReport.categoryExpenses
+                                        .sort((a: CategoryExpenses, b: CategoryExpenses) =>
+                                            a.category.name.localeCompare(b.category.name)
+                                        )
+                                        .map((catExpenses: CategoryExpenses, catExpenseIndex: number) => (
+                                            <>
+                                                <CategoryExpenseItem
+                                                    key={catExpenseIndex}
+                                                    categoryExpense={catExpenses}
+                                                />
+
+                                                {catExpenseIndex !== dateReport.categoryExpenses.length - 1 && (
+                                                    <Divider style={{ margin: 0 }} />
+                                                )}
+                                            </>
+                                        ))}
+                                </div>
+
+                                <div className="date-expenses__total">
+                                    <ReportTotalAmount grandTotal={dateReport.grandTotal} showConverted={true} />
+                                </div>
                             </div>
 
-                            <div className="date-category__chart">
-                                <DateExpensesPieChart categoryExpenses={dateReport.categoryExpenses} />
+                            <div className="date-expenses__chart">
+                                <DateExpensesPieChart
+                                    categoryExpenses={dateReport.categoryExpenses}
+                                    currency={dateReport.grandTotal.total.currency}
+                                />
                             </div>
                         </div>
                     </Card>

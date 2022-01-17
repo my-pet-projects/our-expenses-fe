@@ -1,3 +1,4 @@
+import { formatMoney } from 'src/common/formatters';
 import { Total } from 'src/models';
 
 type TotalAmountProps = {
@@ -5,7 +6,5 @@ type TotalAmountProps = {
 };
 
 export const TotalAmount = ({ total }: TotalAmountProps): JSX.Element => (
-    <>
-        {total.sum} {total.currency}
-    </>
+    <span>{formatMoney(total.sum, total.currency)}</span>
 );

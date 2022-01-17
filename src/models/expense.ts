@@ -1,4 +1,5 @@
 import { Category } from './category';
+import { TotalInfo } from './report';
 
 export interface Expense {
     id: string;
@@ -11,6 +12,7 @@ export interface Expense {
     date: Date;
     category: Category;
     trip: string;
+    totalInfo: TotalInfo;
 }
 
 export interface NewExpenseResponse {

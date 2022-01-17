@@ -9,5 +9,19 @@
     &__expenses {
         display: flex;
         flex-direction: column;
+
+        &__total {
+            width: 120px;
+            justify-content: end;
+            display: flex;
+            align-items: center;
+
+            span {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                display: inline-block;
+                overflow: hidden;
+            }
+        }
     }
 }

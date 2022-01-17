@@ -32,7 +32,7 @@ export const CategoryExpenseItem = ({ categoryExpense }: CategoryExpenseItemProp
                     />
                     <Typography.Text>{categoryExpense.category.name}</Typography.Text>
                 </div>
-                <Typography.Text>
+                <Typography.Text className="category-expense-item__total">
                     <GrandTotalAmount grandTotal={categoryExpense.grandTotal} />
                 </Typography.Text>
             </div>
