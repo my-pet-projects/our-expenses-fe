@@ -22,7 +22,7 @@ jobs:
         run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
 
       - name: Configure GCloud in Github Actions environment
-        uses: google-github-actions/setup-gcloud@main
+        uses: google-github-actions/setup-gcloud@v0
         with:
           service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
           project_id: ${{ secrets.GCP_PROJECT_ID }}
