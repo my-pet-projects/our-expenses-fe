@@ -147,6 +147,7 @@ export const ExpenseForm = (): JSX.Element => {
                 <Select.Option value="RSD">RSD</Select.Option>
                 <Select.Option value="MKD">MKD</Select.Option>
                 <Select.Option value="USD">USD</Select.Option>
+                <Select.Option value="TRY">TRY</Select.Option>
             </Select>
         </Form.Item>
     );
